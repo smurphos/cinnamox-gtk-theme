@@ -1,0 +1,705 @@
+/*********
+ ! Buttons
+**********/
+
+$button_outline_radius: $roundness * (1 + ($button_outline_offset/1px + 2) / 10);
+$button_border_width: 1px;
+
+@include exports("button_extends") {
+    // stuff for .needs-attention
+    $_dot_color: if($variant == "light", $selected_bg_color, lighten($selected_bg_color, .15));
+
+    @keyframes needs_attention {
+        from {
+            background-image: -gtk-gradient(radial, center center, 0, center center, .01, to($_dot_color), to(transparent));
+        }
+
+        to {
+            background-image: -gtk-gradient(radial, center center, 0, center center, .5, to($selected_bg_color), to(transparent));
+        }
+    }
+
+    %needs_attention {
+        animation: needs_attention 150ms ease-in;
+        $_dot_shadow: _text_shadow_color();
+        $_dot_shadow_r: if($variant == "light", .5, .45);
+        background-image: -gtk-gradient(radial, center center, 0, center center, .5, to($_dot_color), to(transparent)),
+                          -gtk-gradient(radial, center center, 0, center center, $_dot_shadow_r, to($_dot_shadow), to(transparent));
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+
+        @if $variant == "light" {
+            background-position: right 3px, right 4px;
+        } @else {
+            background-position: right 3px, right 2px;
+        }
+
+        &:backdrop { background-size: 6px 6px, 0 0; }
+
+        &:dir(rtl) {
+            @if $variant == "light" {
+                background-position: left 3px, left 4px;
+            } @else {
+                background-position: left 3px, left 2px;
+            }
+        }
+    }
+
+    %button {
+        min-height: 14px + $spacing * 2;
+        min-width: 14px + $spacing * 2;
+        padding: $spacing ($spacing + 2px);
+        border-width: $button_border_width;
+        border-style: solid;
+        border-radius: $roundness;
+        -gtk-outline-radius: $button_outline_radius;
+        transition: 150ms ease;
+        outline-color: transparent;
+    }
+
+    %undecorated_button {
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+    }
+
+    %linked_middle {
+        border-radius: 0;
+        -gtk-outline-radius: 0;
+        //border-left-style: none;
+        //border-right-style: solid;
+
+        &:dir(rtl) {
+            border-radius: 0; // needed when including %linked_middle:dir(rtl)
+            -gtk-outline-radius: 0;
+            //border-right-style: none;
+            //border-left-style: solid;
+        }
+    }
+
+    %linked_vertical_middle {
+        border-radius: 0;
+        -gtk-outline-radius: 0;
+        //border-top-style: none;
+        //border-bottom-style: solid;
+
+        &:dir(rtl) {
+            border-radius: 0; // needed when including %linked_vertical_middle:dir(rtl)
+            -gtk-outline-radius: 0;
+            //border-top-style: none;
+            //border-bottom-style: solid;
+        }
+    }
+
+    %linked_button {
+        border-width: $button_border_width;
+        //border-style: solid;
+        border-radius: 0;
+        -gtk-outline-radius: 0;
+        //border-right-style: none;
+        //border-left-style: none;
+
+        &:first-child {
+            border-width: $button_border_width;
+            //border-left-style: solid;
+            //border-right-style: none;
+            //top-left top-right bottom-right bottom-left
+            border-radius: $roundness 0 0 $roundness;
+            -gtk-outline-radius: $button_outline_radius 0 0 $button_outline_radius;
+
+            &:dir(rtl) {
+                //border-left-style: none;
+                //border-right-style: solid;
+            }
+        }
+
+        &:last-child {
+            border-width: $button_border_width;
+            //border-left-style: none;
+            //border-right-style: solid;
+            border-radius: 0 $roundness $roundness 0;
+            -gtk-outline-radius: 0 $button_outline_radius $button_outline_radius 0;
+
+            &:dir(rtl) {
+                //border-left-style: solid;
+                //border-right-style: none;
+            }
+        }
+
+        &:only-child {
+            border-width: $button_border_width;
+            border-style: solid;
+        }
+
+        &:only-child {
+            border-radius: $roundness;
+            -gtk-outline-radius: $button_outline_radius;
+        }
+    }
+
+    %linked_vertical_button {
+        border-width: $button_border_width;
+        border-style: solid;
+        border-radius: 0;
+        -gtk-outline-radius: 0;
+        //border-top-style: none;
+        //border-bottom-style: none;
+
+        &:first-child {
+            border-width: $button_border_width;
+            //border-top-style: solid;
+            //border-bottom-style: none;
+            //top-left top-right bottom-right bottom-left
+            border-radius: $roundness $roundness 0 0;
+            -gtk-outline-radius: $button_outline_radius $button_outline_radius 0 0;
+
+            //&:dir(rtl) {
+                //border-top-style: none;
+                //border-bottom-style: solid;
+            //}
+        }
+
+        &:last-child {
+            border-width: $button_border_width;
+            //border-top-style: none;
+            //border-bottom-style: solid;
+            //top-left top-right bottom-right bottom-left
+            border-radius: 0 0 $roundness $roundness;
+            -gtk-outline-radius: 0 0 $button_outline_radius $button_outline_radius;
+
+            //&:dir(rtl) {
+                //border-top-style: solid;
+                //border-bottom-style: none;
+            //}
+        }
+
+        &:only-child, &:first-child:only-child {
+            border-width: $button_border_width;
+            //border-style: solid;
+        }
+
+        &:only-child {
+            border-radius: $roundness;
+            -gtk-outline-radius: $button_outline_radius;
+        }
+    }
+}
+
+@mixin linked_button($bg, $fg) {
+    $button_border_strength: if(lightness($fg) > 50, .1, .2);
+    $shadow_strength: if(lightness($bg) > 50, 0, .1);
+
+    @extend %linked_button;
+
+    box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+
+    &:focus, &:hover {
+        box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+    }
+
+    &:active, &:active:hover,
+    &:active:focus, &:active:hover:focus,
+    &:checked, &:checked:hover,
+    &:checked:focus, &:checked:hover:focus {
+        box-shadow: inset 0 1px alpha($dark_shadow, .07),
+        inset 0 -1px alpha($dark_shadow, .05);
+    }
+
+    &:disabled { box-shadow: inset -1px 0 shade($bg, .8); }
+
+    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
+
+    &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
+
+    &:disabled:last-child, &:disabled:only-child,
+    &:active:disabled:last-child, &:active:disabled:only-child,
+    &:checked:disabled:last-child, &:checked:disabled:only-child { box-shadow: none; }
+
+    &:active:last-child, &:active:last-child:focus, &:active:last-child:hover, &:active:last-child:hover:focus,
+    &:checked:last-child, &:checked:last-child:focus, &:checked:last-child:hover, &:checked:last-child:hover:focus {
+        box-shadow: inset 0 1px alpha($dark_shadow, .07),
+        inset -1px 0 alpha($dark_shadow, .06);
+    }
+
+    &:active:only-child, &:active:only-child:focus, &:active:only-child:hover, &:active:only-child:hover:focus,
+    &:checked:only-child, &:checked:only-child:focus, &:checked:only-child:hover, &:checked:only-child:hover:focus {
+        box-shadow: inset 1px 0 alpha($dark_shadow, .06),
+        inset 0 1px alpha($dark_shadow, .07),
+        inset -1px 0 alpha($dark_shadow, .06);
+    }
+}
+
+@mixin linked_vertical_button($bg, $fg) {
+    $button_border_strength: if(lightness($fg) > 50, .1, .2);
+    $shadow_strength: if(lightness($bg) > 50, 0, .1);
+
+    @extend %linked_vertical_button;
+
+    box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+
+    &:focus, &:hover {
+        box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+    }
+
+    &:active, &:active:hover,
+    &:active:focus, &:active:hover:focus,
+    &:checked, &:checked:hover,
+    &:checked:focus, &:checked:hover:focus {
+        box-shadow: inset 1px 0 alpha($dark_shadow, .07),
+        inset -1px 0 alpha($dark_shadow, .05);
+    }
+
+    &:disabled { box-shadow: inset 0 -1px shade($bg, .8); }
+
+    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
+
+    &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
+
+    &:disabled:last-child, &:disabled:only-child,
+    &:active:disabled:last-child, &:active:disabled:only-child,
+    &:checked:disabled:last-child, &:checked:disabled:only-child { box-shadow: none; }
+
+    &:active:last-child, &:active:last-child:focus, &:active:last-child:hover, &:active:last-child:hover:focus,
+    &:checked:last-child, &:checked:last-child:focus, &:checked:last-child:hover, &:checked:last-child:hover:focus {
+        box-shadow: inset 0 1px alpha($dark_shadow, .07),
+        inset -1px 0 alpha($dark_shadow, .06);
+    }
+
+    &:active:only-child, &:active:only-child:focus, &:active:only-child:hover, &:active:only-child:hover:focus,
+    &:checked:only-child, &:checked:only-child:focus, &:checked:only-child:hover, &:checked:only-child:hover:focus {
+        box-shadow: inset 1px 0 alpha($dark_shadow, .06),
+        inset 0 1px alpha($dark_shadow, .07),
+        inset -1px 0 alpha($dark_shadow, .06);
+    }
+}
+
+@mixin default_linked_button_mixin($bg, $fg) {
+    $border_focus_color: border_focus(alpha($fg, .2 + $button_border_strength));
+    $selected_border_focus_color: border_focus(alpha($selected_bg_color, .2 + $button_border_strength));
+
+    .linked:not(.vertical) > &:not(:last-child):not(:only-child),
+    .linked:not(.vertical) > :not(:last-child):not(:only-child) &,
+    stackswitcher:not(.vertical) >  &:not(:last-child):not(:only-child) {
+        border-right-style: none;
+
+        &:hover {
+            border-color: $border_focus_color;
+            border-right-style: none;
+            box-shadow: inset -$button_border_width 0 0 $border_focus_color;
+        }
+    }
+
+    .linked:not(.vertical) > &:not(:last-child):not(:only-child):checked,
+    .linked:not(.vertical) > :not(:last-child):not(:only-child) &:checked,
+    stackswitcher:not(.vertical) > &:not(:last-child):not(:only-child):checked {
+        border-right-style: none;
+
+        &:hover {
+            border-color: $selected_border_focus_color;
+            border-right-style: none;
+            box-shadow: inset -$button_border_width 0 0 $selected_border_focus_color;
+        }
+    }
+
+    .linked.vertical > &:not(:last-child):not(:only-child),
+    .linked.vertical > :not(:last-child):not(:only-child) &,
+    stackswitcher.vertical >  &:not(:last-child):not(:only-child) {
+        border-bottom-style: none;
+
+        &:hover {
+            border-color: $border_focus_color;
+            border-bottom-style: none;
+            box-shadow: inset 0 0 -$button_border_width $border_focus_color;
+        }
+    }
+
+    .linked.vertical > &:not(:last-child):not(:only-child):checked,
+    .linked.vertical > :not(:last-child):not(:only-child) &:checked,
+    stackswitcher.vertical >  &:not(:last-child):not(:only-child):checked {
+        border-bottom-style: none;
+
+        &:hover {
+            border-color: $selected_border_focus_color;
+            border-bottom-style: none;
+            box-shadow: inset 0 0 -$button_border_width $selected_border_focus_color;
+        }
+    }
+
+}
+
+@mixin button($bg, $fg) {
+    $button_border_strength: if(lightness($fg) > 50, .1, .2);
+    $shadow_strength: if(lightness($bg) > 50, 0, .1);
+
+    $button_bg: $bg;
+
+    @extend %button;
+    @include linear-gradient($button_bg);
+    @include border(alpha($fg, .12 + $button_border_strength));
+    @include default_linked_button_mixin($bg, $fg);
+
+    color: $fg;
+    box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+
+
+    &.flat {
+        //color: mix($bg, $fg, .2);
+        color: $fg;
+        border-color: alpha($button_bg, 0);
+        background-color: alpha($button_bg, 0);
+        background-image: none;
+        box-shadow: none;
+    }
+
+    &, &.flat {
+
+        &:hover {
+            @include linear-gradient(shade($bg, 1.05));
+            @include border(alpha($fg, .2 + $button_border_strength));
+
+            color: $fg;
+            box-shadow: 0 1px 2px -1px alpha($dark_shadow, .22 + $shadow_strength);
+        }
+
+        &:focus {
+            @include linear-gradient(shade($bg, 1.05));
+            border-color: alpha($fg, .12 + $button_border_strength);
+            outline-color: alpha($selected_bg_color, .5);
+            outline-width: $button_outline_width;
+            outline-style: solid;
+            //outline-offset: 1px;
+            //outline-offset: -3px;
+            outline-offset: $button_outline_offset;
+
+            color: $fg;
+            box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
+
+            &:hover {
+                @include linear-gradient(shade($bg, 1.1));
+                @include border(alpha($fg, .2 + $button_border_strength));
+
+                box-shadow: 0 1px 2px -1px alpha($dark_shadow, .38 + $shadow_strength);
+            }
+        }
+
+        &:checked, &:active {
+            /*@include linear-gradient(shade($bg, .7), to top);*/
+            @include linear-gradient($selected_bg_color, to top);
+            @include border(alpha($fg, .12 + $button_border_strength));
+
+            color: $selected_fg_color;
+            box-shadow: inset 1px 0 alpha($fg, .06),
+            inset  0 1px alpha($fg, .07),
+            inset -1px 0 alpha($fg, .06),
+            inset 0 -1px alpha($fg, .05);
+
+            &:focus, &:hover {
+                /*@include linear-gradient(shade($bg, .65), to top);*/
+                @include linear-gradient(shade($selected_bg_color, 1.05), to top);
+
+                color: $selected_fg_color;
+            }
+        }
+
+        &:focus, &:hover { color: $fg; }
+
+        &:disabled:disabled {
+            @include linear-gradient(alpha(mix($bg, $fg, .2), .4));
+            /*border: 1px solid alpha($bg, .2);*/
+            opacity: .6;
+            color: mix($bg, $fg, .6);
+            box-shadow: none;
+
+            :disabled {
+                color: mix($bg, $fg, .6);
+            }
+        }
+
+        &:active:disabled, &:checked:disabled {
+            @include linear-gradient(alpha($selected_bg_color, .6));
+
+            color: alpha($selected_fg_color, .85);
+            box-shadow: none;
+
+            :disabled {
+                color: alpha($selected_fg_color, .85);
+            }
+        }
+    }
+
+    &.separator, .separator {
+        border: 1px solid currentColor;
+        color: alpha($bg, ($contrast + .1));
+
+        &:disabled { color: alpha($bg, .85); }
+    }
+}
+
+@include exports("button") {
+    $button_border_strength: if(lightness($button_fg_color) > 50, .1, .2);
+
+    %close_button {
+        border: 1px solid transparent;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+
+        &:focus, &:hover {
+            border: 1px solid alpha($bg_color, .3);
+            background-color: alpha($fg_color, .2);
+            background-image: none;
+            box-shadow: none;
+        }
+
+        &:active, &:checked, &:active:hover, &:checked:hover {
+            border: 1px solid alpha($selected_bg_color, .3);
+            background-color: alpha($selected_fg_color, .1);
+            background-image: none;
+            box-shadow: none;
+        }
+    }
+
+    button {
+        @include button($button_bg_color, $button_fg_color);
+
+
+        .inline-toolbar &,
+        .linked > & { @include linked_button($button_bg_color, $button_fg_color); }
+
+        .linked.vertical > & { @include linked_vertical_button($button_bg_color, $button_fg_color); }
+
+        &.circular,
+        &.circular-button { // FIXME: aggregate to buttons
+            padding: 0;
+            min-width: 28px;
+            min-height: 28px;
+            border-radius: 9999px; // Fixed: https://github.com/GNOME/gtk/commit/a6409458f0d50d673a4dc370b9251993b7835b6b
+            -gtk-outline-radius: 9999px;
+
+            label { padding: 0; }
+        }
+    }
+
+    spinbutton {
+
+        $border_focus_color: border_focus(alpha($button_fg_color, .2 + $button_border_strength));
+
+        &:disabled {
+            opacity: .6;
+        }
+
+        button {
+            color: $button_fg_color;
+
+            &:active, &:checked, &:hover {
+                @include linear-gradient(shade($button_bg_color, 1.2));
+            }
+
+            &:hover,
+            &:focus:hover {
+                @include border(alpha($button_fg_color, .2 + $button_border_strength));
+            }
+
+            &:focus:hover {
+                color: mix($fg_color, border_focus($borders_color), .3);
+            }
+
+            &:disabled { color: mix($button_fg_color, $bg_color, .7); }
+
+            &:backdrop { color: mix($backdrop_base_color, $backdrop_fg_color, .9); }
+
+            &:backdrop:disabled { color: alpha($backdrop_insensitive_color, .8); }
+        }
+
+        &:not(.vertical) {
+            /*@extend %entry;*/
+            @include linear-gradient($base_color, to top);
+            /*@include border($base_color);*/
+
+            padding: 0;
+            border-radius: $roundness;
+            -gtk-outline-radius: $button_outline_radius;
+
+            color: $text_color;
+            caret-color: $text_color;
+
+            /*&:focus, &:active { border-color: border_focus($borders_color); }*/
+
+            &:disabled {
+                @include linear-gradient(shade($base_color, .9), to top);
+
+                color: mix($base_color, $text_color, .5);
+            }
+
+            entry {
+                border-radius: $roundness 0 0 $roundness;
+                -gtk-outline-radius: $button_outline_radius 0 0 $button_outline_radius;
+                border-right-width: 0;
+                box-shadow: none;
+            }
+
+            button {
+                @extend %linked_middle;
+                border-radius: 0;
+                -gtk-outline-radius: 0;
+                border-style: solid;
+                background-image: none;
+                box-shadow: none;
+
+                &:focus {
+                    border-top-color: border_focus($borders_color);
+                    border-bottom-color: border_focus($borders_color);
+                }
+
+                &:active { box-shadow: inset 0 2px 3px -1px transparentize($black, .8); }
+
+                &:backdrop { border-color: alpha($backdrop_borders_color, .8); }
+
+                &.up:dir(ltr),
+                &.down:dir(rtl) {
+                    border-style: solid;
+
+                    &:hover,
+                    &:focus:hover {
+                        border-color: border_focus(alpha($button_fg_color, .2 + $button_border_strength));
+                    }
+                }
+
+                &.down:dir(rtl) {
+                    //border-right-color: $button_bg_color;
+                    border-right-style: none;
+                    border-radius: $roundness 0 0 $roundness;
+                    -gtk-outline-radius: $button_outline_radius 0 0 $button_outline_radius;
+
+                    &:focus {
+                        border-top-color: border_focus($borders_color);
+                        border-bottom-color: border_focus($borders_color);
+                        border-left-color: border_focus($borders_color);
+                    }
+
+                    &:hover,
+                    &:focus:hover {
+                        border-color: $border_focus_color;
+                        box-shadow: inset -$button_border_width 0 0 $border_focus_color;
+                    }
+                }
+
+                &.up:dir(ltr) {
+                    //border-left-color: $button_bg_color;
+                    border-left-style: none;
+                    border-radius: 0 $roundness $roundness 0;
+                    -gtk-outline-radius: 0 $button_outline_radius $button_outline_radius 0;
+
+                    &:focus {
+                        border-top-color: border_focus($borders_color);
+                        border-bottom-color: border_focus($borders_color);
+                        border-right-color: border_focus($borders_color);
+                    }
+
+                    &:hover,
+                    &:focus:hover {
+                        border-color: $border_focus_color;
+                        box-shadow: inset $button_border_width 0 $border_focus_color;
+                    }
+                }
+            }
+        }
+
+        &.vertical {
+            button, entry {
+                min-width: 0;
+                padding-left: $spacing - 2px;
+                padding-right: $spacing - 2px;
+            }
+
+            entry {
+                // reset all the other props since the spinbutton node is styled here
+                border-radius: 0;
+                -gtk-outline-radius: 0;
+                border-top-width: 0;
+                border-bottom-width: 0;
+            }
+
+            button {
+                &.up,
+                &.down {
+                    &:focus:hover {
+                        border-color: border_focus(alpha($button_fg_color, .2 + $button_border_strength));
+                    }
+                }
+
+                &.up {
+                    border-radius: $roundness $roundness 0 0;
+                    -gtk-outline-radius: $button_outline_radius $button_outline_radius 0 0;
+
+                    &:focus {
+                        border-top-color: border_focus($borders_color);
+                        border-left-color: border_focus($borders_color);
+                        border-right-color: border_focus($borders_color);
+                    }
+                }
+
+                &.down {
+                    border-radius: 0 0 $roundness $roundness;
+                    -gtk-outline-radius: 0 0 $button_outline_radius $button_outline_radius;
+
+                    &:focus {
+                        border-bottom-color: border_focus($borders_color);
+                        border-left-color: border_focus($borders_color);
+                        border-right-color: border_focus($borders_color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/******************
+! ComboBoxes *
+*******************/
+
+@include exports("combobox") {
+    combobox {
+        button.combo {
+            // otherwise the arrow placement is not symmetric
+            min-width: 0;
+            padding-left: $spacing + 2px;
+            padding-right: $spacing + 2px;
+        }
+
+        arrow {
+            -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+            min-height: 16px;
+            min-width: 16px;
+        }
+
+        box button, box entry {
+            @extend %linked_button;
+            padding: $spacing ($spacing + 2px);
+        }
+
+        .linked:not(.vertical) > & > box > button.combo {
+            // the combo is a composite widget so the way we do button linked doesn't
+            // work, special case needed. See
+            // https://bugzilla.gnome.org/show_bug.cgi?id=733979
+            &:dir(ltr) { @extend %linked_middle; }
+            // specificity bump
+            &:dir(rtl) { @extend %linked_middle:dir(rtl); }
+        }
+
+        .linked:not(.vertical) > &:first-child > box > button.combo { @extend %linked_button:first-child; }
+
+        .linked:not(.vertical) > &:last-child > box > button.combo { @extend %linked_button:last-child; }
+
+        .linked:not(.vertical) > &:only-child > box > button.combo { @extend %linked_button:only-child; }
+
+        .linked.vertical > & > box > button.combo { @extend %linked_vertical_middle; }
+
+        .linked.vertical > &:first-child > box > button.combo { @extend %linked_vertical_button:first-child; }
+
+        .linked.vertical > &:last-child > box > button.combo { @extend %linked_vertical_button:last-child; }
+
+        .linked.vertical > &:only-child > box > button.combo { @extend %linked_vertical_button:only-child; }
+    }
+}
