@@ -31,7 +31,7 @@ function build_theme {
     WORKDIR="$PWD";
     BUILDDIR="$PWD/cinnamox_builds";
     THEMEDIR="$HOME/.themes/$THEMENAME";
-    /$PWD/change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/colors/$THEMENAME";
+    /$PWD/change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/test/colors/$THEMENAME";
     echo "moving cinnamox theme elements for $THEMENAME to $THEMEDIR";
     cd "$THEMEDIR/gtk-3.0" && rm -r "$PWD/assets";
     cd "$THEMEDIR/gtk-3.20" && rm -r "$PWD/assets";
