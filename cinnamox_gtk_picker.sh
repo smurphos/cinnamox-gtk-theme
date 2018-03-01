@@ -24,9 +24,12 @@ function willowgrove {
 function zanah {
 	THEMENAME="Cinnamox-Zanah"; build_theme;
 }
+function test_themes {
+	THEMENAME="clearlooks"; build_theme; THEMENAME="monovedek"; build_theme; THEMENAME="monovedek_lcars"; build_theme; THEMENAME="random"; build_theme;
+}
 function build_theme {
     WORKDIR="$PWD";
-    BUILDDIR="$HOME/Workspace/Theming/cinnamox_builds";
+    BUILDDIR="$PWD/cinnamox_builds";
     THEMEDIR="$HOME/.themes/$THEMENAME";
     /$PWD/change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/colors/$THEMENAME";
     echo "moving cinnamox theme elements for $THEMENAME to $THEMEDIR";
@@ -42,7 +45,7 @@ function build_theme {
     cd "$WORKDIR";
 }
 
-VARIANT=("Build all" "Aubergine" "Gold-Spice" "Heather" "Kashmir-Blue" "Rhino" "Rosso-Cursa" "Willow-Grove" "Zanah");
+VARIANT=("Build all" "Aubergine" "Gold-Spice" "Heather" "Kashmir-Blue" "Rhino" "Rosso-Cursa" "Willow-Grove" "Zanah" "Test Themes");
 echo "";
 echo "*** Cinnamox GTK & Metacity Theme Builder ***";
 echo "";
@@ -52,7 +55,7 @@ select CHOICE in "${VARIANT[@]}";
 do
     case $CHOICE in 
     "Build all")
-		aubergine; goldspice; heather; kashmirblue; rhino; rossocursa; willowgrove; zanah;; 
+		aubergine; goldspice; heather; kashmirblue; rhino; rossocursa; willowgrove; zanah; test_themes;; 
     "Aubergine")
 		aubergine;;
     "Gold-Spice")
@@ -68,7 +71,9 @@ do
     "Willow-Grove")
 		willowgrove;;
     "Zanah")
-		zanah;;  
+		zanah;;
+    "Test Themes")
+        test_themes;;  
     *) echo "Invalid option. Try another one."; continue;;
     esac
     break
