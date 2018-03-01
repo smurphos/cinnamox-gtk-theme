@@ -34,8 +34,9 @@
 
 /* widget colors */
 @define-color titlebar_bg_focused @dark_bg_color;
-@define-color titlebar_bg_unfocused #{"" + $titlebar_bg_unfocused};
-@define-color titlebar_fg_color @dark_fg_color;
+@define-color titlebar_bg_unfocused @theme_bg_color;
+@define-color titlebar_fg_focused @dark_fg_color;
+@define-color titlebar_fg_unfocused #{"" + $titlebar_fg_unfocused};
 @define-color menubar_bg_color @dark_bg_color;
 @define-color menubar_fg_color @dark_fg_color;
 @define-color toolbar_bg_color @theme_bg_color;
