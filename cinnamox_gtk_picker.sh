@@ -41,7 +41,7 @@ function build_theme {
     echo "moving cinnamox theme elements for $THEMENAME to $THEMEDIR";
     cd "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/assets";
     cd "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/assets";
-    rsync -a -u --exclude '*.png' --exclude 'sass' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR/$THEMENAME";
+    rsync -a -u --exclude '*.png' --exclude '*.svg' --exclude 'sass' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR/$THEMENAME";
     cd "$THEMEDIR/$THEMENAME/gtk-3.0";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.0/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/dist";
