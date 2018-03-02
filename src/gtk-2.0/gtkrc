@@ -391,6 +391,7 @@ style "murrine-menu-item" = "murrine-wider" {
 	engine "murrine" {
 		textstyle = 0
 		border_shades = { 1.2, 1.2 }
+		roundness = %ROUNDNESS%
 	}
 }
 
@@ -428,7 +429,7 @@ style "murrine-menubaritem" {
 	fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
 
 	engine "murrine" {
-		roundness = 0
+		roundness = %ROUNDNESS%
 	}
 }
 
