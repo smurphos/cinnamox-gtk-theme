@@ -60,6 +60,14 @@ _TEST_THEMES=(
 	'clearlooks'
 	'monovedek'
 	'monovedek_lcars'
+	'Cinnamox-Aubergine'
+	'Cinnamox-Gold-Spice'
+	'Cinnamox-Heather'
+	'Cinnamox-Kashmir-Blue'
+	'Cinnamox-Rhino'
+	'Cinnamox-Rosso-Cursa'
+	'Cinnamox-Willow-Grove'
+	'Cinnamox-Zanah'
 )
 TEST_THEMES=${TEST_THEMES-${_TEST_THEMES[@]}}
 
