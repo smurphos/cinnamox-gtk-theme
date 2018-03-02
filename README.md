@@ -17,7 +17,7 @@ The current release version of the themes can be downloaded and installed via Ci
  
 ### Cinnamox-Kashir-Blue release screenshot
 
-![Cinnamox-Kashmir-Blue](https://github.com/smurphos/cinnamox_themes/raw/master/Cinnamox-Kashmir-Blue/screenshot.png "Cinnamox-Kashmir-Blue")
+![Cinnamox-Kashmir-Blue](https://github.com/smurphos/cinnamox_themes/raw/master/Cinnamox-Kashmir-Blue/cinnamon/thumbnail.png "Cinnamox-Kashmir-Blue")
 
 ### Cinnamox-Kashir-Blue GTK test result screenshots
 
