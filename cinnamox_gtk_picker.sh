@@ -29,19 +29,25 @@ function test_themes {
 }
 function build_theme {
     WORKDIR="$PWD";
-    BUILDDIR="$PWD/cinnamox_builds";
-    THEMEDIR="$HOME/.themes/$THEMENAME";
-    /$PWD/change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/test/colors/$THEMENAME";
+    BUILDDIR="$WORKDIR/cinnamox_builds";
+    THEMEDIR="$HOME/.themes";
+    if [ ! -d "$BUILDDIR" ]; then
+		mkdir "$BUILDDIR";
+	fi
+	if [ ! -d "$THEMEDIR" ]; then
+		mkdir "$THEMEDIR";
+	fi
+    ./change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/test/colors/$THEMENAME";
     echo "moving cinnamox theme elements for $THEMENAME to $THEMEDIR";
-    cd "$THEMEDIR/gtk-3.0" && rm -r "$PWD/assets";
-    cd "$THEMEDIR/gtk-3.20" && rm -r "$PWD/assets";
-    rsync -a -u --exclude '*.png' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR";
-    cd "$THEMEDIR/gtk-3.0";
+    cd "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/assets";
+    cd "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/assets";
+    rsync -a -u --exclude 'Makefile' --exclude '*.sh' --exclude 'thumbnail.png' --exclude 'thumbnail.svg' --exclude 'sass' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR/$THEMENAME";
+    cd "$THEMEDIR/$THEMENAME/gtk-3.0";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
-    rsync -a "$THEMEDIR/gtk-3.0/dist"/ "$THEMEDIR/gtk-3.0" && rm -r "$PWD/dist";
-    cd "$THEMEDIR/gtk-3.20";
+    rsync -a "$THEMEDIR/$THEMENAME/gtk-3.0/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/dist";
+    cd "$THEMEDIR/$THEMENAME/gtk-3.20";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
-    rsync -a "$THEMEDIR/gtk-3.20/dist"/ "$THEMEDIR/gtk-3.20" && rm -r "$PWD/dist";
+    rsync -a "$THEMEDIR/$THEMENAME/gtk-3.20/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/dist";
     cd "$WORKDIR";
 }
 
