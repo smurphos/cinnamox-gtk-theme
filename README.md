@@ -1,15 +1,27 @@
-oomox-gtk-theme
+Cinnamox-gtk-theme
 =====
 
-Oomox-gtk-theme is a fork of Numix-gtk-theme.
-It is used in oomox app: https://github.com/actionless/oomox
+Cinnamox-gtk-theme is a fork of the [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) used in the excellent [Oomox](https://github.com/actionless/oomox) app
+[Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) is in turn a fork of the [Numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme).
 
-### Theme examples
+Thank-you to all the upstream developers for their work in making these tools available.
 
-![Screenshot Light](https://raw.githubusercontent.com/actionless/oomox-gtk-theme/master/screenshots/theme-clearlooks_hidpi-gtk3-page1.png "Screenshot Light")
-![Screenshot Medium](https://raw.githubusercontent.com/actionless/oomox-gtk-theme/master/screenshots/theme-monovedek_hidpi-gtk3-page1.png "Screenshot Medium")
-![Screenshot Dark](https://raw.githubusercontent.com/actionless/oomox-gtk-theme/master/screenshots/theme-monovedek_lcars_hidpi-gtk3-page1.png "Screenshot Dark")
+Cinnamox-gtk-theme differs from [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) only in a few cosmetic tweaks and the inclusion of color files and scripts used to build the Metacity, GTK2, GTK3.18 and GTK3.20 elements of the eight [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes).
+Tools for building the cinnamon element of the themes can be found at [Cinnamox_theme_master](https://github.com/smurphos/cinnamox_theme_master).
 
+Cinnamox themes are compatible with Cinnamon 3.2+, GTK3.18 or GTK 3.20+ and require the gtk2-engines-murrine package to be installed.
+Current releases of the themes can be downloaded and installed via the Cinnamon Themes application or manually via [Cinnamon Spices](https://cinnamon-spices.linuxmint.com/themes)
+ 
+### Cinnamox-Kashir-Blue Release Screenshot
+
+![Cinnamox-Kashmir-Blue](https://github.com/smurphos/cinnamox_themes/raw/master/Cinnamox-Kashmir-Blue/screenshot.png "Cinnamox-Kashmir-Blue")
+
+### Cinnamox-Kashir-Blue GTK Tests
+
+![Cinnamox-Kashmir-Blue-GTK2](https://github.com/smurphos/cinnamox-gtk-theme/raw/master/screenshots/theme-Cinnamox-Kashmir-Blue-gtk2-awf.png "Cinnamox-Kashmir-Blue-GTK2")
+![Cinnamox-Kashmir-Blue-GTK3-1](https://github.com/smurphos/cinnamox-gtk-theme/blob/master/screenshots/theme-Cinnamox-Kashmir-Blue-gtk3-page1.png "Cinnamox-Kashmir-Blue-GTK3-1")
+![Cinnamox-Kashmir-Blue-GTK3-2](https://github.com/smurphos/cinnamox-gtk-theme/blob/master/screenshots/theme-Cinnamox-Kashmir-Blue-gtk3-page2.png "Cinnamox-Kashmir-Blue-GTK3-2")
+![Cinnamox-Kashmir-Blue-GTK3-3](https://github.com/smurphos/cinnamox-gtk-theme/blob/master/screenshots/theme-Cinnamox-Kashmir-Blue-gtk3-page3.png "Cinnamox-Kashmir-Blue-GTK3-3")
 
 #### Prerequisites
 
@@ -39,24 +51,16 @@ And install `sassc>=3.4`: https://askubuntu.com/questions/849057/how-to-install-
 
 #### How to generate the theme using CLI:
 
-##### bash:
-```bash
-git clone https://github.com/actionless/oomox-gtk-theme.git
-cd oomox-gtk-theme
+```
+git clone https://github.com/smurphos/cinnamox-gtk-theme.git
+cd cinnamox-gtk-theme
 ./change_color.sh -o my-test-theme <(echo -e "BG=888a85\nBTN_BG=85509b\nBTN_FG=0e0021\nFG=0e0021\nGRADIENT=0.0\nHDR_BTN_BG=85509b\nHDR_BTN_FG=0e0021\nMENU_BG=0e0021\nMENU_FG=888a85\nROUNDNESS=4\nSEL_BG=dc5e86\nSEL_FG=000000\nSPACING=3\nTXT_BG=c0bbbb\nTXT_FG=000000\nWM_BORDER_FOCUS=9edc60\nWM_BORDER_UNFOCUS=0e0021\n")
 ```
+Alternatively
 
-##### fish:
-```fish
-git clone https://github.com/actionless/oomox-gtk-theme.git
-cd oomox-gtk-theme
-./change_color.sh -o my-test-theme (echo -e "BG=888a85\nBTN_BG=85509b\nBTN_FG=0e0021\nFG=0e0021\nGRADIENT=0.0\nHDR_BTN_BG=85509b\nHDR_BTN_FG=0e0021\nMENU_BG=0e0021\nMENU_FG=888a85\nROUNDNESS=4\nSEL_BG=dc5e86\nSEL_FG=000000\nSPACING=3\nTXT_BG=c0bbbb\nTXT_FG=000000\nWM_BORDER_FOCUS=9edc60\nWM_BORDER_UNFOCUS=0e0021\n" | psub)
-```
+```./cinnamox_gtk_picker.sh```
 
-
-next select `my-test-theme` in your appearance config tool (for example, _lxappearance_)
-
-
+will launch an interactive script to build the Cinnamox Themes.
 
 ### Using with tiling WMs:
 
