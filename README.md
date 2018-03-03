@@ -77,8 +77,8 @@ To resolve borders/shadow problem in tiling window managers create/append to
   border-radius: 0;
 }
 window decoration {
-	margin: 0;
-    border: 0;
+  margin: 0;
+  border: 0;
 }
 
 ```
@@ -91,15 +91,28 @@ The test-suite is designed to run in a [docker](https://www.docker.com/community
 
 ```sh
 cd ./docker_scripts/
-# prepare container:
-./build_docker_image.sh ; ./start_docker_container.sh
+
+# build container:
+./build_docker_image.sh
+
+# start container:
+./start_docker_container.sh
+
 # run tests:
 ./run_docker_tests.sh
+```
+
+Alternatively, to avoid rebuilding the container after each small theme change, you can start already built container and mount the current working directory inside that container:
+
+```sh
+# start container:
+./docker_scripts/dev_docker_container.sh
 ```
 
 #### Generate new screenshots:
 
 ```sh
+# assuming container is already started:
 ./docker_scripts/run_docker_tests.sh -e GENERATE_ASSETS=1
 ```
 
