@@ -5,15 +5,15 @@ Cinnamox-gtk-theme is a fork of the [Oomox-gtk-theme](https://github.com/actionl
 
 [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) is in turn a fork of the famous [Numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme).
 
-Thank-you to all the upstream developers for their time and effort in making these reosurces available.
+Thank-you to all the upstream developers for their time and effort in making these resources available.
 
-Cinnamox-gtk-theme differs from [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) only in a few cosmetic tweaks to the theme SCSS code and the inclusion of color files and helper scripts used to build the Metacity, GTK2, GTK3.18 and GTK3.20 elements of the eight [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes).
+Cinnamox-gtk-theme differs from [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) only in a few cosmetic tweaks to the theme SCSS code and the inclusion of color files and helper scripts used to build the Metacity, GTK2, GTK3.18 and GTK3.20 elements of the eight [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes/releases).
 
 Tools for building the Cinnamon element of the themes can be found at [Cinnamox_theme_master](https://github.com/smurphos/cinnamox_theme_master).
 
 Cinnamox themes are compatible with Cinnamon 3.2+, GTK3.18 or GTK 3.20+ and require the `gtk2-engines-murrine` or `gtk-engine-murrine` package to be installed.
 
-The current release version of the themes can be downloaded and installed via Cinnamon's Themes module in Cinnamon Settings or manually via [Cinnamon Spices](https://cinnamon-spices.linuxmint.com/themes)
+The current release version of the themes can be downloaded and installed via Cinnamon's Themes module in Cinnamon Settings or manually via [Cinnamon Spices](https://cinnamon-spices.linuxmint.com/themes), [openDesktop.org](https://www.opendesktop.org/member/491875/), or from [this Github repository](https://github.com/smurphos/cinnamox_themes/releases).
  
 ### Cinnamox-Kashir-Blue release screenshot
 
