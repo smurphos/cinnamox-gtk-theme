@@ -31,11 +31,16 @@ function build_theme {
     WORKDIR="$PWD";
     BUILDDIR="$WORKDIR/cinnamox_builds";
     THEMEDIR="$HOME/.themes";
+    QTDIR="$HOME/.config/qt5ct/colors";
+    QTTHEMEDIR="$HOME/.themes/$THEMENAME/qt5ct";
     if [ ! -d "$BUILDDIR" ]; then
 		mkdir "$BUILDDIR";
 	fi
 	if [ ! -d "$THEMEDIR" ]; then
 		mkdir "$THEMEDIR";
+	fi
+	if [ ! -d "$QTTHEMEDIR" ]; then
+		mkdir "$QTTHEMEDIR";
 	fi
     ./change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/test/colors/$THEMENAME";
     echo "moving cinnamox theme elements for $THEMENAME to $THEMEDIR";
@@ -48,7 +53,14 @@ function build_theme {
     cd "$THEMEDIR/$THEMENAME/gtk-3.20";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.20/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/dist";
-    cd "$WORKDIR";
+    cp "$QTDIR/$THEMENAME.conf" "$QTTHEMEDIR/$THEMENAME.conf";
+    cp "$WORKDIR/cinnamox_enable_qt5ct.sh" "$QTTHEMEDIR/cinnamox_enable_qt5ct.sh";
+    cd "$QTTHEMEDIR";
+    sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_enable_qt5ct.sh;
+    cp "$WORKDIR/cinnamox_toggle_GTK2_HIDPI.sh" "$THEMEDIR/$THEMENAME/gtk-2.0/cinnamox_toggle_GTK2_HIDPI.sh";
+    cd "$THEMEDIR/$THEMENAME/gtk-2.0";
+    sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_GTK2_HIDPI.sh;
+    cd "$WORKDIR"; 
 }
 
 VARIANT=("Build all" "Aubergine" "Gold-Spice" "Heather" "Kashmir-Blue" "Rhino" "Rosso-Cursa" "Willow-Grove" "Zanah" "Test Themes");
