@@ -18,8 +18,3 @@ echo "";
 read -p "Press enter to exit the script.";
 cd;
 exit;
-
-
-	 
-
-
