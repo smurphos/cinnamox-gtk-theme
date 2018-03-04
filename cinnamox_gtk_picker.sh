@@ -54,9 +54,12 @@ function build_theme {
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.20/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/dist";
     cp "$QTDIR/$THEMENAME.conf" "$QTTHEMEDIR/$THEMENAME.conf";
-    cp "$WORKDIR/cinnamox_enable_qt5ct.sh" "$QTTHEMEDIR/cinnamox_enable_qt5ct.sh"
+    cp "$WORKDIR/cinnamox_enable_qt5ct.sh" "$QTTHEMEDIR/cinnamox_enable_qt5ct.sh";
     cd "$QTTHEMEDIR";
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_enable_qt5ct.sh;
+    cp "$WORKDIR/cinnamox_toggle_GTK2_HIDPI.sh" "$THEMEDIR/$THEMENAME/gtk-2.0/cinnamox_toggle_GTK2_HIDPI.sh";
+    cd "$THEMEDIR/$THEMENAME/gtk-2.0";
+    sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_GTK2_HIDPI.sh;
     cd "$WORKDIR"; 
 }
 
