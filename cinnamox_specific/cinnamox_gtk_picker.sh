@@ -118,6 +118,7 @@ function build_theme {
     cp "$WORKDIR/cinnamox_specific/cinnamox_toggle_GTK2_HIDPI.sh" "$THEMEDIR/$THEMENAME/gtk-2.0/cinnamox_toggle_GTK2_HIDPI.sh";
     cd "$THEMEDIR/$THEMENAME/gtk-2.0";
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_GTK2_HIDPI.sh;
+    cp "$WORKDIR/cinnamox_specific/cinnamox_firefox_fix.sh" "$THEMEDIR/$THEMENAME/cinnamox_firefox_fix.sh";
     cd "$CURRENTDIR"; 
 }
 

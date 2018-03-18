@@ -68,6 +68,14 @@ The GTK2 theme requires the package `gtk2-engines-murrine` or `gtk-engine-murrin
 
 Tested on Linux Mint `18.2` & `18.3` 64bit with Cinnamon `3.4.x`, `3.6.x`, Manjaro `17.0.6` 64Bit with Cinnamon `3.6.x` and Ubuntu `17.10` with Cinnamon nightly builds.
 
+### Firefox fix
+
+If you have problems seeing text on input fields in Firefox with any particular theme this problem can be solved by adding a userContent.css file to your Firefox default profile including the line `input, textarea { color: #222; background: #eee; }`
+
+The theme includes a helper script that creates the userContent.css file with this content in the correct location. To access the tool open a terminal window and use the following command to make the script executable and launch it.
+
+`chmod +x ~/.themes/#THEMENAME/cinnamox_firefox_fix.sh && ~/.themes/#THEMENAME/cinnamon/cinnamox_firefox_fix.sh`
+
 ## Make your own theme using Cinnamox / Oomox
 
 The repository at [Cinnamox_theme_master](https://github.com/smurphos/cinnamox_theme_master) includes instructions to utilise the tools provided to make your own unique Cinnamox based theme.
