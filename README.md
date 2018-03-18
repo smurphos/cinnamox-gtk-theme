@@ -21,9 +21,9 @@ Thank-you to all the upstream developers for their time and effort in making the
 
 The cinnamon theme includes in Cinnamox-gtk-theme is authored by me. A version has now been merged upstream to [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) and the [Oomox](https://github.com/actionless/oomox) app version 1.60+ has the option to build a cinnamon theme.
 
-Cinnamox-gtk-theme has some cinnamox specific changes applied to the theme code so will produce a slightly different output to [Oomox](https://github.com/actionless/oomox). Having said improvements to either theme are often merged upstream / downstream.
+Cinnamox-gtk-theme has some cinnamox specific changes applied to the theme code so will produce a slightly different output to [Oomox](https://github.com/actionless/oomox). Having said that improvements to either theme are often merged upstream / downstream.
 
-Cinnamon-gtk-theme also includes the theme definitions and helper scripts used to build the [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes/releases)
+Cinnamon-gtk-theme also includes the theme definitions and helper scripts used to build the [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes/releases). Please note that the theme definitions in Cinnamox-gtk-theme are not compatible with [Oomox](https://github.com/actionless/oomox)
 
 ### Instructions
 
