@@ -4,7 +4,7 @@
 // dnd is for panel edit mode
 // dummy is for adding or moving panels
 #panel {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	height: 2.5em;
 	width: 3.2em;
 	&:highlight {
@@ -201,7 +201,7 @@
 	-natural-hpadding: 6px;
 	-minimum-hpadding: 2px;
 	font-weight: bold;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	transition-duration: 150;
 	#appMenuIcon {
 		app-icon-bottom-clip: 1px;
@@ -254,7 +254,7 @@
 	border: 1px solid $selected_borders_color;
 }
 .applet-box {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	transition-duration: 150;
 	border-radius: $roundness;
 	&:checked {
@@ -279,10 +279,10 @@
 }
 .applet-label {
 	font-weight: bold;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 }
 .applet-icon {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	icon-size: 1.14em;
 	padding: 0;
 	spacing: 0;
@@ -303,7 +303,7 @@
 	-natural-hpadding: 3px;
 	-minimum-hpadding: 3px;
 	font-weight: bold;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	height: 2em;
 	&:hover {
 		color: $selected_bg_color;
@@ -318,7 +318,7 @@
 	padding: 4px;
 }
 .user-label {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	font-weight: bold;
 }
 // the window list applet. Some third party applets inherit some of this theming.
@@ -364,7 +364,7 @@
 	border: 1px solid $borders_color;
 	padding: 10px 15px;
 	spacing: 1em;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 }
 // the sound player applet
 .sound-player {
@@ -390,17 +390,7 @@
 		}
 	}
 	.slider {
-		height: 1em;
-		min-width: 15em;
-		color: $dark_fg_color;
-		-slider-height: 0.7em;
-		-slider-background-color: $dark_bg_color;
-		-slider-border-color: $dark_bg_color;
-		-slider-active-background-color: $selected_bg_color;
-		-slider-active-border-color: $dark_bg_color;
-		-slider-border-width: 1px;
-		-slider-border-radius: 0.3em;
-		-slider-handle-radius: 0.7em;
+		@extend %slider-shared;
 	}
 	StBoxLayout {
 		spacing: 0.5em;
@@ -417,7 +407,7 @@
 	padding: 12px 16px;
 	spacing: 0.5em;
     @extend %bg-grad-to-bottom;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	StButton {
 		@extend %shared-button;
 		border-radius: $roundness;
@@ -443,7 +433,7 @@
 .workspace-button {
 	width: 2em;
 	height: 1em;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	border: 1px solid $borders_color;
 	margin: 2px;
 	transition-duration: 150;

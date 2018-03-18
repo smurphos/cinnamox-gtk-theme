@@ -1,6 +1,6 @@
 // on screen keyboard
 #keyboard {
-	@extend %bg-grad-to-bottom;
+	background-color: $bg_color_trans;
 }
 .keyboard-key {
 	min-height: 1.5em;
@@ -28,12 +28,12 @@
 	spacing: 15px;
 }
 .keyboard-subkeys {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	padding: 5px;
 	-arrow-border-radius: $roundness;
-	-arrow-background-color: $dark_bg_color;
+	-arrow-background-color: $mid_bg_color;
 	-arrow-border-width: 1px;
-	-arrow-border-color: $dark_fg_color;
+	-arrow-border-color: $mid_fg_color;
 	-arrow-base: 20px;
 	-arrow-rise: 10px;
 	-boxpointer-gap: 5px;

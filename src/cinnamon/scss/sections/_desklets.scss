@@ -2,9 +2,9 @@
 // to maintain visibility irrespctive of wallpaper and to allow for the highlighting scheme to work
 .desklet {
     padding: 10px;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	border-radius: $roundness;
-	background-color: $dark_bg_color_trans;
+	background-color: $bg_color_trans;
 	&:highlight {
 		background-color: $selected_bg_color;
 	}
@@ -43,7 +43,7 @@
 }
 .desklet-drag-placeholder {
 	border: 2px solid $selected_bg_color;
-	background-color: $dark_bg_color_trans;
+	background-color: $bg_color_trans;
 	border-radius: $roundness;
 }
 .launcher {

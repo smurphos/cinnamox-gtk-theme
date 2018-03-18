@@ -1,7 +1,7 @@
 // popup-menu-boxpointer is only for cinnamon < version 3.2
 .popup-menu-boxpointer {
 	-arrow-border-radius: $roundness;
-	-arrow-background-color: $dark_bg_color;
+	-arrow-background-color: $mid_bg_color;
 	-arrow-border-width: 1px;
 	-arrow-border-color: $borders_color;
 	-arrow-base: 24px;
@@ -62,7 +62,7 @@
 .popup-menu-item {
 	padding: .5em .7em;
 	spacing: 1em;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	&:active {
 		background-color: $selected_bg_color;
 		border-radius: $roundness;
@@ -73,39 +73,25 @@
 	}
 }
 .popup-image-menu-item {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 }
 .popup-combobox-item {
 	spacing: 1em;
 }
-// sliders and seperators in menus
+// sliders and separators in menus
 .popup-separator-menu-item {
-	-gradient-height: 3px;
+	@extend %separator-shared;
 	-gradient-direction: horizontal;
-	-gradient-start: $selected_bg_color;
-	-gradient-end: $dark_bg_color;
-	-margin-horizontal: 1em;
-	height: 1em;
 }
 .popup-slider-menu-item {
-	height: 1em;
-	min-width: 15em;
-	color: $dark_fg_color;
-	-slider-height: 0.7em;
-	-slider-background-color: $dark_bg_color;
-	-slider-border-color: $dark_bg_color;
-	-slider-active-background-color: $selected_bg_color;
-	-slider-active-border-color: $dark_bg_color;
-	-slider-border-width: 1px;
-	-slider-border-radius: 0.3em;
-	-slider-handle-radius: 0.7em;
+	@extend %slider-shared;
 }
 .popup-device-menu-item {
 	spacing: .5em;
 }
 .popup-inactive-menu-item {
 	font-style: italic;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 }
 .popup-subtitle-menu-item {
 	font-weight: bold;
@@ -216,7 +202,7 @@
 }
 .menu-category-button-greyed {
 	padding: .5em .7em;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	font-style: italic;
 }
 .menu-category-button-selected {

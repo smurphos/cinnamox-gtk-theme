@@ -3,7 +3,7 @@
 	border: 1px solid $borders_color;
 	border-radius: $roundness;
     @extend %bg-grad-to-right;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	padding: 20px 30px;
 }
 .modal-dialog-button-box {
@@ -33,7 +33,7 @@
 }
 // run dialog (ALT-F2)
 .run-dialog-label {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	padding-bottom: 10px;
 }
 .run-dialog-error-label {
@@ -101,9 +101,9 @@
 	}
 }
 .show-processes-dialog-app-list-item {
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	&:hover {
-		color: $dark_fg_color;
+		color: $mid_fg_color;
 	}
 	&:ltr {
 		padding-right: 1em;
@@ -130,11 +130,11 @@
 	.level {
 		height: 0.7em;
 		border-radius: 0.3em;
-		background-color: $dark_bg_color;
+		background-color: $scrollbar_bg_color;
 	}
 	.level-bar {
 		border-radius: 0.3em;
-		background-color: $selected_bg_color;
+		background-color: $scrollbar_slider_hover_color;
 	}
 }
 .info-osd {
@@ -151,7 +151,7 @@
 }
 // this is an full screen overlay that is displayed with any cinnamon OSD or modal dialog which needs to always be semi transparent
 .lightbox {
-	background-color: $dark_bg_color_trans;
+	background-color: $bg_color_trans;
 }
 // applet 'about' OSDs - inherits from modal dialogs
 .about-content {
@@ -191,5 +191,5 @@
 	padding: 10px;
 	border: 1px solid $borders_color;
 	border-radius: $roundness;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 }

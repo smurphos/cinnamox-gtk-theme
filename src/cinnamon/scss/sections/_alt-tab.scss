@@ -8,7 +8,7 @@
 	border-radius: $roundness;
 	border: 1px solid $borders_color;
 	padding: 20px;
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	.item-box {
 		padding: 8px;
 		border-radius: $roundness;
@@ -24,7 +24,7 @@
 	.thumbnail-box {
 		padding: 2px;
 		spacing: 4px;
-		color: $dark_fg_color;
+		color: $mid_fg_color;
 	}
 	.thumbnail {
 		min-width: 20em;
@@ -57,7 +57,7 @@
 }
 .switcher-arrow {
 	border-color: rgba(0,0,0,0);
-	color: $dark_fg_color;
+	color: $mid_fg_color;
 	&:highlighted {
 		border-color: rgba(0,0,0,0);
 		color: $selected_fg_color;
