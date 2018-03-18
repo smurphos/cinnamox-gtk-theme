@@ -34,6 +34,7 @@ On order to build themes using the tools in this repository you need to have the
  - `glib-compile-schemas`
  - `gdk-pixbuf-pixdata`
  - `sassc>=3.4`
+ - `libsassc>=3.4`
  - `gtk3>=3.18`
  
 To build the GTK2 elements you need `gtk2-engines-murrine` or `gtk-engine-murrine`
@@ -52,12 +53,12 @@ Enter this command in a termimal to install the dependencies in an Ubuntu nased 
 sudo apt install libgdk-pixbuf2.0-dev libxml2-utils gtk2-engines-murrine librsvg2-bin
 ```
 
-`sassc>=3.4` is available in the Ubuntu repos for version 17.10 'artful' and later. Ubuntu 17.10+ and Linux Mint 19+  enter this command into a terminal to install.
+`sassc>=3.4` & `libsass0>=3.4` are available in the Ubuntu repos for version 17.10 'artful' and later. Ubuntu 17.10+ and Linux Mint 19+  enter this command into a terminal to install.
 ```
-sudo apt install sassc
+sudo apt install sassc libsass0
 ```
 
-Ubuntu 16.04 and Mint 18.x users can download the `libsass0` and `sassc` deb packages appropriate for their architecture from the Ubuntu website. I have successfully installed the bionic versions available from the links below on a Linux Mint 18 AMD64 machine. `libsass0` must be installed first.
+Ubuntu 16.04 and Mint 18.x users can download the required `libsass0` and `sassc` deb packages appropriate for their architecture from the Ubuntu website. I have successfully installed the bionic versions available from the links below on a Linux Mint 18 AMD64 machine. `libsass0` should be installed first. Please disregard any warning about the `libsass0` version being newer than the xenial repo version.
 
 [bionic libsass0](https://packages.ubuntu.com/bionic/libsass0)
 
