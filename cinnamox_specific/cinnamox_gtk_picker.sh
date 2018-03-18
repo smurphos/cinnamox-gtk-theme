@@ -3,7 +3,7 @@
 function aubergine {
 	LIGHTBG="#671559"; DARKBG="#3e0d35";
 	LOWTRANSLIGHTBG="rgba(103, 21, 89, 0.8)"; MODTRANSLIGHTBG="rgba(103, 21, 89, 0.6)"; HIGHTRANSLIGHTBG="rgba(103, 21, 89, 0.4)";
-	LOWTRANSDARKBG="rgba(62, 13, 53, 0.8)"; MODTRANSDARKBG="rgba(62, 13, 53, 0.6)"; HIGHTRANSDARKBG="rgba(62, 13, 53 0.4)";
+	LOWTRANSDARKBG="rgba(62, 13, 53, 0.8)"; MODTRANSDARKBG="rgba(62, 13, 53, 0.6)"; HIGHTRANSDARKBG="rgba(62, 13, 53, 0.4)";
 	THEMENAME="Cinnamox-Aubergine"; COLORDESC="a deep purple colour scheme and light text"; THEMESHORT="Aubergine";
 	build_theme;
 }
@@ -23,7 +23,7 @@ function heather {
 }
 function kashmirblue {
 	LIGHTBG="#506a77"; DARKBG="#304047";
-	LOWTRANSLIGHTBG="rgba(200, 33, 47, 0.8)"; MODTRANSLIGHTBG="rgba(200, 33, 47, 0.6)"; HIGHTRANSLIGHTBG="rgba(200, 33, 47, 0.4)";
+	LOWTRANSLIGHTBG="rgba(80, 106, 119, 0.8)"; MODTRANSLIGHTBG="rgba(80, 106, 119, 0.6)"; HIGHTRANSLIGHTBG="rgba(80, 106, 119, 0.4)";
 	LOWTRANSDARKBG="rgba(48, 64, 71, 0.8)"; MODTRANSDARKBG="rgba(48, 64, 71, 0.6)"; HIGHTRANSDARKBG="rgba(48, 64, 71, 0.4)";
 	THEMENAME="Cinnamox-Kashmir-Blue"; COLORDESC="a soothing blue colour scheme and light text"; THEMESHORT="Kashmir-Blue";
 	build_theme;
@@ -104,6 +104,7 @@ function build_theme {
     cd "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/assets";
     cd "$THEMEDIR/$THEMENAME/cinnamon" && rm -r "$PWD/assets";
     rsync -a -u --exclude 'all-assets.*' --exclude 'Makefile' --exclude '*.sh' --exclude 'thumbnail.png' --exclude 'thumbnail.svg' --exclude 'scss' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR/$THEMENAME";
+    cp "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh" "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh";
     cd "$THEMEDIR/$THEMENAME/gtk-3.0";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.0/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/dist";
