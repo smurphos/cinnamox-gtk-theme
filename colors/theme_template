@@ -1,0 +1,50 @@
+#Base background and foreground colors - should have good contrast
+BG=A52A2A
+FG=D9D9D9
+
+#Menu background and foreground colors - should have good contrast
+MENU_BG=A5532A
+MENU_FG=D9D9D9
+
+#Selected item background and foreground colors - should have good contrast
+SEL_BG=2AA5A5	 	
+SEL_FG=262626
+
+#Button background and foreground colors - should have good contrast
+BTN_BG=A52A53
+BTN_FG=D9D9D9
+
+#Header bar button background and foreground colors - should have good contrast
+HDR_BTN_BG=A57C2A
+HDR_BTN_FG=D9D9D9
+
+#Text box background and foreground colors - should have good contrast
+TXT_BG=A5912A
+TXT_FG=D9D9D9
+
+#Caret color for text entry box.
+CARET1_FG=D9D9D9
+CARET_SIZE=0.05	
+
+#Special colors used in themes. SPECIAL_FG_COLOR should have reasonable contrast with INFO, SUCCESS, WARNING, and ERROR COLORS
+#Typically INFO would be a shade of Blue, SUCCESS - Green, WARNING - Orange and ERROR - Red.
+LINK_COLOR=F2C2C2
+SPECIAL_FG_COLOR=262626
+INFO_BG_COLOR=0000FF
+SUCCESS_COLOR=008000
+WARNING_COLOR=FFA500
+ERROR_COLOR=FF0000
+
+#Window Manager Focussed and unfocussed borders
+WM_BORDER_FOCUS=2AA5A5
+WM_BORDER_UNFOCUS=000000
+
+#Other theme attributes
+NAME=Theme_Template
+CINNAMON_OPACITY=1.0			#opacity of Cinnamon theme - value between 0 and 1 required.
+GRADIENT=0.5					#gradient modifier - value between 0 and 1 recommended.
+ROUNDNESS=2 					#roundness of widgets - value between 0 and 20 required.
+SPACING=4						#spacing of GTK elements - value between 0 and 20 required.	
+
+
+

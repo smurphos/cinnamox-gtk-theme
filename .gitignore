@@ -6,12 +6,6 @@
 gtk.gresource
 dist
 
-# pkgbuild
-pkg/
-*.tar.xz
-
-# test-related
-test_results/
-
 # builds
 cinnamox_builds/
+
