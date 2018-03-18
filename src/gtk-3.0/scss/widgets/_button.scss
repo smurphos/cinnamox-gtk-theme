@@ -73,7 +73,7 @@
 }
 
 @mixin linked_button($bg) {
-    $border_strength: if(lightness($bg) > 50, 0, .1);
+    $border_strength: if(lightness($bg) > 50, .1, .2);
     $shadow_strength: if(lightness($bg) > 50, 0, .1);
 
     @extend %linked_button;
@@ -120,8 +120,9 @@
 }
 
 @mixin button($bg, $fg) {
-    $border_strength: if(lightness($bg) > 50, 0, .1);
+    $border_strength: if(lightness($bg) > 50, .1, .2);
     $shadow_strength: if(lightness($bg) > 50, 0, .1);
+    $selected_border_focus_color: border_focus(alpha($selected_bg_color, .2 + $border_strength));
 
     /*$button_bg: if(hue($bg) == 0deg, shade($bg, 1.2), $bg);*/
     $button_bg: $bg;
@@ -143,7 +144,7 @@
     &, &.flat {
         &:focus, &:hover {
             @include linear-gradient(shade($button_bg, 1.2));
-            @include border(rgba(0, 0, 0, .2 + $border_strength));
+            @include border($selected_border_focus_color);
 
             box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
         }
