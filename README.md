@@ -48,7 +48,7 @@ sudo pacman -S --needed bash grep sed bc glib2 gdk-pixbuf2 sassc gtk-engine-murr
 
 ##### Ubuntu / Linux Mint
 
-Enter this command in a termimal to install the dependencies in an Ubuntu nased distro.
+Enter this command in a termimal to install the dependencies in an Ubuntu based distro.
 ```
 sudo apt install libgdk-pixbuf2.0-dev libxml2-utils gtk2-engines-murrine librsvg2-bin
 ```
