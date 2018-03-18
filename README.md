@@ -34,7 +34,7 @@ On order to build themes using the tools in this repository you need to have the
  - `glib-compile-schemas`
  - `gdk-pixbuf-pixdata`
  - `sassc>=3.4`
- - `libsassc>=3.4`
+ - `libsass0>=3.4`
  - `gtk3>=3.18`
  
 To build the GTK2 elements you need `gtk2-engines-murrine` or `gtk-engine-murrine`
