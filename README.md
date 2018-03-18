@@ -5,25 +5,25 @@ Cinnamox-gtk-theme
 
 This repository provides the templates and scripts used to build the [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes/releases).
 
-It also serves as a command line tool for end-users to make their own personalised theme using the cinnamox theme template.
+It also serves as a command line tool for end-users to make their own personalised theme.
 
-Cinnamox themes are compatible with Cinnamon 3.2+, GTK3.18 or GTK 3.20+ and require the `gtk2-engines-murrine` or `gtk-engine-murrine` package to be installed.
+Cinnamox themes include a Cinnamon, GTK2, GTK3, GTK3.20 and Metacity Theme and are compatible with Cinnamon 3.2+, GTK3.18 or GTK 3.20+ and require the `gtk2-engines-murrine` or `gtk-engine-murrine` package to be installed.
 
-The current release versions of themes can be downloaded and installed via Cinnamon's Themes module in Cinnamon Settings or manually via [Cinnamon Spices](https://cinnamon-spices.linuxmint.com/themes), [openDesktop.org](https://www.opendesktop.org/member/491875/), or from [this Github repository](https://github.com/smurphos/cinnamox_themes/releases).
+The current release versions of the themes can be downloaded and installed via Cinnamon's Themes module in Cinnamon Settings or manually via [Cinnamon Spices](https://cinnamon-spices.linuxmint.com/themes), [openDesktop.org](https://www.opendesktop.org/member/491875/), or from [this Github repository](https://github.com/smurphos/cinnamox_themes/releases).
 
 ### Credits
 
-Cinnamox-gtk-theme is a fork of the [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) used in the excellent [Oomox](https://github.com/actionless/oomox) GUI based theme making app.
+Cinnamox-gtk-theme is a fork of [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) used in the excellent [Oomox](https://github.com/actionless/oomox) GUI theme making app.
 
 [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) is in turn a fork of the famous [Numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme).
 
 Thank-you to all the upstream developers for their time and effort in making these resources available.
 
-The cinnamon theme includes in Cinnamox-gtk-theme is my work and a version of it has now been merged upstream to [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) and the [Oomox](https://github.com/actionless/oomox) GUI based theme making app now includes the capability to build cinnamon themes.
+The cinnamon theme includes in Cinnamox-gtk-theme is authored by me. A version has now been merged upstream to [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) and the [Oomox](https://github.com/actionless/oomox) app version 1.60+ has the option to build a cinnamon theme.
 
-Cinnamox-gtk-theme differs from [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) only in a few cosmetic tweaks to the theme SCSS code and the inclusion of color files and helper scripts used to build the Metacity, GTK2, GTK3.18 and GTK3.20 elements of the eight [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes/releases).
+Cinnamox-gtk-theme differs from [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) only in a few cosmetic tweaks to the theme SCSS code and the inclusion of color files and helper scripts used to build the Metacity, GTK2, GTK3.18 and GTK3.20 elements of the [Cinnamox Themes](https://github.com/smurphos/cinnamox_themes/releases).
 
-### Building a personalised theme using this repo.
+### Instructions
 
 #### Prerequisites
 
@@ -38,25 +38,24 @@ To build the GTK2 elements you need `gtk2-engines-murrine` or `gtk-engine-murrin
 
 ##### Arch Linux
 
+Enter this command in a termimal to install the dependencies under Arch
 ```
 sudo pacman -S --needed bash grep sed bc glib2 gdk-pixbuf2 sassc gtk-engine-murrine gtk-engines librsvg
 ```
 
 ##### Ubuntu / Linux Mint
 
+Enter this command in a termimal to install the dependencies in an Ubuntu or Ubuntu based distribution.
 ```
 sudo apt install libgdk-pixbuf2.0-dev libxml2-utils gtk2-engines-murrine librsvg2-bin
 ```
 
-`sassc>=3.4` is available in the Ubuntu repos for version 17.10 'artful' and later. Ubuntu 17.10 + and Linux Mint 19 + users can install it using
-
+`sassc>=3.4` is available in the Ubuntu repos for version 17.10 'artful' and later. Ubuntu 17.10 + and Linux Mint 19 + users can install by entering this command into a terminal.
 ```
 sudo apt install sassc
 ```
 
-Ubuntu 16.04 and Mint 18.x users can download and install the `libsass0` and `sassc` deb packages appropriate for your architecture from Ubuntu.
-
-The author has successfully installed the bionic versions available from the links below on a Linux Mint 18 AMD64 machine. `libsass0` must be installed first.
+Ubuntu 16.04 and Mint 18.x users can download the `libsass0` and `sassc` deb packages appropriate for your architecture from Ubuntu. The author has successfully installed the bionic versions available from the links below on a Linux Mint 18 AMD64 machine. `libsass0` must be installed first.
 
 [bionic libsass0](https://packages.ubuntu.com/bionic/libsass0)
 
@@ -65,18 +64,30 @@ The author has successfully installed the bionic versions available from the lin
 
 #### Clone this repo
 
+Once the dependencies are installed clone the repo
 ```
+cd
 git clone https://github.com/smurphos/cinnamox-gtk-theme.git
 cd cinnamox-gtk-theme
 ```
 
+#### Make and build your own theme
+
+1. Open `~/cinnamox-gtk-theme/colors/theme_template` in your preferred text editor. I recommend [Geany](https://www.geany.org/) as it includes a built in color wheel / picker utility whci can assist in choosing colors.
+2. Theme colors values are listed in this file in HEX format without the preceeding `#`. E.g. the HEX for `green`, `#008000`, would be entered as `008000`.
+3. Edit the theme colors as preferred. Please ensure the variable names are not changed and ensure not to include the # in the color values.
+4. Edit the other theme characteristics (name, roundness, gradient etc) taking note of the required or recommended range of values.
+5. Save the file into the colors directory with a new name - e.g `~/cinnamox-gtk-theme/colors/excellent-theme`
+6. Open a terminal window and input this command `~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/excellent-theme`
+7. To ensure the theme applies to gui apps opened as root input this command `sudo ln -s ~/.themes/* /usr/share/themes/`
+8. Apply the theme using the Cinnamon Themes module in Cinnamon Settings to set your Windows Border theme, Controls theme, and Desktop theme to cinnamox-excellent-theme
+
 #### Building the Cinnamox themes
 
-`.cinnamox_specific/cinnamox_gtk_picker.sh` will launch an interactive bash script to build your choice of the Cinnamox themes.
+`~/cinnamox-gtk-theme/cinnamox_specific/cinnamox_gtk_picker.sh` will launch an interactive bash script allowing you to build your choice of the Cinnamox themes.
 
-#### Make and build your own theme template
 
-WIP
+### Screenshots
 
 #### Cinnamox-Kashir-Blue release screenshot
 
