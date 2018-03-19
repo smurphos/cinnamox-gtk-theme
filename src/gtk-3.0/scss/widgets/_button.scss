@@ -150,7 +150,7 @@
         
         &:focus {
             @include linear-gradient(shade($button_bg, 1.2));
-            @include border(rgba(0, 0, 0, .12 + $border_strength));
+            @include border(rgba(0, 0, 0, .2 + $border_strength));
 
             box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
         }
