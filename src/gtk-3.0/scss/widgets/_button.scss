@@ -159,6 +159,7 @@
             
             &:hover {
                 @include border($selected_border_focus_color);
+                @include linear-gradient(shade($button_bg, 1.2));
             }
             
         }
