@@ -44,7 +44,8 @@ $dark_tooltip_bg_grad: if($darken_amount < 1, darken($tooltip_bg_color, (1 - $da
 
 // borders used throughout theme Buttons also use selected_borders_color
 $selected_borders_color: mix($mid_bg_color, $selected_bg_color, if(lightness($mid_bg_color) < 50%, 18%, 10%));
-$borders_color: mix($mid_bg_color, $mid_fg_color, if(lightness($mid_bg_color) < 50%, 18%, 10%));
+$border_strength: if(lightness($mid_fg_color) > 50, .1, .2);
+$borders_color: fade-out($mid_fg_color, 0.88 - $border_strength);
 
 // decoration for buttons
 $button_border_strength: if(lightness($button_fg_color) > 50, .1, .2);
