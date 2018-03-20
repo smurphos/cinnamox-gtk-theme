@@ -147,23 +147,20 @@ GRADIENT=${GRADIENT-0}
 ROUNDNESS=${ROUNDNESS-2}
 CINNAMON_OPACITY=${CINNAMON_OPACITY-1}
 ROUNDNESS_GTK2_HIDPI=$(( ${ROUNDNESS} * 2 ))
+
 if [ $(echo "$GRADIENT < 2" | bc) ]; then
 	GTK2_GRAD=$(echo "$GRADIENT/2" | bc)
 else
     GTK2_GRAD=1;
 fi
 GTK2_GRAD_1=$(echo "1+$GTK2_GRAD" | bc)
+GTK2_GRAD_2=$(echo "1-$GTK2_GRAD" | bc)
 if expr "$GTK2_GRAD_1" : '-\?[0-9]\+$' >/dev/null
 then
   GTK2_GRAD_TOP="$GTK2_GRAD_1".0
-else
-  GTK2_GRAD_TOP=$GTK2_GRAD_1
-fi
-GTK2_GRAD_2=$(echo "scale=2; 1-$GTK2_GRAD" | bc)
-if expr "$GTK2_GRAD_1" : '-\?[0-9]\+$' >/dev/null
-then
   GTK2_GRAD_BOTTOM="$GTK2_GRAD_2".0
 else
+  GTK2_GRAD_TOP=$GTK2_GRAD_1
   GTK2_GRAD_BOTTOM=$GTK2_GRAD_2
 fi
 
