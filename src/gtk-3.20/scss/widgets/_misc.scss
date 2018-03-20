@@ -23,7 +23,7 @@
                 @include linear-gradient($tooltip_bg_color);
                 
                 background-clip: padding-box;
-                border: 1px solid (alpha($tooltip_fg_color, .12 + $border_strength));
+                border: 1px solid (mix($tooltip_bg_color, $tooltip_fg_color, .3 + $border_strength));
                 border-radius: $roundness;
                 color: $tooltip_fg_color;
             }
