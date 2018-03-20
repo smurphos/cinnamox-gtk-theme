@@ -72,6 +72,6 @@ $info_bg_color: #%INFO_BG_COLOR%;
 $roundness: %ROUNDNESS%px;
 
 // used to set notification position
-$notification_margin_right: 10px;
-$notification_margin_top: 50px;
+$notification_margin_right: %NOTIFICATION_MARGIN_RIGHT%px;
+$notification_margin_top: %NOTIFICATION_MARGIN_TOP%px;
 
