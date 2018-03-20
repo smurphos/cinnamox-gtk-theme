@@ -72,7 +72,7 @@
 .panel-top {
     @extend %bg-grad-to-bottom;
     border-bottom: 1px solid;
-    border-color: $borders_color;
+    border-color: $exterior_borders_color;
     .window-list-item-box {
         @extend %bg-grad-to-top;
         &:active {
@@ -102,7 +102,7 @@
 .panel-bottom {
     @extend %bg-grad-to-top;
     border-top: 1px solid;
-    border-color: $borders_color;
+    border-color: $exterior_borders_color;
     .window-list-item-box {
         @extend %bg-grad-to-bottom;
         &:checked {
@@ -132,7 +132,7 @@
 .panel-left {
     @extend %bg-grad-to-right;
     border-right: 1px solid;
-    border-color: $borders_color;
+    border-color: $exterior_borders_color;
     .window-list-item-box {
         @extend %bg-grad-to-left;
         margin-right: 1px;
@@ -162,7 +162,7 @@
 .panel-right {
     @extend %bg-grad-to-left;
     border-left: 1px solid;
-    border-color: $borders_color;
+    border-color: $exterior_borders_color;
     .window-list-item-box {
         @extend %bg-grad-to-right;
         margin-left: 2px;
@@ -337,7 +337,7 @@
 }
 // progress was added with cinnamon 3.6 and allows compatible applications to use the window list as a progress bar
 .window-list-item-box {
-    border: 1px solid $borders_color;
+    border: 1px solid $interior_borders_color;
     border-radius: $roundness;
     transition-duration: 150;
     &:hover {
@@ -361,7 +361,7 @@
 .window-list-preview {
     @extend %bg-grad-to-right;
     border-radius: $roundness;
-    border: 1px solid $borders_color;
+    border: 1px solid $exterior_borders_color;
     padding: 10px 15px;
     spacing: 1em;
     color: $mid_fg_color;
@@ -434,7 +434,7 @@
     width: 2em;
     height: 1em;
     color: $mid_fg_color;
-    border: 1px solid $borders_color;
+    border: 1px solid $interior_borders_color;
     margin: 2px;
     transition-duration: 150;
     &:outlined {
@@ -448,10 +448,10 @@
     padding: 2px;
     spacing: 2px;
     .workspace {
-        border: 1px solid $borders_color;
+        border: 1px solid $interior_borders_color;
         @extend %bg-grad-to-bottom;
         &:active {
-            border: 1px solid $borders_color;
+            border: 1px solid $interior_borders_color;
             @extend %selected-bg-grad-to-bottom;
             .windows {
                 -active-window-background: rgba(255, 255, 255, 0.8);
