@@ -16,7 +16,7 @@ function goldspice {
 }
 function heather {
 	LIGHTBG="#cddbe4"; DARKBG="#5d89a8";
-	LOWTRANSLIGHTBG="rgba(205, 219, 228, 0.8)"; MODTRANSLIGHTBG="rgba(205, 219, 228, 0.6))"; HIGHTRANSLIGHTBG="rgba(205, 219, 228, 0.4)";
+	LOWTRANSLIGHTBG="rgba(205, 219, 228, 0.8)"; MODTRANSLIGHTBG="rgba(205, 219, 228, 0.6)"; HIGHTRANSLIGHTBG="rgba(205, 219, 228, 0.4)";
 	LOWTRANSDARKBG="rgba(93, 137, 168, 0.8)"; MODTRANSDARKBG="rgba(93, 137, 168, 0.6)"; HIGHTRANSDARKBG="rgba(93, 137, 168, 0.4)";
 	THEMENAME="Cinnamox-Heather"; COLORDESC="a pale blue colour scheme and dark text"; THEMESHORT="Heather";
 	build_theme;
