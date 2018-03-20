@@ -53,7 +53,7 @@ Enter this command in a termimal to install the dependencies in an Ubuntu based 
 sudo apt install libgdk-pixbuf2.0-dev libxml2-utils gtk2-engines-murrine librsvg2-bin
 ```
 
-`sassc>=3.4` & `libsass0>=3.4` are available in the Ubuntu repos for version 17.10 'artful' and later. Ubuntu 17.10+ and Linux Mint 19+  enter this command into a terminal to install.
+`sassc>=3.4` & `libsass0>=3.4` are available in the Ubuntu repos for version 17.10 'artful' and later. Ubuntu 17.10+ and Linux Mint 19+ users can enter this command into a terminal to install.
 ```
 sudo apt install sassc libsass0
 ```
@@ -82,19 +82,21 @@ cd cinnamox-gtk-theme
 
 3. Edit the theme colors as preferred. Please ensure the variable names are not changed and ensure not to include the # in the color values
 
-4. Edit the other theme characteristics (name, roundness, gradient etc) taking note of the required or recommended range of values
+4. Edit the other theme characteristics (name, roundness, gradient, opacity etc) taking note of the required or recommended range of values
 
 5. Save the file into the colors directory with a new name - e.g `~/cinnamox-gtk-theme/colors/excellent-theme`
 
-6. Open a terminal window and input this command `~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/excellent-theme`
+6. Open a terminal window and input this command `~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/excellent-theme` to build your theme. Themes are built in `~/.themes`
 
-7. To ensure the theme applies to gui apps opened as root input this command `sudo ln -s ~/.themes/* /usr/share/themes/`
+7. To ensure the theme applies to gui apps opened as root input this command `sudo ln -s ~/.themes/* /usr/share/themes/` in a terminal window
 
-8. Apply the theme using the Cinnamon Themes module in Cinnamon Settings to set your Windows Border theme, Controls theme, and Desktop theme to cinnamox-excellent-theme
+8. Apply the theme using the Cinnamon Themes module in Cinnamon Settings to set your Windows Border theme, Controls theme, and Desktop theme to `cinnamox-excellent-theme`
+
+9. Enjoy your new theme.
 
 #### Building the Cinnamox themes
 
-`~/cinnamox-gtk-theme/cinnamox_specific/cinnamox_gtk_picker.sh` will launch an interactive bash script allowing you to build your choice of the Cinnamox themes.
+Open a terminal and enter `~/cinnamox-gtk-theme/cinnamox_specific/cinnamox_gtk_picker.sh` to launch an interactive bash script allowing you to build your choice of the Cinnamox themes.
 
 
 ### Screenshots
