@@ -48,6 +48,9 @@
 }
 .run-dialog-entry {
         @extend %dialog-entry;
+        &:focus  {
+            border: 1px solid $selected_border;
+        }
 }
 .run-dialog {
     border-radius: $roundness;
