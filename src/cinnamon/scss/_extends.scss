@@ -7,6 +7,13 @@
     background-gradient-end: $light_bg_grad;
 }
 
+// dark to bottom
+%dark-bg-grad-to-bottom {
+    background-gradient-direction: vertical;
+    background-gradient-start: $dark_entry_bg_grad;
+    background-gradient-end: $light_entry_bg_grad;
+}
+
 // button to top
 %button-bg-grad-to-top {
     background-gradient-direction: vertical;
@@ -116,12 +123,11 @@
 // used in selectors
 // #menu-search-entry, .run-dialog-entry, #notification StEntry
 %dialog-entry {
-    background-color: $dark_bg_color;
+    @extend %dark-bg-grad-to-bottom;
     padding: 2px;
     border-radius: $roundness;
     color: $dark_fg_color;
-    font-weight: bold;
-    border: 1px solid $selected_border;
+    border: 1px solid $interior_border;
     selection-background-color: $selected_bg_color;
     selected-color: $selected_fg_color;
     caret-color: $primary_caret_color;

@@ -42,6 +42,10 @@ $dark_hover_button_bg_grad: if($darken_amount < 1, darken($hover_button_bg, (1 -
 $light_tooltip_bg_grad: if($lighten_amount > 1, lighten($tooltip_bg_color, ($lighten_amount - 1) * lightness($tooltip_bg_color)), $tooltip_bg_color);
 $dark_tooltip_bg_grad: if($darken_amount < 1, darken($tooltip_bg_color, (1 - $darken_amount) * lightness($tooltip_bg_color)), $tooltip_bg_color);
 
+// entry background surface gradient start and end colors - used for menu search entry, run dialog etc
+$light_entry_bg_grad: if($lighten_amount > 1, lighten($dark_bg_color, ($lighten_amount - 1) * lightness($dark_bg_color)), $dark_bg_color);
+$dark_entry_bg_grad: if($darken_amount < 1, darken($dark_bg_color, (1 - $darken_amount) * lightness($dark_bg_color)), $dark_bg_color);
+
 // borders used throughout theme buttons also use selected_borders_color
 $selected_border: mix($mid_bg_color, $selected_bg_color, if(lightness($mid_bg_color) < 50%, 18%, 10%));
 $border_strength: if(lightness($mid_fg_color) > 50, .1, .2);
