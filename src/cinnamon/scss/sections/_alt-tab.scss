@@ -8,7 +8,7 @@
     border-radius: $roundness;
     border: 1px solid $exterior_border;
     padding: 20px;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     .item-box {
         padding: 8px;
         border-radius: $roundness;
@@ -24,7 +24,7 @@
     .thumbnail-box {
         padding: 2px;
         spacing: 4px;
-        color: $mid_fg_color;
+        color: $cinn_fg_color;
     }
     .thumbnail {
         min-width: 20em;
@@ -57,7 +57,7 @@
 }
 .switcher-arrow {
     border-color: rgba(0,0,0,0);
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     &:highlighted {
         border-color: rgba(0,0,0,0);
         color: $selected_fg_color;

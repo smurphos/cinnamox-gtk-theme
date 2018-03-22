@@ -7,7 +7,7 @@
 }
 // also covers the year label
 .calendar-month-label {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     font-size: 0.8em;
     padding: 5px 10px;
     border-radius: $roundness;
@@ -44,7 +44,7 @@
 }
 .datemenu-date-label {
     padding: 1em 1.75em;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     font-weight: bold;
     text-align: center;
 }
@@ -61,21 +61,21 @@
     }
 }
 .calendar-day-heading {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     padding-top: 0.9em;
 }
 .calendar-week-number {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     font-weight: bold;
     padding-top: 0.6em;
 }
 .calendar-day {
     &:ltr {
-        color: $mid_fg_color;
+        color: $cinn_fg_color;
         padding: 2px;
     }
     &:rtl {
-        color: $mid_fg_color;
+        color: $cinn_fg_color;
         padding: 3px;
     }
 }

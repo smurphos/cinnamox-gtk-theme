@@ -1,7 +1,7 @@
 // popup-menu-boxpointer is only for cinnamon < version 3.2
 .popup-menu-boxpointer {
     -arrow-border-radius: $roundness;
-    -arrow-background-color: $mid_bg_color;
+    -arrow-background-color: $cinn_bg_color;
     -arrow-border-width: 1px;
     -arrow-border-color: $exterior_border;
     -arrow-base: 24px;
@@ -62,7 +62,7 @@
 .popup-menu-item {
     padding: .5em .7em;
     spacing: 1em;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     &:active {
         background-color: $selected_bg_color;
         border-radius: $roundness;
@@ -73,7 +73,7 @@
     }
 }
 .popup-image-menu-item {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
 }
 .popup-combobox-item {
     spacing: 1em;
@@ -91,7 +91,7 @@
 }
 .popup-inactive-menu-item {
     font-style: italic;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
 }
 .popup-subtitle-menu-item {
     font-weight: bold;
@@ -202,7 +202,7 @@
 }
 .menu-category-button-greyed {
     padding: .5em .7em;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     font-style: italic;
 }
 .menu-category-button-selected {
