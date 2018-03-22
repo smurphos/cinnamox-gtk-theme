@@ -25,7 +25,7 @@ $darken_amount: 1 - (%GRADIENT% / 2);
 $light_bg_grad: if($lighten_amount > 1, lighten($cinn_bg_color, ($lighten_amount - 1) * lightness($cinn_bg_color)), $cinn_bg_color);
 $dark_bg_grad: if($darken_amount < 1, darken($cinn_bg_color, (1 - $darken_amount) * lightness($cinn_bg_color)), $cinn_bg_color);
 
-// selected background surface gradient start and end colors - used for buttons and window list
+// selected background surface gradient start and end colors - used for window list
 $light_selected_bg_grad: if($lighten_amount > 1, lighten($selected_bg_color, ($lighten_amount - 1) * lightness($selected_bg_color)), $selected_bg_color);
 $dark_selected_bg_grad: if($darken_amount < 1, darken($selected_bg_color, (1 - $darken_amount) * lightness($selected_bg_color)), $selected_bg_color);
 
