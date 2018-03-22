@@ -3,7 +3,7 @@
     border: 1px solid $exterior_border;
     border-radius: $roundness;
     @extend %bg-grad-to-right;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     padding: 20px 30px;
 }
 .modal-dialog-button-box {
@@ -33,7 +33,7 @@
 }
 // run dialog (ALT-F2)
 .run-dialog-label {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     padding-bottom: 10px;
 }
 .run-dialog-error-label {
@@ -104,9 +104,9 @@
     }
 }
 .show-processes-dialog-app-list-item {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     &:hover {
-        color: $mid_fg_color;
+        color: $cinn_fg_color;
     }
     &:ltr {
         padding-right: 1em;
@@ -194,5 +194,5 @@
     padding: 10px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
 }

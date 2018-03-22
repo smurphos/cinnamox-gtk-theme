@@ -11,21 +11,21 @@ $tooltip_fg_color: #%FG%;
 $dark_bg_color: #%MENU_BG%;
 $dark_fg_color: #%MENU_FG%;
 
-$mid_bg_color: fade-out(mix(#%BG%, #%MENU_BG%, 50%), 1 - %CINNAMON_OPACITY%);
-$mid_fg_color: mix(#%FG%, #%MENU_FG%, 50%);
+$cinn_bg_color: fade-out(#%CINN_BG%, 1 - %CINNAMON_OPACITY%);
+$cinn_fg_color: #%CINN_FG%;
 
 // an always transparent color used for expo & scale views and the lightbox effect when cinnamon is showing an OSD.
-$bg_color_trans: fade-out(#%MENU_BG%, 1 - (%CINNAMON_OPACITY% / 2));
+$bg_color_trans: fade-out(#%CINN_BG%, 1 - (%CINNAMON_OPACITY% / 2));
 
 // used to calculate gradients for gradient values > 0
 $lighten_amount: 1 + (%GRADIENT% / 2);
 $darken_amount: 1 - (%GRADIENT% / 2);
 
 // main background surface gradient start and end colors
-$light_bg_grad: if($lighten_amount > 1, lighten($mid_bg_color, ($lighten_amount - 1) * lightness($mid_bg_color)), $mid_bg_color);
-$dark_bg_grad: if($darken_amount < 1, darken($mid_bg_color, (1 - $darken_amount) * lightness($mid_bg_color)), $mid_bg_color);
+$light_bg_grad: if($lighten_amount > 1, lighten($cinn_bg_color, ($lighten_amount - 1) * lightness($cinn_bg_color)), $cinn_bg_color);
+$dark_bg_grad: if($darken_amount < 1, darken($cinn_bg_color, (1 - $darken_amount) * lightness($cinn_bg_color)), $cinn_bg_color);
 
-// selected background surface gradient start and end colors - used for buttons and window list
+// selected background surface gradient start and end colors - used for window list
 $light_selected_bg_grad: if($lighten_amount > 1, lighten($selected_bg_color, ($lighten_amount - 1) * lightness($selected_bg_color)), $selected_bg_color);
 $dark_selected_bg_grad: if($darken_amount < 1, darken($selected_bg_color, (1 - $darken_amount) * lightness($selected_bg_color)), $selected_bg_color);
 
@@ -47,10 +47,10 @@ $light_entry_bg_grad: if($lighten_amount > 1, lighten($dark_bg_color, ($lighten_
 $dark_entry_bg_grad: if($darken_amount < 1, darken($dark_bg_color, (1 - $darken_amount) * lightness($dark_bg_color)), $dark_bg_color);
 
 // borders used throughout theme buttons also use selected_borders_color
-$selected_border: mix($mid_bg_color, $selected_bg_color, if(lightness($mid_bg_color) < 50%, 18%, 10%));
-$border_strength: if(lightness($mid_fg_color) > 50, .1, .2);
-$interior_border: fade-out($mid_fg_color, 0.88 - $border_strength);
-$exterior_border: mix($mid_bg_color, $mid_fg_color, (30 + ($border_strength * 100)));
+$selected_border: mix($cinn_bg_color, $selected_bg_color, if(lightness($cinn_bg_color) < 50%, 18%, 10%));
+$border_strength: if(lightness($cinn_fg_color) > 50, .1, .2);
+$interior_border: fade-out($cinn_fg_color, 0.88 - $border_strength);
+$exterior_border: mix($cinn_bg_color, $cinn_fg_color, (30 + ($border_strength * 100)));
 $tooltip_border: mix($tooltip_bg_color, $tooltip_fg_color, (30 + ($border_strength * 100)));
 
 // decoration for buttons
@@ -58,9 +58,9 @@ $button_border_strength: if(lightness($button_fg_color) > 50, .1, .2);
 $button_border: fade-out($button_fg_color, 0.88 - $button_border_strength);
 
 // scrollbar colors
-$scrollbar_bg_color:  darken($mid_bg_color, 5%);
-$scrollbar_slider_color: mix($mid_bg_color, $mid_fg_color, 50%);
-$scrollbar_slider_hover_color: mix($mid_bg_color, $selected_bg_color, 20%);
+$scrollbar_bg_color:  darken($cinn_bg_color, 5%);
+$scrollbar_slider_color: mix($cinn_bg_color, $cinn_fg_color, 50%);
+$scrollbar_slider_hover_color: mix($cinn_bg_color, $selected_bg_color, 20%);
 
 // caret colors for dialog entrys
 $primary_caret_color: #%CARET1_FG%;

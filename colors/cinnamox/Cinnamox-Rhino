@@ -1,61 +1,60 @@
-ACCENT_BG=3d80cc
+#Base background and foreground colors - should have good contrast
 BG=434e5a
-BTN_BG=3b444c
-BTN_FG=d8e5f2
-BTN_OUTLINE_OFFSET=-3
-BTN_OUTLINE_WIDTH=1
-CARET1_FG=d8e5f2
-CARET2_FG=d8e5f2
-CARET_SIZE=0.05
 FG=d8e5f2
-GNOME_SHELL_PANEL_OPACITY=0.6
-GRADIENT=0.5
-GTK3_GENERATE_DARK=False
-HDR_BTN_BG=3b444c
-HDR_BTN_FG=d8e5f2
-ICONS_ARCHDROID=7ec1e2
-ICONS_DARK=1c2126
-ICONS_LIGHT=434e5a
-ICONS_LIGHT_FOLDER=3d80cc
-ICONS_MEDIUM=434e5a
-ICONS_STYLE=gnome_colors
-MATERIA_STYLE_COMPACT=True
+
+#GTK Menu background and foreground colors - should have good contrast
 MENU_BG=1c2126
 MENU_FG=d8e5f2
-NAME=Cinnamox-Rhino
-OUTLINE_WIDTH=1
-ROUNDNESS=10
+
+#Cinnamon Main background and foreground colors - should have good contrast
+CINN_BG=303840
+CINN_FG=d8e5f2
+
+#Selected item background and foreground colors - should have good contrast
 SEL_BG=3d80cc
 SEL_FG=000000
-SPACING=4
-SPOTIFY_PROTO_BG=1c2126
-SPOTIFY_PROTO_FG=d8e5f2
-SPOTIFY_PROTO_SEL=3d80cc
-TERMINAL_ACCENT_COLOR=3d80cc
-SPECIAL_FG_COLOR=000000
-TERMINAL_BASE_TEMPLATE=monovedek
-TERMINAL_COLOR0=2d442b
-TERMINAL_COLOR1=8a3768
-SUCCESS_COLOR=5dfe50
-WARNING_COLOR=d8d84e
-INFO_BG_COLOR=3d3dcc
-TERMINAL_COLOR13=7680cc
-TERMINAL_COLOR14=1dfea4
-TERMINAL_COLOR15=ffffff
-TERMINAL_COLOR2=4ded05
-TERMINAL_COLOR3=8abc05
-LINK_COLOR=a9cdf2
-TERMINAL_COLOR5=8a37b9
-TERMINAL_COLOR6=00d6bb
-TERMINAL_COLOR7=a4b3bb
-TERMINAL_COLOR8=739882
-ERROR_COLOR=a06060
-TERMINAL_FOREGROUND=d8e5f2
-TERMINAL_THEME_AUTO_BGFG=True
-TERMINAL_THEME_MODE=manual
-THEME_STYLE=oomox
+
+#Button background and foreground colors - should have good contrast
+BTN_BG=3b444c
+BTN_FG=d8e5f2
+
+#Header bar button background and foreground colors - should have good contrast
+HDR_BTN_BG=3b444c
+HDR_BTN_FG=d8e5f2
+
+#Text box background and foreground colors - should have good contrast
 TXT_BG=3b444c
 TXT_FG=d8e5f2
-UNITY_DEFAULT_LAUNCHER_STYLE=False
+
+#Caret color for text entry box.
+CARET1_FG=d8e5f2
+CARET_SIZE=0.05	
+
+#Special colors used in themes. SPECIAL_FG_COLOR should have reasonable contrast with INFO, SUCCESS, WARNING, and ERROR COLORS
+#Typically INFO would be a shade of Blue, SUCCESS - Green, WARNING - Orange and ERROR - Red.
+LINK_COLOR=a9cdf2
+SPECIAL_FG_COLOR=000000
+INFO_BG_COLOR=3d3dcc
+SUCCESS_COLOR=5dfe50
+WARNING_COLOR=d8d84e
+ERROR_COLOR=a06060
+
+#Color used for checkbox, radio button and toggles. If in doubt use the same value as SEL_BG
+ACCENT_BG=3d80cc
+
+#Window Manager focused and unfocused borders
 WM_BORDER_FOCUS=2b3137
 WM_BORDER_UNFOCUS=3b444c
+
+#Other theme attributes
+NAME=Cinnamox-Rhino
+CINNAMON_OPACITY=1.0			#opacity of Cinnamon theme - value between 0 and 1 required
+GRADIENT=0.5					#gradient modifier - value between 0 and 1 recommended. Values in excess of 2 may cause errors when building the theme
+ROUNDNESS=10 					#roundness of widgets - value between 0 and 20 required
+SPACING=4						#spacing of GTK elements - value between 0 and 20 required
+
+#These attributes allow you to vary the position of the Cinnamon notification.
+#Values are in pixels from the default position near the top of the screen and the right edge of the screen.
+#Please bear in mind that the visual effect of these attributes is screen resolution specific.
+NOTIFICATION_MARGIN_TOP=0
+NOTIFICATION_MARGIN_RIGHT=10

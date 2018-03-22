@@ -9,10 +9,10 @@
     margin-from-right-edge-of-screen: $notification_margin_right;
     margin-top: $notification_margin_top;
     width: 25em;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     &.multi-line-notification {
         padding-bottom: 8px;
-        color: $mid_fg_color;
+        color: $cinn_fg_color;
     }
     StEntry {
         @extend %dialog-entry;
@@ -23,7 +23,7 @@
 }
 .notification-with-image {
     min-height: 159px;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
 }
 #notification-scrollview {
     max-height: 10em;

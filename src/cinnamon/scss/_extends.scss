@@ -91,7 +91,7 @@
     @extend %bg-grad-to-bottom;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
 }
 
 // used in selectors
@@ -99,7 +99,7 @@
 %slider-shared {
     height: 1em;
     min-width: 15em;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     -slider-height: 0.7em;
     -slider-background-color: $scrollbar_bg_color;
     -slider-border-color: $interior_border;
@@ -140,7 +140,7 @@
 // used in selectors
 // .desklet-with-borders, .desklet-with-borders-and-header, .desklet-header, .photoframe-box
 %desklet-shared {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     padding: 10px;
     border: 1px solid $exterior_border;
     @extend %bg-grad-to-right;
@@ -194,14 +194,14 @@
     border: 1px solid $exterior_border;
     border-radius: $roundness;
     @extend %bg-grad-to-right;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
 }
 
 // used in selectors
 // .show-processes-dialog-subject, .mount-question-dialog-subject
 %shared-dialogs-subject {
     font-weight: bold;
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     padding-top: 10px;
     padding-left: 17px;
     padding-bottom: 6px;
@@ -217,7 +217,7 @@
 // used in selectors
 // .show-processes-dialog-description, .mount-question-dialog-description
 %shared-dialogs-description {
-    color: $mid_fg_color;
+    color: $cinn_fg_color;
     padding-left: 17px;
     width: 28em;
 }
