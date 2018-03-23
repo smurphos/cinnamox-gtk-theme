@@ -47,7 +47,7 @@ WM_BORDER_FOCUS=454545
 WM_BORDER_UNFOCUS=383838
 
 #Other theme attributes
-NAME=Cinnamox-Mint-Y
+NAME=Mint-Y
 CINNAMON_OPACITY=1.0			#opacity of Cinnamon theme - value between 0 and 1 required
 GRADIENT=0.1					#gradient modifier - value between 0 and 1 recommended. Values in excess of 2 may cause errors when building the theme
 ROUNDNESS=2 					#roundness of widgets - value between 0 and 20 required

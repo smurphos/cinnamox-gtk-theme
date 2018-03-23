@@ -1,57 +1,57 @@
 #Base background and foreground colors - should have good contrast
-BG=EDECEB
-FG=000000
+BG=d6d6d6
+FG=212121
 
 #GTK Menu background and foreground colors - should have good contrast
-MENU_BG=EDECEB
-MENU_FG=000000
+MENU_BG=F7F7F7
+MENU_FG=212121
 
 #Cinnamon Main background and foreground colors - should have good contrast
-CINN_BG=EDECEB
-CINN_FG=000000
+CINN_BG=EBEBEB
+CINN_FG=212121
 
 #Selected item background and foreground colors - should have good contrast
-SEL_BG=86ABD9	 	
-SEL_FG=FFFFFF
+SEL_BG=9ab87c	 	
+SEL_FG=f5f5f5
 
 #Button background and foreground colors - should have good contrast
-BTN_BG=EDECEB
-BTN_FG=000000
+BTN_BG=DFDFDF
+BTN_FG=212121
 
 #Header bar button background and foreground colors - should have good contrast
-HDR_BTN_BG=EDECEB
-HDR_BTN_FG=000000
+HDR_BTN_BG=DFDFDF
+HDR_BTN_FG=212121
 
 #Text box background and foreground colors - should have good contrast
-TXT_BG=FFFFFF
-TXT_FG=1A1A1A
+TXT_BG=f7f7f7
+TXT_FG=212121
 
 #Caret color for text entry box.
-CARET1_FG=1A1A1A
+CARET1_FG=212121
 CARET_SIZE=0.05	
 
 #Special colors used in themes. SPECIAL_FG_COLOR should have reasonable contrast with INFO, SUCCESS, WARNING, and ERROR COLORS
 #Typically INFO would be a shade of Blue, SUCCESS - Green, WARNING - Orange and ERROR - Red.
-LINK_COLOR=1A1A1A
-SPECIAL_FG_COLOR=262626
-INFO_BG_COLOR=0000FF
-SUCCESS_COLOR=008000
-WARNING_COLOR=FFA500
-ERROR_COLOR=FF0000
+LINK_COLOR=81a65b
+SPECIAL_FG_COLOR=ffffff
+INFO_BG_COLOR=55c1ec
+SUCCESS_COLOR=73d216
+WARNING_COLOR=f27835
+ERROR_COLOR=FC4138
 
 #Color used for checkbox, radio button and toggles. If in doubt use the same value as SEL_BG
-ACCENT_BG=86ABD9
+ACCENT_BG=9ab87c
 
 #Window Manager focused and unfocused borders
-WM_BORDER_FOCUS=86ABD9
-WM_BORDER_UNFOCUS=EDECEB
+WM_BORDER_FOCUS=454545
+WM_BORDER_UNFOCUS=383838
 
 #Other theme attributes
-NAME=clearlooks
+NAME=Mint-X
 CINNAMON_OPACITY=1.0			#opacity of Cinnamon theme - value between 0 and 1 required
-GRADIENT=0.12					#gradient modifier - value between 0 and 1 recommended. Values in excess of 2 may cause errors when building the theme
-ROUNDNESS=5 					#roundness of widgets - value between 0 and 20 required
-SPACING=3						#spacing of GTK elements - value between 0 and 20 required
+GRADIENT=0.2					#gradient modifier - value between 0 and 1 recommended. Values in excess of 2 may cause errors when building the theme
+ROUNDNESS=2 					#roundness of widgets - value between 0 and 20 required
+SPACING=4						#spacing of GTK elements - value between 0 and 20 required
 
 #These attributes allow you to vary the position of the Cinnamon notification.
 #Values are in pixels from the default position near the top of the screen and the right edge of the screen.
