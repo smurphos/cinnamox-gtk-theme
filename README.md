@@ -94,10 +94,27 @@ cd cinnamox-gtk-theme
 
 9. Enjoy your new theme.
 
+#### Example templates
+
+The repo includes example templates to build themes based on Linux Mint's Mint-X, Mint-Y and Mint-Y-Dark colours. To build these themes use one of the following commands.
+
+* Mint-X			`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/mint_themes/Mint-X`
+* Mint-Y			`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/mint_themes/Mint-Y`
+* Mint-Y-Dark		`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/mint_themes/Mint-Y-Dark`
+
+Also included are three 'test' themes from Oomox.
+
+* Clearlooks		`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/oomox/clearlooks`
+* Lavender			`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/oomox/lavender`
+* Monovedek_lcars	`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/oomox/monovedek_lcars`
+
 #### Building the Cinnamox themes
 
-Open a terminal and enter `~/cinnamox-gtk-theme/cinnamox_specific/cinnamox_gtk_picker.sh` to launch an interactive bash script allowing you to build your choice of the Cinnamox themes.
+Individual Cinnamox themes can be built using
 
+* <themename>		`~/cinnamox-gtk-theme/change_color.sh ~/cinnamox-gtk-theme/colors/cinnamox/<themename>`
+
+Alternatively `~/cinnamox-gtk-theme/cinnamox_specific/cinnamox_gtk_picker.sh` will launch an interactive bash script allowing you to build one or all of the Cinnamox themes including extras such as the transparency script.
 
 ### Screenshots
 
