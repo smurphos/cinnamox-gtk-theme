@@ -134,6 +134,7 @@
 
     &.flat {
         @include border(alpha($fg, .1 + $border_strength));
+        
         color: $fg;
         background-color: alpha($button_bg, 0);
         background-image: none;
