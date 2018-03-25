@@ -355,7 +355,7 @@ style "murrine-entry" = "murrine-wider" {
 	text[INSENSITIVE] = mix (0.5, @base_color, @text_color)
 	engine "murrine" {
 		#border_shades = { 1.15, 1.15 }
-				border_colors = { mix(0.22, @text_color, @base_color), mix(0.22, @text_color, @base_color) }
+		border_colors = { mix(0.22, @text_color, @base_color), mix(0.22, @text_color, @base_color) }
 		roundness = %ROUNDNESS%
 	}
 }
@@ -614,10 +614,10 @@ style "xfdesktop-icon-view" {
 
 style "xfwm-tabwin" {
 	Xfwm4TabwinWidget::border-width = 1
-		Xfwm4TabwinWidget::border-alpha = 1.0
+	Xfwm4TabwinWidget::border-alpha = 1.0
 	Xfwm4TabwinWidget::icon-size = 64
-		Xfwm4TabwinWidget::alpha = 1.0
-		Xfwm4TabwinWidget::border-radius = 2
+	Xfwm4TabwinWidget::alpha = 1.0
+	Xfwm4TabwinWidget::border-radius = 2
 
 	bg[NORMAL] = @menu_bg_color
 	bg[SELECTED] = @menu_bg_color
