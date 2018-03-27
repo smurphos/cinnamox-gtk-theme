@@ -57,4 +57,4 @@ SPACING=4						#spacing of GTK elements - value between 0 and 20 required
 #Values are in pixels from the default position near the top of the screen and the right edge of the screen.
 #Please bear in mind that the visual effect of these attributes is screen resolution specific.
 NOTIFICATION_MARGIN_TOP=0
-NOTIFICATION_MARGIN_RIGHT=10
+NOTIFICATION_MARGIN_RIGHT=20
