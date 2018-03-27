@@ -99,8 +99,8 @@ style "murrine-default" {
 	GtkToolbar::shadow-type = GTK_SHADOW_NONE # Makes toolbars flat and unified
 	GtkMenuBar::shadow-type = GTK_SHADOW_NONE # Makes menubars flat and unified
 
-	xthickness = 1
-	ythickness = 1
+	xthickness = %GTK2_SP_SMALL%
+	ythickness = %GTK2_SP_SMALL%
 
 	fg[NORMAL] = @fg_color
 	fg[PRELIGHT] = @fg_color
@@ -159,13 +159,13 @@ style "murrine-default" {
 }
 
 style "murrine-wide" {
-	xthickness = 2
-	ythickness = 2
+	xthickness = %GTK2_SP_MEDIUM%
+	ythickness = %GTK2_SP_MEDIUM%
 }
 
 style "murrine-wider" {
-	xthickness = 3
-	ythickness = 3
+	xthickness = %GTK2_SP_LARGE%
+	ythickness = %GTK2_SP_LARGE%
 }
 
 style "murrine-thin" {
@@ -181,8 +181,8 @@ style "clearlooks-notebook-bg" {
 }
 
 style "clearlooks-notebook" = "clearlooks-notebook-bg" {
-	xthickness = 2
-	ythickness = 2
+	xthickness = %GTK2_SP_MEDIUM%
+	ythickness = %GTK2_SP_MEDIUM%
 
 	engine "clearlooks" {
 		radius = 0.1
@@ -197,8 +197,6 @@ style "murrine-button"  = "murrine-wider" {
 	bg[SELECTED] = mix (0.5, @selected_bg_color, @bg_color)
 	bg[ACTIVE] = shade (0.95, @selected_bg_color)
 	bg[INSENSITIVE] = shade (0.75, @btn_bg_color)
-	#xthickness = 4
-	#ythickness = 4
 
 	engine "murrine" {
 		border_colors = { mix(0.25, @btn_fg_color, @btn_bg_color), mix(0.25, @btn_fg_color, @btn_bg_color) }
@@ -303,8 +301,8 @@ style "murrine-frame-title" {
 }
 
 style "murrine-tooltips" {
-	xthickness = 5
-	ythickness = 5
+	xthickness  = %GTK2_SP_XLARGE% #%SPACING% +2?
+	ythickness = %GTK2_SP_XLARGE% #%SPACING% +2?
 
 	bg[NORMAL] = @tooltip_bg_color
 	bg[SELECTED] = @tooltip_bg_color
@@ -407,6 +405,9 @@ style "murrine-menu-item" = "murrine-wider" {
 	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @selected_fg_color
 	fg[INSENSITIVE] = mix (0.5, @menu_bg_color, @menu_fg_color)
+	
+	xthickness = %GTK2_SP_XLARGE% 
+	ythickness = %GTK2_SP_XLARGE% 
 
 	engine "murrine" {
 		textstyle = 0
@@ -507,7 +508,7 @@ widget_class "*Toolbar*.*Separator*" style "murrine-toolbar"
 # Panels
 
 style "murrine-panel" = "murrine-thin" {
-	xthickness = 2
+	xthickness = %GTK2_SP_MEDIUM%
 
 	bg[NORMAL] = @panel_bg_color
 	bg[PRELIGHT] =  mix (0.21, @panel_fg_color, @panel_bg_color)
