@@ -382,5 +382,9 @@
         &:last-child > .button { @extend %linked_button:last-child; }
 
         &:only-child > .button { @extend %linked_button:only-child; }
+
+        menu menuitem {
+            padding: $spacing ($spacing + 2px);
+        }
     }
 }
