@@ -168,14 +168,14 @@ else
 fi
 
 if [ "${SPACING}" -gt 3 ]; then
-  GTK2_SP_SMALL=$(( 1 + ${SPACING} - 3 ));
-  GTK2_SP_MEDIUM=$(( 2 + ${SPACING} - 3 ));
-  GTK2_SP_LARGE=$(( 3 + ${SPACING} - 3 ));
-  GTK2_SP_XLARGE=$(( 4 + ${SPACING} - 3 ));
-  GTK2HIDPI_SP_SMALL=$(( 2 + (( ${SPACING} * 2 )) - 6 ));
-  GTK2HIDPI_SP_MEDIUM=$(( 4 + (( ${SPACING} * 2 )) - 6 ));
-  GTK2HIDPI_SP_LARGE=$(( 6 + (( ${SPACING} * 2 )) - 6 ));
-  GTK2HIDPI_SP_XLARGE=$(( 8 + (( ${SPACING} * 2 )) - 6 ));
+  GTK2_SP_SMALL=$(( 1 + SPACING - 3 ));
+  GTK2_SP_MEDIUM=$(( 2 + SPACING - 3 ));
+  GTK2_SP_LARGE=$(( 3 + SPACING - 3 ));
+  GTK2_SP_XLARGE=$(( 4 + SPACING - 3 ));
+  GTK2HIDPI_SP_SMALL=$(( 2 + (( SPACING * 2 )) - 6 ));
+  GTK2HIDPI_SP_MEDIUM=$(( 4 + (( SPACING * 2 )) - 6 ));
+  GTK2HIDPI_SP_LARGE=$(( 6 + (( SPACING * 2 )) - 6 ));
+  GTK2HIDPI_SP_XLARGE=$(( 8 + (( SPACING * 2 )) - 6 ));
 else
   GTK2_SP_SMALL=1
   GTK2_SP_MEDIUM=2
