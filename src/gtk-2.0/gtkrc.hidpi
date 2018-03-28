@@ -18,16 +18,15 @@ style "murrine-default" {
 	#GtkButton::inner-border        = { 8, 8, 2, 2 }
 	#GtkButton::inner-border        = { 4, 4, 2, 1 }
 	GtkButton::inner-border        = { 0, 0, 1, 0 }
-	GtkButton::focus-line-width    = 2
-	GtkButton::focus-padding       = 1
+	GtkButton::focus-line-width    = 1
+	GtkButton::focus-padding       = 0
+	GtkButton::interior-focus      = 0
 
 	GtkEntry::inner-border        = { 4, 4, 5, 4 }
 	GtkComboBox::inner-border        = { 4, 4, 6, 5 }
 	GtkComboBoxText::inner-border        = { 4, 4, 6, 5 }
 
-	GtkButtonBox::child-min-height = 52
-
-	GtkCheckButton::indicator-size = 30
+	GtkCheckButton::indicator-size = 24
 
 	# The following line hints to gecko (and possibly other appliations)
 	# that the entry should be drawn transparently on the canvas.
@@ -140,7 +139,7 @@ style "murrine-default" {
 		colorize_scrollbar = FALSE
 		comboboxstyle = 0 # 0 = normal combobox, 1 = colorized combobox below arrow
 		contrast = 0.8 # overal contrast with borders
-		focusstyle = 0 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
+		focusstyle = 2 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
 		glazestyle = 0 # 0 = flat highlight, 1 = curved highlight, 2 = concave, 3 = top curved highlight, 4 = beryl highlight
 		glowstyle = 0 # 0 = glow on top, 1 = glow on bottom, 2 = glow on top and bottom, 3 = glow on middle vertically, 4 = glow on middle horizontally, 5 = glow on all sides
 		glow_shade = 1.0 # amount of glow
@@ -156,7 +155,7 @@ style "murrine-default" {
 		menustyle = 0 # 0 = none, 1 = vertical striped
 		progressbarstyle = 0 # 0 = none, 1 = diagonal striped, 2 = vertical striped
 		reliefstyle = 0 # 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
-		roundness = %ROUNDNESS_GTK2_HIDPI%# roundness of widgets
+		roundness = %ROUNDNESS_GTK2_HIDPI% # roundness of widgets
 		scrollbarstyle = 0 # 0 = none, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		sliderstyle = 0 # 0 = none, 1 = handles
 		stepperstyle = 1 # 0 = standard, 1 = integrated stepper handles
@@ -231,13 +230,9 @@ style "murrine-buttonlabel" {
 }
 
 style "murrine-comboboxtext" = "murrine-buttonlabel" {
-	xthickness = %GTK2HIDPI_SP_XLARGE%
-	ythickness = %GTK2HIDPI_SP_XLARGE%
 }
 
 style "murrine-togglebutton" = "murrine-buttonlabel" {
-	xthickness = %GTK2HIDPI_SP_XLARGE%
-	ythickness = %GTK2HIDPI_SP_XLARGE%
 }
 
 style "murrine-scrollbar" {
