@@ -202,8 +202,6 @@ style "murrine-button"  = "murrine-wider" {
 	bg[SELECTED] = mix (0.5, @selected_bg_color, @bg_color)
 	bg[ACTIVE] = shade (0.95, @selected_bg_color)
 	bg[INSENSITIVE] = shade (0.75, @btn_bg_color)
-	xthickness = %GTK2HIDPI_SP_XLARGE%
-	ythickness = %GTK2HIDPI_SP_XLARGE%
 
 	engine "murrine" {
 		border_colors = { mix(0.25, @btn_fg_color, @btn_bg_color), mix(0.25, @btn_fg_color, @btn_bg_color) }
@@ -233,6 +231,11 @@ style "murrine-comboboxtext" = "murrine-buttonlabel" {
 }
 
 style "murrine-togglebutton" = "murrine-buttonlabel" {
+}
+
+style "murrine-radiocheck" = "murrine-togglebutton" {
+	text[NORMAL] = @accent_bg_color
+	text[PRELIGHT] = @accent_bg_color
 }
 
 style "murrine-scrollbar" {
@@ -984,5 +987,6 @@ widget_class "*<GtkButton>*<GtkLabel>*" style:highest "murrine-buttonlabel"
 widget_class "*<GtkCheckButton>*<GtkLabel>*" style:highest "clearlooks-radiocheck-label"
 widget_class "*<GtkComboBoxText>*" style "murrine-comboboxtext"
 widget_class "*<GtkToggleButton>*" style "murrine-togglebutton"
+widget_class "*.<GtkCheckButton>" style "murrine-radiocheck"
 widget_class "*<GtkComboBoxText>*<GtkEntry>*" style:highest "murrine-entry"
 widget_class "*<GtkToolbar>*<GtkToolButton>*<GtkLabel>*" style:highest "murrine-toolbutton-label"
