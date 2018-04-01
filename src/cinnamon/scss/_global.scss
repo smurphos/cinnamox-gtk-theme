@@ -90,6 +90,7 @@ $roundness: %ROUNDNESS%px;
 $spacing: %SPACING%px;
 $spacing_plus2: (%SPACING% + 2) + px;
 $spacing_plus16: (%SPACING% + 16) + px;
+$spacing_button_width: ((%SPACING% + 16) * 4) + px;
 
 // used to set notification position
 $notification_margin_right: %NOTIFICATION_MARGIN_RIGHT%px;

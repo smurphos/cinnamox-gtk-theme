@@ -58,6 +58,7 @@
     
     border-radius: $roundness;
     min-height: $spacing_plus16;
+    min-width: $spacing_button_width;
     padding: $spacing $spacing_plus2;
     &:hover {
         @extend %shared-button-hover;
@@ -73,7 +74,7 @@
     @extend %shared-button;
     
     border-radius: $roundness;
-    padding: $spacing;
+    padding: 8px;
     &:hover {
         @extend %shared-button-hover;
     }
@@ -84,6 +85,6 @@
         @extend %shared-button-active;
     }
     > StIcon {
-        icon-size: 3.5em;
+        icon-size: 1.5em;
     }
 }
