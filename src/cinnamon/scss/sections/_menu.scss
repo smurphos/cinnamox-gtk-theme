@@ -21,10 +21,10 @@
     margin: $spacing 0;
     .popup-menu-icon {
         &:ltr {
-			padding-right: 4px
+			padding-right: 4px;
         }
         &:rtl {
-			padding-left: 4px
+			padding-left: 4px;
         }
     }
     StScrollBar {
