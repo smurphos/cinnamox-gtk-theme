@@ -51,7 +51,7 @@ NAME=Cinnamox-Rhino
 CINNAMON_OPACITY=1.0			#opacity of Cinnamon theme - value between 0 and 1 required
 GRADIENT=0.5					#gradient modifier - value between 0 and 1 recommended. Values in excess of 2 may cause errors when building the theme
 ROUNDNESS=10 					#roundness of widgets - value between 0 and 20 required
-SPACING=4						#spacing of GTK elements - value between 0 and 20 required
+SPACING=3						#spacing of GTK elements - value between 0 and 20 required
 
 #These attributes allow you to vary the position of the Cinnamon notification.
 #Values are in pixels from the default position near the top of the screen and the right edge of the screen.

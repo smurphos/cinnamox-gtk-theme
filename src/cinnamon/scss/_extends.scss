@@ -141,7 +141,7 @@
 }
 
 // used in selectors
-// .osd-window, .info-osd, .info-osd
+// .osd-window, .info-osd, .workspace-osd
 %osd-shared {
     @extend %bg-grad-to-bottom;
     border: 1px solid $exterior_border;
@@ -179,7 +179,7 @@
 // #menu-search-entry, .run-dialog-entry, #notification StEntry
 %dialog-entry {
     @extend %dark-bg-grad-to-bottom;
-    padding: 2px;
+    padding: $spacing $spacing_plus2;
     border-radius: $roundness;
     color: $dark_fg_color;
     border: 1px solid $interior_border;
@@ -196,7 +196,7 @@
 // .desklet-with-borders, .desklet-with-borders-and-header, .desklet-header, .photoframe-box
 %desklet-shared {
     color: $cinn_fg_color;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid $exterior_border;
     @extend %bg-grad-to-right;
 }
@@ -236,20 +236,31 @@
 }
 
 // used in selectors
-// .menu, .popup-menu
-%menu-width {
-    min-width: 100px;
-    margin: 0.4em;
-}
-
-// used in selectors
-// .menu, .popup-menu, .popup-combo-menu
+// .menu .popup-combo-menu
 %shared-menu {
-    padding: 10px;
+    padding: 8px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
     @extend %bg-grad-to-right;
     color: $cinn_fg_color;
+}
+
+// used in selectors
+// .menu-application-button-label, .menu-category-button-label
+%menu-button-label-shared {
+    &:ltr {
+        padding-left: $spacing;
+    }
+    &:rtl {
+        padding-right: $spacing;
+    }
+}
+
+// used in selectors
+// .popup-menu-item, .popup-combobox-item, .menu-favorites-button, .menu-places-button, .menu-category-button, .menu-category-button-greyed, .menu-category-button-selected
+%menu-buttons-shared {
+	min-height: 22px;
+    padding: $spacing $spacing_plus2;
 }
 
 // used in selectors
@@ -280,7 +291,7 @@
 // used in selectors
 // .menu-applications-inner-box StScrollView, .starkmenu-favorites-box .menu-context-menu
 %menu-context-shared {
-    padding: 5px;
+    padding: $spacing;
     margin: 0.5em 0;
     border-radius: $roundness;
     border: 1px solid $interior_border;
@@ -291,7 +302,7 @@
 // .starkmenu-favorites-box StScrollView .menu-context-menu StBoxLayout >.popup-menu-item, .menu-favorites-box StScrollView .menu-context-menu StBoxLayout >.popup-menu-item
 %menu-context-shared-workaround {
     margin: 0;
-    padding: .5em .7em;
+    padding: $spacing $spacing_plus2;
 }
 
 // used in selectors
@@ -320,13 +331,6 @@
 %panel-right-shared {
     @extend %selected-bg-grad-to-right;
     color: $selected_fg_color;
-}
-
-// used in selectors
-// .panel-top .workspace-switcher, .panel-bottom .workspace-switcher
-%workspace-switcher-shared {
-    padding-left: 2px;
-    padding-right: 2px;
 }
 
 // used in selectors
