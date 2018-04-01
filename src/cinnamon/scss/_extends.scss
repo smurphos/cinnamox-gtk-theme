@@ -156,13 +156,7 @@
     min-width: 15em;
     color: $cinn_fg_color;
     -slider-height: 0.7em;
-    -slider-backgrou{
-    color: $link_color;
-    font-style: italic;
-    &:hover {
-        color: $selected_fg_color;
-    }
-}nd-color: $scrollbar_bg_color;
+    -slider-background-color: $scrollbar_bg_color;
     -slider-border-color: $interior_border;
     -slider-active-background-color: $scrollbar_slider_hover_color;
     -slider-active-border-color: $selected_border;
