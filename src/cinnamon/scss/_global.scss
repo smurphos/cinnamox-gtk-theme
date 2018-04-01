@@ -86,6 +86,11 @@ $info_bg_color: #%INFO_BG_COLOR%;
 // used for border-radius throughout theme
 $roundness: %ROUNDNESS%px;
 
+// used for buttons, entrys, panel spacing, and menu item spacing.
+$spacing: %SPACING%px;
+$spacing_plus2: (%SPACING% + 2) + px;
+$spacing_plus16: (%SPACING% + 16) + px;
+
 // used to set notification position
 $notification_margin_right: %NOTIFICATION_MARGIN_RIGHT%px;
 $notification_margin_top: %NOTIFICATION_MARGIN_TOP%px;
