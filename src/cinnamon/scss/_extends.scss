@@ -249,10 +249,10 @@
 // .menu-application-button-label, .menu-category-button-label
 %menu-button-label-shared {
     &:ltr {
-        padding-left: $spacing;
+        padding-left: 4px;
     }
     &:rtl {
-        padding-right: $spacing;
+        padding-right: 4px;
     }
 }
 
@@ -296,6 +296,14 @@
     border-radius: $roundness;
     border: 1px solid $interior_border;
     @extend %bg-grad-to-bottom;
+        StIcon {
+            &:ltr {
+			    padding-right: 4px;
+            }
+            &:rtl {
+			    padding-left: 4px;
+            }
+        }
 }
 
 // used in selectors
