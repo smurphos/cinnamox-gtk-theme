@@ -20,6 +20,8 @@ style "murrine-default" {
 	GtkButton::focus-padding       = 0
 	GtkButton::interior-focus      = 0
 
+	GtkButtonBox::child-min-height = 26
+
 	GtkCheckButton::indicator-size = %GTK2_SP_IND%
 
 	# The following line hints to gecko (and possibly other appliations)
@@ -634,7 +636,7 @@ style "xfwm-tabwin" {
 }
 
 style "xfwm-tabwin-button" {
-		font_name = "bold"
+	font_name = "bold"
 
 	bg[SELECTED] = @selected_bg_color
 }
