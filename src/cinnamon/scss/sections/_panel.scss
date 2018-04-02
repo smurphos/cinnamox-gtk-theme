@@ -320,10 +320,12 @@
     font-weight: bold;
     color: $cinn_fg_color;
 }
+// icon-size set to 22 to match hard-coded menu icon size - applet-icon style is used for search provider results in menu
 .applet-icon {
     color: $cinn_fg_color;
     padding: 0;
     spacing: 0;
+    icon-size: 22px;
 }
 // used by power applet to warn of low battery
 .system-status-icon {

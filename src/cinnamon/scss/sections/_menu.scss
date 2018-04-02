@@ -170,13 +170,15 @@
     border-radius: $roundness;
 }
 .menu-application-button {
-    padding: $spacing $spacing_plus2;
+    @extend %menu-buttons-shared;
+
     &:highlighted {
         font-weight: bold;
     }
 }
 .menu-application-button-selected {
-    padding: $spacing $spacing_plus2;
+    @extend %menu-buttons-shared;
+
     background-color: $selected_bg_color;
     border-radius: $roundness;
     color: $selected_fg_color;
