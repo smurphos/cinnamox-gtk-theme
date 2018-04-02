@@ -179,7 +179,7 @@
 // #menu-search-entry, .run-dialog-entry, #notification StEntry
 %dialog-entry {
     @extend %dark-bg-grad-to-bottom;
-    padding: $spacing $spacing_plus2;
+    padding: $spacing_plus2;
     border-radius: $roundness;
     color: $dark_fg_color;
     border: 1px solid $interior_border;
@@ -259,8 +259,8 @@
 // used in selectors
 // .popup-menu-item, .popup-combobox-item, .menu-favorites-button, .menu-places-button, .menu-category-button, .menu-category-button-greyed, .menu-category-button-selected
 %menu-buttons-shared {
-	min-height: 22px;
-    padding: $spacing $spacing_plus2;
+	//min-height: 22px; //setting a min height accross the board for all menu types (menu entries with an application icon are hardcoded to this min-height) causes display issues in cinnamon :-(
+    padding: $spacing_plus2;
 }
 
 // used in selectors
@@ -291,8 +291,8 @@
 // used in selectors
 // .menu-applications-inner-box StScrollView, .starkmenu-favorites-box .menu-context-menu
 %menu-context-shared {
-    padding: $spacing;
-    margin: 0.5em 0;
+    padding: 8px;
+    margin: 8px 0;
     border-radius: $roundness;
     border: 1px solid $interior_border;
     @extend %bg-grad-to-bottom;
@@ -310,7 +310,7 @@
 // .starkmenu-favorites-box StScrollView .menu-context-menu StBoxLayout >.popup-menu-item, .menu-favorites-box StScrollView .menu-context-menu StBoxLayout >.popup-menu-item
 %menu-context-shared-workaround {
     margin: 0;
-    padding: $spacing $spacing_plus2;
+    padding: $spacing_plus2;
 }
 
 // used in selectors

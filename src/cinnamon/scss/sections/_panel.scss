@@ -320,10 +320,12 @@
     font-weight: bold;
     color: $cinn_fg_color;
 }
+// icon-size set to 22 to match hard-coded menu icon size - applet-icon style is used for search provider results in menu
 .applet-icon {
     color: $cinn_fg_color;
     padding: 0;
     spacing: 0;
+    icon-size: 22px;
 }
 // used by power applet to warn of low battery
 .system-status-icon {
@@ -409,14 +411,14 @@
 // the sound player applet
 .sound-player {
     StButton {
-        width: 20px;
-        height: 20px;
-        padding: 8px;
+        min-width: 2em;
+        min-height: 2em;
+        padding: $spacing_plus2;
         color: $button_fg_color;
         &:small {
-            width: 16px;
-            height: 16px;
-            padding: 4px;
+            min-width: 1.5em;
+            min-height: 1.5em;
+            padding: $spacing;
             StIcon {
                 icon-size: 1em;
             }

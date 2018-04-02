@@ -57,9 +57,9 @@
     @extend %shared-button;
     
     border-radius: $roundness;
-    min-height: $spacing_plus16;
-    min-width: $spacing_button_width;
-    padding: $spacing $spacing_plus2;
+    min-width: 4em;
+    min-height: 1em;
+    padding: $spacing_plus2;
     &:hover {
         @extend %shared-button-hover;
     }
@@ -74,7 +74,9 @@
     @extend %shared-button;
     
     border-radius: $roundness;
-    padding: 8px;
+    min-width: 2em;
+    min-height: 2em;
+    padding: $spacing_plus2;
     &:hover {
         @extend %shared-button-hover;
     }
