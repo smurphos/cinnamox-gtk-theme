@@ -2,7 +2,7 @@
     @extend %shared-menu;
     
     min-width: 100px;
-    margin: 0.4em;
+    margin: 4px;
 }
 // scale view right click menu
 .popup-combo-menu {
@@ -17,8 +17,8 @@
     
     border: 1px solid $interior_border;
     border-radius: $roundness;
-    padding: $spacing;
-    margin: $spacing 0;
+    padding: 8px;
+    margin: 8px 0;
     .popup-menu-icon {
         &:ltr {
 			padding-right: 4px;
@@ -269,10 +269,10 @@ StScrollView .menu-context-menu {
         padding: 0;
         StBoxLayout {
             @extend %bg-grad-to-bottom;
-            padding: 4px;
+            padding: 8px;
                 > .popup-menu-item {
-                    margin: .2em 0;
-                    padding: $spacing $spacing_plus2;
+                    margin: 4px 0;
+                    padding: $spacing_plus2;
                 }
         }
     }

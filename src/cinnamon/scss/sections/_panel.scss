@@ -411,14 +411,14 @@
 // the sound player applet
 .sound-player {
     StButton {
-        width: 20px;
-        height: 20px;
-        padding: 8px;
+        min-width: 2em;
+        min-height: 2em;
+        padding: $spacing_plus2;
         color: $button_fg_color;
         &:small {
-            width: 16px;
-            height: 16px;
-            padding: 4px;
+            min-width: 1.5em;
+            min-height: 1.5em;
+            padding: $spacing;
             StIcon {
                 icon-size: 1em;
             }
