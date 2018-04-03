@@ -1,7 +1,7 @@
 // notification system
 #notification {
     @extend %bg-grad-to-right;
-    
+
     border-radius: $roundness;
     border: 1px solid $exterior_border;
     padding: 8px;
@@ -17,7 +17,7 @@
     }
     StEntry {
         @extend %dialog-entry;
-        
+
         &:focus {
             border: 1px solid $selected_border;
         }
@@ -55,9 +55,9 @@
 }
 .notification-button {
     @extend %shared-button;
-    
+
     border-radius: $roundness;
-    min-width: 4em;
+    min-width: 5em;
     min-height: 1em;
     padding: $spacing_plus2;
     &:hover {
@@ -72,7 +72,7 @@
 }
 .notification-icon-button {
     @extend %shared-button;
-    
+
     border-radius: $roundness;
     min-width: 2em;
     min-height: 2em;

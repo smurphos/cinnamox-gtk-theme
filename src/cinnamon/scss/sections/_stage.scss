@@ -106,8 +106,8 @@ StScrollView {
 }
 #Tooltip {
     @extend %tooltip-bg-grad-to-top;
-    
-    padding: 4px 6px;
+
+    padding: 5px 8px;
     border: 1px solid $tooltip_border;
     color: $tooltip_fg_color;
     text-align: center;

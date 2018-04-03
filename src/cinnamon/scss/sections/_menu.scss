@@ -1,6 +1,6 @@
 .menu {
     @extend %shared-menu;
-    
+
     min-width: 100px;
     margin: 4px;
 }
@@ -14,19 +14,11 @@
 // applet submenus
 .popup-sub-menu {
     @extend %bg-grad-to-bottom;
-    
+
     border: 1px solid $interior_border;
     border-radius: $roundness;
     padding: 8px;
     margin: 8px 0;
-    .popup-menu-icon {
-        &:ltr {
-			padding-right: 4px;
-        }
-        &:rtl {
-			padding-left: 4px;
-        }
-    }
     StScrollBar {
         padding: 2px;
         min-width: 0.8em;
@@ -52,7 +44,7 @@
 // individual menu entries are themed here
 .popup-menu-item {
     @extend %menu-buttons-shared;
-    
+
     color: $cinn_fg_color;
     &:active {
         background-color: $selected_bg_color;
@@ -63,16 +55,13 @@
         font-style: italic;
     }
 }
-.popup-image-menu-item {
-    color: $cinn_fg_color;
-}
 .popup-combobox-item {
     @extend %menu-buttons-shared;
 }
 // sliders and separators in menus
 .popup-separator-menu-item {
     @extend %separator-shared;
-    
+
     -gradient-direction: horizontal;
 }
 .popup-slider-menu-item {
@@ -90,6 +79,7 @@
 }
 .popup-menu-icon {
     icon-size: 1.14em;
+    padding: 0px 4px;
 }
 .popup-menu-item-dot {
 }
@@ -120,42 +110,29 @@
     icon-size: 1.14em;
 }
 // all the remaining code is for the main menu applet
-// it includes some themeing to ensure constency in right click context menu behavior in third party menu applets.
 .menu-favorites-box {
     @extend %bg-grad-to-right;
-    
+
     padding: 8px;
     border: 1px solid $interior_border;
     border-radius: $roundness;
     transition-duration: 150;
-    StScrollView .menu-context-menu StBoxLayout > .popup-menu-item {
-        @extend %menu-context-shared-workaround;
-    }
 }
 .menu-favorites-button {
     @extend %menu-buttons-shared;
-    
+
     &:hover {
         background-color: $selected_bg_color;
         border-radius: $roundness;
         color: $selected_fg_color;
     }
 }
-.menu-places-box {
-    @extend %bg-grad-to-right;
-    
-    padding: 8px;
-    border: 1px solid $interior_border;
-    border-radius: $roundness;
-}
-.menu-places-button {
-    @extend %menu-buttons-shared;
-}
 .menu-categories-box {
     padding: 8px;
 }
 .menu-applications-inner-box {
     @extend %bg-grad-to-right;
+
     padding: 8px;
     border-radius: $roundness;
     border: 1px solid $interior_border;
@@ -165,6 +142,7 @@
 }
 .menu-applications-outer-box {
     @extend %bg-grad-to-right;
+
     padding: 8px;
     border: 1px solid $interior_border;
     border-radius: $roundness;
@@ -194,13 +172,13 @@
 }
 .menu-category-button-greyed {
     @extend %menu-buttons-shared;
-    
+
     color: $cinn_fg_color;
     font-style: italic;
 }
 .menu-category-button-selected {
     @extend %menu-buttons-shared;
-    
+
     background-color: $selected_bg_color;
     border-radius: $roundness;
     color: $selected_fg_color;
@@ -242,7 +220,7 @@
 }
 #menu-search-entry {
     @extend %dialog-entry;
-    
+
     margin: 0.5em 0;
     &:focus {
         border: 1px solid $selected_border;
@@ -255,25 +233,6 @@
     color: $dark_fg_color;
 }
 // cinnVIIstark menu right click favourites context menu
-.starkmenu-favorites-box {
-    .menu-context-menu {
+.starkmenu-favorites-box .menu-context-menu, .menu-context-menu {
         @extend %menu-context-shared;
-    }
-    StScrollView .menu-context-menu StBoxLayout > .popup-menu-item {
-        @extend %menu-context-shared-workaround;
-    }
 }
-// cinnamenu right click context menu
-StScrollView .menu-context-menu {
-        border-width: 0;
-        padding: 0;
-        StBoxLayout {
-            @extend %bg-grad-to-bottom;
-            padding: 8px;
-                > .popup-menu-item {
-                    margin: 4px 0;
-                    padding: $spacing_plus2;
-                }
-        }
-    }
-

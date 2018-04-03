@@ -5,7 +5,7 @@
 }
 .switcher-list {
     @extend %bg-grad-to-bottom;
-    
+
     border-radius: $roundness;
     border: 1px solid $exterior_border;
     padding: 16px;
@@ -15,7 +15,7 @@
         border-radius: $roundness;
         &:selected {
             @extend %selected-bg-grad-to-bottom;
-            
+
             color: $selected_fg_color;
         }
     }

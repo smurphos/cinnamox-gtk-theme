@@ -33,11 +33,11 @@
     .button.linked, .linked .button { @include linked_button($toolbar_bg_color); }
 
     GtkComboBox, .button {
-        padding: $spacing - 1px;
+        padding: $spacing;
 
-        &.text-button { padding: $spacing; }
+        &.text-button { padding: ($spacing); }
 
-        &.image-button { padding: ($spacing + 1px) ($spacing - 1px) ($spacing + 1px) $spacing; }
+        &.image-button { padding: ($spacing + 4); }
     }
 
     GtkSeparatorToolItem, .separator, .separator:insensitive {

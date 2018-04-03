@@ -1,7 +1,7 @@
 // on screen messages and input boxes
 .modal-dialog {
     @extend %bg-grad-to-right;
-    
+
     border: 1px solid $exterior_border;
     border-radius: $roundness;
     color: $cinn_fg_color;
@@ -12,8 +12,8 @@
 }
 .modal-dialog-button {
     @extend %shared-button;
-    
-    min-width: 4em;
+
+    min-width: 5em;
     min-height: 1em;
     padding: $spacing_plus2;
     &:hover {
@@ -49,7 +49,7 @@
 }
 .run-dialog-entry {
         @extend %dialog-entry;
-        
+
         &:focus  {
             border: 1px solid $selected_border;
         }
@@ -73,28 +73,28 @@
 }
 .show-processes-dialog-subject {
     @extend %shared-dialogs-subject;
-    
+
     &:rtl {
         @extend %shared-dialogs-subject-rtl;
     }
 }
 .mount-question-dialog-subject {
     @extend %shared-dialogs-subject;
-    
+
     &:rtl {
         @extend %shared-dialogs-subject-rtl;
     }
 }
 .show-processes-dialog-description {
     @extend %shared-dialogs-description;
-    
+
     &:rtl {
         padding-right: 17px;
     }
 }
 .mount-question-dialog-description {
     @extend %shared-dialogs-description;
-    
+
     &:rtl {
         padding-right: 17px;
     }
@@ -134,7 +134,7 @@
 // displayed when media keys are pressed.
 .osd-window {
     @extend %osd-shared;
-    
+
     spacing: 1em;
     padding: 16px;
     .level {
@@ -149,7 +149,7 @@
 }
 .info-osd, .workspace-osd {
     @extend %osd-shared;
-    
+
     font-size: 1.5em;
     text-align: center;
     padding: 8px 10px;
@@ -192,7 +192,7 @@
 // dialog box for the cinnamon debug utility
 #LookingGlassDialog {
     @extend %bg-grad-to-bottom;
-    
+
     spacing: 4px;
     padding: 8px;
     border: 1px solid $exterior_border;

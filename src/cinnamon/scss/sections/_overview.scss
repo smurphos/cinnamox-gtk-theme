@@ -2,16 +2,6 @@
 #overview {
     spacing: 12px;
 }
-.workspace-controls {
-    visible-height: 3em;
-}
-.workspace-thumbnails-background {
-    @extend %bg-grad-to-right;
-    
-    padding: 8px;
-    border: 1px solid $exterior_border;
-    border-radius: $roundness;
-}
 .workspace-thumbnails {
     spacing: 14px;
 }
@@ -47,12 +37,9 @@
 .workspace-overview-background-shade {
     background-color: $bg_color_trans;
 }
-.workspace-thumbnail-indicator {
-    border: 2px solid $exterior_border;
-}
 .window-caption {
     @extend %bg-grad-to-bottom;
-    
+
     padding: 4px 6px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
@@ -60,7 +47,7 @@
     -cinnamon-caption-spacing: 4px;
     &#selected {
         @extend %selected-bg-grad-to-bottom;
-        
+
         color: $selected_fg_color;
     }
 }
@@ -94,7 +81,7 @@
 }
 .expo-workspaces-name-entry {
     @extend %bg-grad-to-bottom;
-    
+
     padding: 4px 6px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
@@ -104,7 +91,7 @@
     text-align: center;
     &#selected {
         @extend %selected-bg-grad-to-bottom;
-        
+
         color: $selected_fg_color;
         selected-color: $cinn_fg_color;
         selection-background-color: $selected_bg_color;
