@@ -130,16 +130,6 @@
         color: $selected_fg_color;
     }
 }
-.menu-places-box {
-    @extend %bg-grad-to-right;
-    
-    padding: 8px;
-    border: 1px solid $interior_border;
-    border-radius: $roundness;
-}
-.menu-places-button {
-    @extend %menu-buttons-shared;
-}
 .menu-categories-box {
     padding: 8px;
 }

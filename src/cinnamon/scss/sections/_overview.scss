@@ -2,16 +2,6 @@
 #overview {
     spacing: 12px;
 }
-.workspace-controls {
-    visible-height: 3em;
-}
-.workspace-thumbnails-background {
-    @extend %bg-grad-to-right;
-    
-    padding: 8px;
-    border: 1px solid $exterior_border;
-    border-radius: $roundness;
-}
 .workspace-thumbnails {
     spacing: 14px;
 }
@@ -46,9 +36,6 @@
 // this always looks better semi transparent
 .workspace-overview-background-shade {
     background-color: $bg_color_trans;
-}
-.workspace-thumbnail-indicator {
-    border: 2px solid $exterior_border;
 }
 .window-caption {
     @extend %bg-grad-to-bottom;
