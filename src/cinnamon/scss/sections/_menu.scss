@@ -19,14 +19,6 @@
     border-radius: $roundness;
     padding: 8px;
     margin: 8px 0;
-    .popup-menu-icon {
-        &:ltr {
-			padding-right: 4px;
-        }
-        &:rtl {
-			padding-left: 4px;
-        }
-    }
     StScrollBar {
         padding: 2px;
         min-width: 0.8em;
@@ -90,6 +82,7 @@
 }
 .popup-menu-icon {
     icon-size: 1.14em;
+    padding: 0px 4px;
 }
 .popup-menu-item-dot {
 }
@@ -120,7 +113,6 @@
     icon-size: 1.14em;
 }
 // all the remaining code is for the main menu applet
-// it includes some themeing to ensure constency in right click context menu behavior in third party menu applets.
 .menu-favorites-box {
     @extend %bg-grad-to-right;
     
@@ -128,9 +120,6 @@
     border: 1px solid $interior_border;
     border-radius: $roundness;
     transition-duration: 150;
-    StScrollView .menu-context-menu StBoxLayout > .popup-menu-item {
-        @extend %menu-context-shared-workaround;
-    }
 }
 .menu-favorites-button {
     @extend %menu-buttons-shared;
@@ -255,25 +244,7 @@
     color: $dark_fg_color;
 }
 // cinnVIIstark menu right click favourites context menu
-.starkmenu-favorites-box {
-    .menu-context-menu {
+.starkmenu-favorites-box .menu-context-menu, .menu-context-menu {
         @extend %menu-context-shared;
-    }
-    StScrollView .menu-context-menu StBoxLayout > .popup-menu-item {
-        @extend %menu-context-shared-workaround;
-    }
 }
-// cinnamenu right click context menu
-StScrollView .menu-context-menu {
-        border-width: 0;
-        padding: 0;
-        StBoxLayout {
-            @extend %bg-grad-to-bottom;
-            padding: 8px;
-                > .popup-menu-item {
-                    margin: 4px 0;
-                    padding: $spacing_plus2;
-                }
-        }
-    }
 

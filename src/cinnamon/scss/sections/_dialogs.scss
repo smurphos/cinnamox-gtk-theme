@@ -13,7 +13,7 @@
 .modal-dialog-button {
     @extend %shared-button;
     
-    min-width: 4em;
+    min-width: 5em;
     min-height: 1em;
     padding: $spacing_plus2;
     &:hover {

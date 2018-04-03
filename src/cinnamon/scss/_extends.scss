@@ -307,13 +307,6 @@
 }
 
 // used in selectors
-// .starkmenu-favorites-box StScrollView .menu-context-menu StBoxLayout >.popup-menu-item, .menu-favorites-box StScrollView .menu-context-menu StBoxLayout >.popup-menu-item
-%menu-context-shared-workaround {
-    margin: 0;
-    padding: $spacing_plus2;
-}
-
-// used in selectors
 // .panel-top .window-list-item-box:active, .panel-top .window-list-item-box:checked, .panel-top .window-list-item-box:focus
 %panel-top-shared {
     @extend %selected-bg-grad-to-top;
