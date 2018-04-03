@@ -1,6 +1,6 @@
 .menu {
     @extend %shared-menu;
-    
+
     min-width: 100px;
     margin: 4px;
 }
@@ -14,7 +14,7 @@
 // applet submenus
 .popup-sub-menu {
     @extend %bg-grad-to-bottom;
-    
+
     border: 1px solid $interior_border;
     border-radius: $roundness;
     padding: 8px;
@@ -44,7 +44,7 @@
 // individual menu entries are themed here
 .popup-menu-item {
     @extend %menu-buttons-shared;
-    
+
     color: $cinn_fg_color;
     &:active {
         background-color: $selected_bg_color;
@@ -64,7 +64,7 @@
 // sliders and separators in menus
 .popup-separator-menu-item {
     @extend %separator-shared;
-    
+
     -gradient-direction: horizontal;
 }
 .popup-slider-menu-item {
@@ -115,7 +115,7 @@
 // all the remaining code is for the main menu applet
 .menu-favorites-box {
     @extend %bg-grad-to-right;
-    
+
     padding: 8px;
     border: 1px solid $interior_border;
     border-radius: $roundness;
@@ -123,7 +123,7 @@
 }
 .menu-favorites-button {
     @extend %menu-buttons-shared;
-    
+
     &:hover {
         background-color: $selected_bg_color;
         border-radius: $roundness;
@@ -135,6 +135,7 @@
 }
 .menu-applications-inner-box {
     @extend %bg-grad-to-right;
+
     padding: 8px;
     border-radius: $roundness;
     border: 1px solid $interior_border;
@@ -144,6 +145,7 @@
 }
 .menu-applications-outer-box {
     @extend %bg-grad-to-right;
+
     padding: 8px;
     border: 1px solid $interior_border;
     border-radius: $roundness;
@@ -173,13 +175,13 @@
 }
 .menu-category-button-greyed {
     @extend %menu-buttons-shared;
-    
+
     color: $cinn_fg_color;
     font-style: italic;
 }
 .menu-category-button-selected {
     @extend %menu-buttons-shared;
-    
+
     background-color: $selected_bg_color;
     border-radius: $roundness;
     color: $selected_fg_color;
@@ -221,7 +223,7 @@
 }
 #menu-search-entry {
     @extend %dialog-entry;
-    
+
     margin: 0.5em 0;
     &:focus {
         border: 1px solid $selected_border;
@@ -237,4 +239,3 @@
 .starkmenu-favorites-box .menu-context-menu, .menu-context-menu {
         @extend %menu-context-shared;
 }
-

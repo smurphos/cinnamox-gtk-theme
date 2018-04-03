@@ -12,7 +12,7 @@
 // these do not inherit from .desklet
 .desklet-with-borders {
     @extend %desklet-shared;
-    
+
     border-radius: $roundness;
     &:highlight {
         background-color: $selected_bg_color;
@@ -20,7 +20,7 @@
 }
 .desklet-with-borders-and-header {
     @extend %desklet-shared;
-    
+
     border-radius-bottomleft: $roundness;
     border-radius-bottomright: $roundness;
     &:highlight {
@@ -29,7 +29,7 @@
 }
 .desklet-header {
     @extend %desklet-shared;
-    
+
     font-size: 1.2em;
     border-radius-topleft: $roundness;
     border-radius-topright: $roundness;
@@ -39,7 +39,7 @@
 }
 .photoframe-box {
     @extend %desklet-shared;
-    
+
     border-radius: $roundness;
     &:highlight {
         background-color: $selected_bg_color;

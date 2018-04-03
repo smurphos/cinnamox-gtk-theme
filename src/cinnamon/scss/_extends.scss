@@ -144,6 +144,7 @@
 // .osd-window, .info-osd, .workspace-osd
 %osd-shared {
     @extend %bg-grad-to-bottom;
+
     border: 1px solid $exterior_border;
     border-radius: $roundness;
     color: $cinn_fg_color;
@@ -179,6 +180,7 @@
 // #menu-search-entry, .run-dialog-entry, #notification StEntry
 %dialog-entry {
     @extend %dark-bg-grad-to-bottom;
+
     padding: $spacing_plus2;
     border-radius: $roundness;
     color: $dark_fg_color;
@@ -195,10 +197,11 @@
 // used in selectors
 // .desklet-with-borders, .desklet-with-borders-and-header, .desklet-header, .photoframe-box
 %desklet-shared {
+    @extend %bg-grad-to-right;
+
     color: $cinn_fg_color;
     padding: 8px;
     border: 1px solid $exterior_border;
-    @extend %bg-grad-to-right;
 }
 
 // used in selectors
@@ -213,9 +216,10 @@
 // used in selectors
 // .notification-button, .notification-icon-button, .modal-dialog-button, .sound-player-overlay StButton, .keyboard-key
 %shared-button {
+    @extend %button-bg-grad-to-top;
+
     border: 1px solid $button_border;
     border-radius: $roundness;
-    @extend %button-bg-grad-to-top;
     text-align: center;
     color: $button_fg_color;
     transition-duration: 150;
@@ -225,6 +229,7 @@
 // .notification-button:hover, .notification-icon-button:hover, .modal-dialog-button:hover, .sound-player-overlay StButton:hover, .keyboard-key:hover
 %shared-button-hover {
     @extend %hover-button-bg-grad-to-top;
+
     border: 1px solid $selected_border;
 }
 
@@ -232,16 +237,18 @@
 // .notification-button:active, .notification-icon-button:active, .modal-dialog-button:active, .modal-dialog-button:pressed, .sound-player-overlay StButton:active, .keyboard-key:active
 %shared-button-active {
     @extend %selected-bg-grad-to-bottom;
+
     color: $selected_fg_color;
 }
 
 // used in selectors
 // .menu .popup-combo-menu
 %shared-menu {
+    @extend %bg-grad-to-right;
+
     padding: 8px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
-    @extend %bg-grad-to-right;
     color: $cinn_fg_color;
 }
 
@@ -291,11 +298,12 @@
 // used in selectors
 // .menu-applications-inner-box StScrollView, .starkmenu-favorites-box .menu-context-menu
 %menu-context-shared {
+    @extend %bg-grad-to-bottom;
+
     padding: 8px;
     margin: 8px 0;
     border-radius: $roundness;
     border: 1px solid $interior_border;
-    @extend %bg-grad-to-bottom;
         StIcon {
             &:ltr {
 			    padding-right: 4px;
@@ -310,6 +318,7 @@
 // .panel-top .window-list-item-box:active, .panel-top .window-list-item-box:checked, .panel-top .window-list-item-box:focus
 %panel-top-shared {
     @extend %selected-bg-grad-to-top;
+
     color: $selected_fg_color;
 }
 
@@ -317,6 +326,7 @@
 // .panel-bottom .windows-list-item-box:active, .panel-bottom .window-list-item-box:checked, .panel-bottom .window-list-item-box:focus
 %panel-bottom-shared {
     @extend %selected-bg-grad-to-bottom;
+
     color: $selected_fg_color;
 }
 
@@ -324,6 +334,7 @@
 // .panel-left .window-list-item-box:active, .panel-left .window-list-item-box:checked, .panel-left .window-list-item-box:focus
 %panel-left-shared {
     @extend %selected-bg-grad-to-left;
+
     color: $selected_fg_color;
 }
 
@@ -331,6 +342,7 @@
 // .panel-right .windows-list-item-box:active, .panel-right .window-list-item-box:checked, .panel-right .window-list-item-box:focus
 %panel-right-shared {
     @extend %selected-bg-grad-to-right;
+
     color: $selected_fg_color;
 }
 

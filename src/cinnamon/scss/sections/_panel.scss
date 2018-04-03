@@ -71,32 +71,32 @@
 // do not overlap the panel border
 .panel-top {
     @extend %bg-grad-to-bottom;
-    
+
     border-bottom: 1px solid;
     border-color: $exterior_border;
     .window-list-item-box {
         @extend %bg-grad-to-top;
-        
+
         &:hover {
             @extend %hover-bg-grad-to-top;
         }
         &:active {
             @extend %panel-top-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-top;
                 }
         }
         &:checked {
             @extend %panel-top-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-top;
-                }            
+                }
         }
         &:focus {
             @extend %panel-top-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-top;
                 }
@@ -121,32 +121,32 @@
 }
 .panel-bottom {
     @extend %bg-grad-to-top;
-    
+
     border-top: 1px solid;
     border-color: $exterior_border;
     .window-list-item-box {
         @extend %bg-grad-to-bottom;
-        
+
         &:hover {
             @extend %hover-bg-grad-to-bottom;
         }
         &:active {
             @extend %panel-bottom-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-bottom;
-                }            
+                }
         }
         &:checked {
             @extend %panel-bottom-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-bottom;
-                }           
+                }
         }
         &:focus {
             @extend %panel-bottom-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-bottom;
                 }
@@ -171,32 +171,32 @@
 }
 .panel-left {
     @extend %bg-grad-to-right;
-    
+
     border-right: 1px solid;
     border-color: $exterior_border;
     .window-list-item-box {
         @extend %bg-grad-to-left;
-        
+
         &:hover {
             @extend %hover-bg-grad-to-left;
         }
         &:active {
             @extend %panel-left-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-left;
                 }
         }
         &:checked {
             @extend %panel-left-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-left;
                 }
         }
         &:focus {
             @extend %panel-left-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-left;
                 }
@@ -221,25 +221,25 @@
 }
 .panel-right {
     @extend %bg-grad-to-left;
-    
+
     border-left: 1px solid;
     border-color: $exterior_border;
     .window-list-item-box {
         @extend %bg-grad-to-right;
-        
+
         &:hover {
             @extend %hover-bg-grad-to-right;
         }
         &:active {
             @extend %panel-right-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-right;
                 }
         }
         &:checked {
             @extend %panel-right-shared;
-            
+
             &:hover {
                 @extend %hover-selected-grad-to-right;
                 }
@@ -276,9 +276,6 @@
     }
     &:focus {
     }
-}
-#appMenu {
-    spacing: $spacing;
 }
 // remaining code is for panel items starting with the generic applets
 .applet-separator-line {
@@ -401,7 +398,7 @@
 // cinnamon 3.8 will support an improved window-list-thumbnail preview which now has it's own selector
 .window-list-preview {
     @extend %bg-grad-to-right;
-    
+
     border-radius: $roundness;
     border: 1px solid $exterior_border;
     padding: 10px 15px;
@@ -446,14 +443,14 @@
 }
 .sound-player-overlay {
     @extend %bg-grad-to-bottom;
-    
+
     width: 300px;
     padding: 12px 16px;
     spacing: 0.5em;
     color: $cinn_fg_color;
     StButton {
         @extend %shared-button;
-        
+
         border-radius: $roundness;
         padding: 8px;
         &:hover {
@@ -491,11 +488,11 @@
 .workspace-graph {
     .workspace {
         @extend %bg-grad-to-bottom;
-        
+
         border: 1px solid $interior_border;
         &:active {
             @extend %selected-bg-grad-to-bottom;
-                    
+
             border: 1px solid $interior_border;
             .windows {
                 -active-window-background: rgba(255, 255, 255, 0.8);

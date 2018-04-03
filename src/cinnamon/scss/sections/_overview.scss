@@ -39,7 +39,7 @@
 }
 .window-caption {
     @extend %bg-grad-to-bottom;
-    
+
     padding: 4px 6px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
@@ -47,7 +47,7 @@
     -cinnamon-caption-spacing: 4px;
     &#selected {
         @extend %selected-bg-grad-to-bottom;
-        
+
         color: $selected_fg_color;
     }
 }
@@ -81,7 +81,7 @@
 }
 .expo-workspaces-name-entry {
     @extend %bg-grad-to-bottom;
-    
+
     padding: 4px 6px;
     border: 1px solid $exterior_border;
     border-radius: $roundness;
@@ -91,7 +91,7 @@
     text-align: center;
     &#selected {
         @extend %selected-bg-grad-to-bottom;
-        
+
         color: $selected_fg_color;
         selected-color: $cinn_fg_color;
         selection-background-color: $selected_bg_color;
