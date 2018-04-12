@@ -80,21 +80,7 @@
         &:hover {
             @extend %hover-bg-grad-to-top;
         }
-        &:active {
-            @extend %panel-top-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-top;
-                }
-        }
-        &:checked {
-            @extend %panel-top-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-top;
-                }
-        }
-        &:focus {
+        &:active, &:checked, &:focus {
             @extend %panel-top-shared;
 
             &:hover {
@@ -107,13 +93,12 @@
     }
     .applet-box {
         padding: 1px $spacing;
-        margin-bottom: 1px;
+        margin: 1px 0;
     }
     .applet-label {
     }
     .panel-launchers .launcher:hover {
-        border-bottom: 2px solid;
-        border-color: $selected_border;
+        box-shadow: 0 -2px 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: 3px $spacing;
@@ -130,21 +115,7 @@
         &:hover {
             @extend %hover-bg-grad-to-bottom;
         }
-        &:active {
-            @extend %panel-bottom-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-bottom;
-                }
-        }
-        &:checked {
-            @extend %panel-bottom-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-bottom;
-                }
-        }
-        &:focus {
+        &:active, &:checked, &:focus {
             @extend %panel-bottom-shared;
 
             &:hover {
@@ -157,13 +128,12 @@
     }
     .applet-box {
         padding: 1px $spacing;
-        margin-top: 1px;
+        margin: 1px 0;
     }
     .applet-label {
     }
     .panel-launchers .launcher:hover {
-        border-top: 2px solid;
-        border-color: $selected_border;
+        box-shadow: 0 2px 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: 3px $spacing;
@@ -180,26 +150,12 @@
         &:hover {
             @extend %hover-bg-grad-to-left;
         }
-        &:active {
+        &:active, &:checked, &:focus {
             @extend %panel-left-shared;
 
             &:hover {
                 @extend %hover-selected-grad-to-left;
-                }
-        }
-        &:checked {
-            @extend %panel-left-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-left;
-                }
-        }
-        &:focus {
-            @extend %panel-left-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-left;
-                }
+            }
         }
     }
     .workspace-switcher, .workspace-graph {
@@ -207,13 +163,12 @@
     }
     .applet-box {
         padding: $spacing 1px;
-        margin-right: 1px;
+        margin: 0 1px;
     }
     .applet-label {
     }
     .panel-launchers .launcher:hover {
-        border-right: 3px solid;
-        border-color: $selected_border;
+        box-shadow: -2px 0 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: $spacing 3px;
@@ -230,22 +185,9 @@
         &:hover {
             @extend %hover-bg-grad-to-right;
         }
-        &:active {
+        &:active, &:checked, &:focus {
             @extend %panel-right-shared;
 
-            &:hover {
-                @extend %hover-selected-grad-to-right;
-                }
-        }
-        &:checked {
-            @extend %panel-right-shared;
-
-            &:hover {
-                @extend %hover-selected-grad-to-right;
-                }
-        }
-        &:focus {
-            @extend %panel-right-shared;
             &:hover {
                 @extend %hover-selected-grad-to-right;
                 }
@@ -256,13 +198,12 @@
     }
     .applet-box {
         padding: $spacing 1px;
-        margin-left: 1px;
+        margin: 0 1px;
     }
     .applet-label {
     }
     .panel-launchers .launcher:hover {
-        border-left: 3px solid;
-        border-color: $selected_border;
+        box-shadow: 2px 0 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: $spacing 3px;
@@ -368,7 +309,6 @@
         padding: 3px 1px;
     }
     #appMenuIcon {
-        padding: 1px;
     }
 }
 .window-list-item-label {
@@ -511,10 +451,13 @@
 }
 // most panel launcher themeing is orientation specific
 .panel-launchers {
-    padding: 1px 4px;
+    padding: 0 4px;
     spacing: $spacing;
+    .launcher {
+        background-color:rgba(0, 0, 0, 0.01);
+    }
     &.vertical {
-        padding: 4px 1px;
+        padding: 4px 0;
         spacing: $spacing;
         .launcher .icon-box {
             padding-top: 0;
