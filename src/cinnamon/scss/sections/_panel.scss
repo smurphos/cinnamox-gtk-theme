@@ -349,10 +349,13 @@
 // the sound player applet
 .sound-player {
     StButton {
+        @extend %shared-button;
+        
         min-width: 2em;
         min-height: 2em;
         padding: $spacing_plus2;
         color: $button_fg_color;
+        border-radius: $roundness;
         &:small {
             min-width: 1.5em;
             min-height: 1.5em;
@@ -365,8 +368,13 @@
             icon-size: 1.5em;
         }
         &:hover {
+            @extend %shared-button-hover;
+        }
+        &:focus {
+            color: $selected_fg_color;
         }
         &:active {
+            @extend %shared-button-active;
         }
     }
     .slider {
@@ -385,31 +393,10 @@
 .sound-player-overlay {
     @extend %bg-grad-to-bottom;
 
-    width: 300px;
+    min-width: 300px;
     padding: 12px 16px;
     spacing: 0.5em;
     color: $cinn_fg_color;
-    StButton {
-        @extend %shared-button;
-
-        border-radius: $roundness;
-        padding: 8px;
-        &:hover {
-            @extend %shared-button-hover;
-        }
-        &:focus {
-            color: $selected_fg_color;
-        }
-        &:active {
-            @extend %shared-button-active;
-        }
-        > StIcon {
-            icon-size: 1.5em;
-        }
-    }
-    StBoxLayout {
-        padding-top: 2px;
-    }
 }
 // workspace switcher applet simple button view
 .workspace-button {
