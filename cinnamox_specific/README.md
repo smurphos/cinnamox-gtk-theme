@@ -6,15 +6,17 @@
 
 Build tools are at [Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme).
 
-[Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme) is a fork of [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme).
+[Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme) is a fork of [Oomox-gtk-theme](https://github.com/themix-project/oomox-gtk-theme).
 
-The Cinnamon themes in both [Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme) & [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) are authored by [@smurphos](https://github.com/smurphos).
+The Cinnamon themes in both [Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme) & [Oomox-gtk-theme](https://github.com/themix-project/oomox-gtk-theme) are authored by [@smurphos](https://github.com/smurphos).
 
-GTK2, GTK3, GTK3.20 and Metacity themes in both [Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme) & [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme) are authored by [@Actionless and others](https://github.com/smurphos/cinnamox-gtk-theme/blob/master/CREDITS) with contributions from [@smurphos](https://github.com/smurphos)
+GTK2, GTK3, GTK3.20 and Metacity themes in both [Cinnamox-gtk-theme](https://github.com/smurphos/cinnamox-gtk-theme) & [Oomox-gtk-theme](https://github.com/themix-project/oomox-gtk-theme) are authored by [@actionless and contributors](https://github.com/themix-project/oomox-gtk-theme/graphs/contributors).
 
 Menu in screenshots is the excellent [CinnVIIStarkMenu](https://cinnamon-spices.linuxmint.com/applets/view/281).
 
 Icons in screenshots are from [Vibrancy Colours](http://www.ravefinity.com/p/vibrancy-colors-gtk-icon-theme.html).
+
+[Licensed under GPL-3.0](https://github.com/smurphos/cinnamox-gtk-theme/blob/master/LICENSE)
 
 ## Installation
 
@@ -80,7 +82,7 @@ The theme includes a helper script that creates the userContent.css file with th
 
 The repository at [Cinnamox_theme_master](https://github.com/smurphos/cinnamox_theme_master) includes instructions to utilise the tools provided to make your own unique Cinnamox based theme.
 
-The [Oomox app](https://github.com/actionless/oomox) is a GUI app to design and build themes using the [Oomox-gtk-theme](https://github.com/actionless/oomox-gtk-theme). From [version 1.60+](https://github.com/actionless/oomox/releases/) this app included a Cinnamon theme based on Cinnamox and has an option to export a Cinnamon theme. 
+The [Oomox app](https://github.com/themix-project/oomox) is a GUI app to design and build themes using the [Oomox-gtk-theme](https://github.com/themix-project/oomox-gtk-theme). From [version 1.60+](https://github.com/themix-project/oomox/releases) this app included a Cinnamon theme based on Cinnamox and has an option to export a Cinnamon theme. 
 
 ## Changelog & Previous Releases
 
