@@ -49,13 +49,6 @@ function willowgrove {
 	THEMENAME="Cinnamox-Willow-Grove"; COLORDESC="a soothing green colour scheme and light text"; THEMESHORT="Willow-Grove";
 	build_theme;
 }
-function zanah {
-	LIGHTBG="#cde4cf"; DARKBG="#5da863";
-	LOWTRANSLIGHTBG="rgba(205, 228, 207, 0.8)"; MODTRANSLIGHTBG="rgba(205, 228, 207, 0.6)"; HIGHTRANSLIGHTBG="rgba(205, 228, 207, 0.4)";
-	LOWTRANSDARKBG="rgba(93, 168, 99, 0.8)"; MODTRANSDARKBG="rgba(93, 168, 99, 0.6)"; HIGHTRANSDARKBG="rgba(93, 168, 99, 0.4)";
-	THEMENAME="Cinnamox-Zanah"; COLORDESC="a pale blue colour scheme and dark text"; THEMESHORT="Zanah";
-	build_theme;
-}
 function build_theme {
 	DESCRIPTION="$THEMENAME features $COLORDESC. Cinnamon, Metacity, GTK2, GTK3.18 and GTK3.20+ themes are included along with a script to adjust the transparency of the Cinnamon theme.";
 	CURRENTDIR="$PWD";
@@ -122,7 +115,7 @@ function build_theme {
     cd "$CURRENTDIR"; 
 }
 
-VARIANT=("Build all" "Aubergine" "Gold-Spice" "Heather" "Kashmir-Blue" "Rhino" "Rosso-Cursa" "Willow-Grove" "Zanah");
+VARIANT=("Build all" "Aubergine" "Gold-Spice" "Heather" "Kashmir-Blue" "Rhino" "Rosso-Cursa" "Willow-Grove");
 echo "";
 echo "*** Cinnamox GTK & Metacity Theme Builder ***";
 echo "";
@@ -132,7 +125,7 @@ select CHOICE in "${VARIANT[@]}";
 do
     case $CHOICE in 
     "Build all")
-		aubergine; goldspice; heather; kashmirblue; rhino; rossocursa; willowgrove; zanah;; 
+		aubergine; goldspice; heather; kashmirblue; rhino; rossocursa; willowgrove;; 
     "Aubergine")
 		aubergine;;
     "Gold-Spice")
@@ -147,8 +140,6 @@ do
 		rossocursa;;
     "Willow-Grove")
 		willowgrove;;
-    "Zanah")
-		zanah;; 
     *) echo "Invalid option. Try another one."; continue;;
     esac
     break

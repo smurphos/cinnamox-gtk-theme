@@ -1,5 +1,6 @@
 {
 	"author": "smurphos", 
 	"name": "#THEMENAME", 
-	"description": "#THEMEDESCRIPTION"
+	"description": "#THEMEDESCRIPTION",
+	"license": "GPL-3.0"
 }

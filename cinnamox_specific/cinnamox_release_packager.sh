@@ -5,7 +5,7 @@ read -p "Press enter to start the script.";
 SPICEDIR="$HOME/Github/other_projects/cinnamon-spices-themes";
 MYDIR="$HOME/Github/my_projects/cinnamox_themes";
 SOURCEDIR="$HOME/.themes";
-THEMES=("Cinnamox-Aubergine" "Cinnamox-Gold-Spice" "Cinnamox-Heather" "Cinnamox-Kashmir-Blue" "Cinnamox-Rhino" "Cinnamox-Rosso-Cursa" "Cinnamox-Willow-Grove" "Cinnamox-Zanah");
+THEMES=("Cinnamox-Aubergine" "Cinnamox-Gold-Spice" "Cinnamox-Heather" "Cinnamox-Kashmir-Blue" "Cinnamox-Rhino" "Cinnamox-Rosso-Cursa" "Cinnamox-Willow-Grove");
 for THEMENAME in "${THEMES[@]}"
 do
 	echo "Copying $SOURCEDIR/$THEMENAME to $MYDIR/$THEMENAME";
