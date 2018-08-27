@@ -302,17 +302,8 @@
     @extend %bg-grad-to-bottom;
 
     padding: 8px;
-    margin: 8px 0;
     border-radius: $roundness;
     border: 1px solid $interior_border;
-        StIcon {
-            &:ltr {
-			    padding-right: 4px;
-            }
-            &:rtl {
-			    padding-left: 4px;
-            }
-        }
 }
 
 // used in selectors
