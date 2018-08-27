@@ -125,7 +125,7 @@ select CHOICE in "${VARIANT[@]}";
 do
     case $CHOICE in 
     "Build all")
-		aubergine; goldspice; heather; kashmirblue; rhino; rossocursa; willowgrove; zanah;; 
+		aubergine; goldspice; heather; kashmirblue; rhino; rossocursa; willowgrove;; 
     "Aubergine")
 		aubergine;;
     "Gold-Spice")
