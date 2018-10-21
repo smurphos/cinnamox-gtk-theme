@@ -313,7 +313,8 @@
     #appMenuIcon {
     }
 }
-.window-list-item-label {
+.window-list-item-box.top StLabel, .window-list-item-box.bottom StLabel {
+  padding-left: 3px;
 }
 // progress was added with cinnamon 3.6 and allows compatible applications to use the window list as a progress bar
 .window-list-item-box {
