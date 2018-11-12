@@ -524,6 +524,9 @@
     border: 1px solid $interior_border;
     margin: 2px;
     transition-duration: 150;
+    &.vertical {
+    height: 1.5em;
+    }
     &:outlined {
         background-color: $selected_bg_color;
         color: $selected_fg_color;
