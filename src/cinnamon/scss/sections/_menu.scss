@@ -216,6 +216,12 @@
     icon-size: 1em;
     color: $dark_fg_color;
 }
+// new styleclasses for the Cinnamon 4 stock menu
+.menu-top-box {
+  spacing: 10px; }
+.menu-systembuttons-box {
+  padding-bottom: 12px;
+  padding-top: 12px;  }
 // cinnVIIstark menu right click favourites context menu
 .starkmenu-favorites-box .menu-context-menu, .menu-context-menu {
         @extend %menu-context-shared;
