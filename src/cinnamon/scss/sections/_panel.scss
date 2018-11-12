@@ -88,6 +88,18 @@
                 }
         }
     }
+    .grouped-window-list-item-box {
+        &:active {      
+          box-shadow: 0 -2px 0 0 $cinn_fg_color inset;
+          }
+        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
+          box-shadow: 0 -2px 0 0 $selected_border inset;
+          color: $selected_bg_color;
+          }
+        &:focus, &:active:focus, &:active:focus:hover {
+          font-weight: bold;
+          }
+    }
     .workspace-switcher, .workspace-graph {
         padding: 1px $spacing;
     }
@@ -122,6 +134,18 @@
                 @extend %hover-selected-grad-to-bottom;
                 }
         }
+    }
+    .grouped-window-list-item-box {
+        &:active {      
+          box-shadow: 0 2px 0 0 $cinn_fg_color inset;
+          }
+        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
+          box-shadow: 0 2px 0 0 $selected_border inset;
+          color: $selected_bg_color;
+          }
+        &:focus, &:active:focus, &:active:focus:hover {
+          font-weight: bold;
+          }
     }
     .workspace-switcher, .workspace-graph {
         padding: 1px $spacing;
@@ -158,6 +182,18 @@
             }
         }
     }
+    .grouped-window-list-item-box {
+        &:active {      
+          box-shadow: -2px 0 0 0 $cinn_fg_color inset;
+          }
+        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
+          box-shadow: -2px 0 0 0 $selected_border inset;
+          color: $selected_bg_color;
+          }
+        &:focus, &:active:focus, &:active:focus:hover {
+          font-weight: bold;
+          }
+    }
     .workspace-switcher, .workspace-graph {
         padding: $spacing 1px;
     }
@@ -192,6 +228,18 @@
                 @extend %hover-selected-grad-to-right;
                 }
         }
+    }
+    .grouped-window-list-item-box {
+        &:active {      
+          box-shadow: 2px 0 0 0 $cinn_fg_color inset;
+          }
+        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
+          box-shadow: 2px 0 0 0 $selected_border inset;
+          color: $selected_bg_color;
+          }
+        &:focus, &:active:focus, &:active:focus:hover {
+          font-weight: bold;
+          }
     }
     .workspace-switcher, .workspace-graph {
         padding: $spacing 1px;
@@ -348,6 +396,73 @@
     spacing: 1em;
     color: $cinn_fg_color;
 }
+// Cinnamon 4.0 has a new grouped window list applet with it's own selectors.
+// Initial themeing support is defined here.
+
+.grouped-window-list-thumbnail-label {
+}
+.grouped-window-list-number-label {
+    z-index: 99;
+    font-size: 0.8em;
+}
+.grouped-window-list-button-label {
+    //transition-duration: 150;
+    padding-left: 3px;
+}
+.grouped-window-list-badge {
+}
+.grouped-window-list-thumbnail-alert {
+    background: $warning_color;
+}
+.grouped-window-list-item-box {
+    //transition-duration: 150;
+    spacing: 1em;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+.grouped-window-list-item-box StIcon {
+}
+.grouped-window-list-item-box StBin {
+}
+.grouped-window-list-item-demands-attention {
+    background-color: $info_bg_color;
+    color: $info_fg_color;
+}
+.grouped-window-list-item-box .progress {
+        background-color: $success_color;
+        color: $info_fg_color;
+}
+.grouped-window-list-thumbnail-menu {
+    @extend %bg-grad-to-right;
+
+    border-radius: $roundness;
+    padding: 10px 15px;
+    spacing: 1em;
+    color: $cinn_fg_color;
+}
+.grouped-window-list-thumbnail-menu .item-box {
+    padding: 8px;
+    border-radius: $roundness;
+    border: 1px solid $interior_border;
+}
+.grouped-window-list-thumbnail-menu .item-box:outlined {
+    border: 1px solid $selected_border;
+}
+.grouped-window-list-thumbnail-menu .item-box:selected {
+    background: $selected_bg_color;
+    border: 1px solid $selected_border;
+}
+.grouped-window-list-thumbnail-menu .thumbnail-box {
+    padding: 2px;
+    spacing: 4px;
+}
+.grouped-window-list-thumbnail-menu .thumbnail {
+    width: 256px;
+}
+.grouped-window-list-thumbnail-menu .separator {
+    width: 1px;
+    background: $selected_bg_color;
+}
+
 // the sound player applet
 .sound-player {
     StButton {
