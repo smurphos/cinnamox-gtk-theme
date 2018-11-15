@@ -72,15 +72,14 @@
 .panel-top {
     @extend %bg-grad-to-bottom;
 
-    border-bottom: 1px solid;
-    border-color: $exterior_border;
+    box-shadow: 0 -1px 0 0 $exterior_border inset;
     .window-list-item-box {
         @extend %bg-grad-to-top;
 
         &:hover {
             @extend %hover-bg-grad-to-top;
         }
-        &:active, &:checked, &:focus {
+        &:active, &:checked, &:focus, &:running {
             @extend %panel-top-shared;
 
             &:hover {
@@ -90,27 +89,23 @@
     }
     .grouped-window-list-item-box {
         &:active {      
-          box-shadow: 0 -2px 0 0 $cinn_fg_color inset;
+          box-shadow: 0 2px 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
-          box-shadow: 0 -2px 0 0 $selected_border inset;
+        &:hover, &:active:hover, &:checked {
+          box-shadow: 0 2px 0 0 $selected_border inset;
           color: $selected_bg_color;
           }
         &:focus, &:active:focus, &:active:focus:hover {
+          box-shadow: 0 4px 0 0 $selected_border inset;
           font-weight: bold;
+          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
         padding: 1px $spacing;
     }
-    .applet-box {
-        padding: 1px $spacing;
-        margin: 1px 0;
-    }
-    .applet-label {
-    }
     .panel-launchers .launcher:hover {
-        box-shadow: 0 -2px 0 0 $selected_border inset;
+        box-shadow: 0 2px 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: 3px $spacing;
@@ -119,15 +114,14 @@
 .panel-bottom {
     @extend %bg-grad-to-top;
 
-    border-top: 1px solid;
-    border-color: $exterior_border;
+    box-shadow: 0 1px 0 0 $exterior_border inset;
     .window-list-item-box {
         @extend %bg-grad-to-bottom;
 
         &:hover {
             @extend %hover-bg-grad-to-bottom;
         }
-        &:active, &:checked, &:focus {
+        &:active, &:checked, &:focus, &:running {
             @extend %panel-bottom-shared;
 
             &:hover {
@@ -137,27 +131,23 @@
     }
     .grouped-window-list-item-box {
         &:active {      
-          box-shadow: 0 2px 0 0 $cinn_fg_color inset;
+          box-shadow: 0 -2px 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
-          box-shadow: 0 2px 0 0 $selected_border inset;
+        &:hover, &:active:hover, &:checked {
+          box-shadow: 0 -2px 0 0 $selected_border inset;
           color: $selected_bg_color;
           }
         &:focus, &:active:focus, &:active:focus:hover {
+          box-shadow: 0 -4px 0 0 $selected_border inset;
           font-weight: bold;
+          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
         padding: 1px $spacing;
     }
-    .applet-box {
-        padding: 1px $spacing;
-        margin: 1px 0;
-    }
-    .applet-label {
-    }
     .panel-launchers .launcher:hover {
-        box-shadow: 0 2px 0 0 $selected_border inset;
+        box-shadow: 0 -2px 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: 3px $spacing;
@@ -166,15 +156,14 @@
 .panel-left {
     @extend %bg-grad-to-right;
 
-    border-right: 1px solid;
-    border-color: $exterior_border;
+    box-shadow: -1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
         @extend %bg-grad-to-left;
 
         &:hover {
             @extend %hover-bg-grad-to-left;
         }
-        &:active, &:checked, &:focus {
+        &:active, &:checked, &:focus, &:running {
             @extend %panel-left-shared;
 
             &:hover {
@@ -184,27 +173,23 @@
     }
     .grouped-window-list-item-box {
         &:active {      
-          box-shadow: -2px 0 0 0 $cinn_fg_color inset;
+          box-shadow: 2px 0 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
-          box-shadow: -2px 0 0 0 $selected_border inset;
+        &:hover, &:active:hover, &:checked {
+          box-shadow: 2px 0 0 0 $selected_border inset;
           color: $selected_bg_color;
           }
         &:focus, &:active:focus, &:active:focus:hover {
+          box-shadow: 4px 0 0 0 $selected_border inset;
           font-weight: bold;
+          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
         padding: $spacing 1px;
     }
-    .applet-box {
-        padding: $spacing 1px;
-        margin: 0 1px;
-    }
-    .applet-label {
-    }
     .panel-launchers .launcher:hover {
-        box-shadow: -2px 0 0 0 $selected_border inset;
+        box-shadow: 2px 0 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: $spacing 3px;
@@ -213,15 +198,14 @@
 .panel-right {
     @extend %bg-grad-to-left;
 
-    border-left: 1px solid;
-    border-color: $exterior_border;
+     box-shadow: 1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
         @extend %bg-grad-to-right;
 
         &:hover {
             @extend %hover-bg-grad-to-right;
         }
-        &:active, &:checked, &:focus {
+        &:active, &:checked, &:focus, &:running {
             @extend %panel-right-shared;
 
             &:hover {
@@ -231,27 +215,23 @@
     }
     .grouped-window-list-item-box {
         &:active {      
-          box-shadow: 2px 0 0 0 $cinn_fg_color inset;
+          box-shadow: -2px 0 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:focus, &:active:hover, &:active:focus, &:active:focus:hover {
-          box-shadow: 2px 0 0 0 $selected_border inset;
+        &:hover, &:active:hover, &:checked {
+          box-shadow: -2px 0 0 0 $selected_border inset;
           color: $selected_bg_color;
           }
         &:focus, &:active:focus, &:active:focus:hover {
+          box-shadow: -4px 0 0 0 $selected_border inset;
           font-weight: bold;
+          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
         padding: $spacing 1px;
     }
-    .applet-box {
-        padding: $spacing 1px;
-        margin: 0 1px;
-    }
-    .applet-label {
-    }
     .panel-launchers .launcher:hover {
-        box-shadow: 2px 0 0 0 $selected_border inset;
+        box-shadow: -2px 0 0 0 $selected_border inset;
     }
     .applet-separator {
         padding: $spacing 3px;
@@ -282,6 +262,11 @@
     color: $cinn_fg_color;
     transition-duration: 150;
     border-radius: $roundness;
+    border: 1px transparent;
+    padding: 0 $spacing;
+    &.vertical {
+        padding: $spacing 0;
+    }
     &:checked {
         color: $selected_bg_color;
         .applet-label {
@@ -305,6 +290,7 @@
 .applet-label {
     font-weight: bold;
     color: $cinn_fg_color;
+    padding-left: 3px;
 }
 // icon-size set to 22 to match hard-coded menu icon size - applet-icon style is used for search provider results in menu
 .applet-icon {
@@ -354,9 +340,14 @@
     spacing: $spacing;
     padding: 1px 3px;
     font-size: 0.9em;
+    border-radius: $roundness;
+    border: 1px transparent;
     &.vertical {
         spacing: $spacing;
         padding: 3px 1px;
+    }
+    &:highlight {
+        border: 1px solid $selected_border;
     }
     #appMenuIcon {
     }
@@ -370,9 +361,6 @@
     border-radius: $roundness;
     transition-duration: 150;
     &:hover {
-        border: 1px solid $selected_border;
-    }
-    &:highlight {
         border: 1px solid $selected_border;
     }
     .progress {
@@ -397,9 +385,10 @@
     color: $cinn_fg_color;
 }
 // Cinnamon 4.0 has a new grouped window list applet with it's own selectors.
-// Initial themeing support is defined here.
+// Initial theme support is defined here.
 
 .grouped-window-list-thumbnail-label {
+    padding-left: 3px;
 }
 .grouped-window-list-number-label {
     z-index: 99;
@@ -428,8 +417,8 @@
     color: $info_fg_color;
 }
 .grouped-window-list-item-box .progress {
-        background-color: $success_color;
-        color: $info_fg_color;
+    background-color: $success_color;
+    color: $info_fg_color;
 }
 .grouped-window-list-thumbnail-menu {
     @extend %bg-grad-to-right;
