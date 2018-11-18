@@ -396,12 +396,21 @@
 .grouped-window-list-number-label {
     z-index: 99;
     font-size: 0.8em;
+    color: $dark_fg_color;
 }
 .grouped-window-list-button-label {
     //transition-duration: 150;
     padding-left: 3px;
 }
 .grouped-window-list-badge {
+    border-radius: 256px;
+    background-color: $dark_bg_color; 
+}
+.panel-top .grouped-window-list-badge {
+    margin-top: 2px;
+}
+.panel-left .grouped-window-list-badge {
+    margin-left: 2px;
 }
 .grouped-window-list-thumbnail-alert {
     background: $warning_color;
