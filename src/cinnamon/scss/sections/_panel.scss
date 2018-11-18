@@ -369,6 +369,9 @@
         border-radius: $roundness;
         color: $info_fg_color;
     }
+    #appMenuIcon {
+		padding-right: 0.2em;
+    }
 }
 .window-list-item-demands-attention {
     background-color: $info_bg_color;
