@@ -75,7 +75,7 @@
     box-shadow: 0 -1px 0 0 $exterior_border inset;
     .window-list-item-box {
         @extend %bg-grad-to-top;
-
+        margin-bottom: 1px;
         &:hover {
             @extend %hover-bg-grad-to-top;
         }
@@ -88,17 +88,14 @@
         }
     }
     .grouped-window-list-item-box {
-        &:active {      
+        &:active, &:checked {      
           box-shadow: 0 2px 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:active:hover, &:checked {
+        &:hover {
           box-shadow: 0 2px 0 0 $selected_border inset;
-          color: $selected_bg_color;
           }
-        &:focus, &:active:focus, &:active:focus:hover {
+        &:focus {
           box-shadow: 0 4px 0 0 $selected_border inset;
-          font-weight: bold;
-          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
@@ -117,6 +114,7 @@
     box-shadow: 0 1px 0 0 $exterior_border inset;
     .window-list-item-box {
         @extend %bg-grad-to-bottom;
+        margin-top: 1px;
 
         &:hover {
             @extend %hover-bg-grad-to-bottom;
@@ -130,17 +128,14 @@
         }
     }
     .grouped-window-list-item-box {
-        &:active {      
+        &:active, &:checked {      
           box-shadow: 0 -2px 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:active:hover, &:checked {
+        &:hover {
           box-shadow: 0 -2px 0 0 $selected_border inset;
-          color: $selected_bg_color;
           }
-        &:focus, &:active:focus, &:active:focus:hover {
+        &:focus {
           box-shadow: 0 -4px 0 0 $selected_border inset;
-          font-weight: bold;
-          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
@@ -158,6 +153,7 @@
 
     box-shadow: -1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
+        margin-right: 1px;
         @extend %bg-grad-to-left;
 
         &:hover {
@@ -172,17 +168,14 @@
         }
     }
     .grouped-window-list-item-box {
-        &:active {      
+        &:active, &:checked {      
           box-shadow: 2px 0 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:active:hover, &:checked {
+        &:hover {
           box-shadow: 2px 0 0 0 $selected_border inset;
-          color: $selected_bg_color;
           }
-        &:focus, &:active:focus, &:active:focus:hover {
+        &:focus {
           box-shadow: 4px 0 0 0 $selected_border inset;
-          font-weight: bold;
-          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
@@ -200,6 +193,7 @@
 
      box-shadow: 1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
+        margin-left: 1px;
         @extend %bg-grad-to-right;
 
         &:hover {
@@ -213,18 +207,15 @@
                 }
         }
     }
-    .grouped-window-list-item-box {
-        &:active {      
+     .grouped-window-list-item-box {
+        &:active, &:checked {      
           box-shadow: -2px 0 0 0 $cinn_fg_color inset;
           }
-        &:hover, &:active:hover, &:checked {
+        &:hover {
           box-shadow: -2px 0 0 0 $selected_border inset;
-          color: $selected_bg_color;
           }
-        &:focus, &:active:focus, &:active:focus:hover {
+        &:focus {
           box-shadow: -4px 0 0 0 $selected_border inset;
-          font-weight: bold;
-          color: $selected_bg_color;
           }
     }
     .workspace-switcher, .workspace-graph {
@@ -256,13 +247,12 @@
     border-bottom: 2px solid;
 }
 .applet-spacer:highlight {
-    border: 1px solid $selected_border;
+    background-color: $selected_bg_color;
 }
 .applet-box {
     color: $cinn_fg_color;
     transition-duration: 150;
     border-radius: $roundness;
-    border: 1px transparent;
     padding: 0 $spacing;
     &.vertical {
         padding: $spacing 0;
@@ -341,7 +331,6 @@
     padding: 1px 3px;
     font-size: 0.9em;
     border-radius: $roundness;
-    border: 1px transparent;
     &.vertical {
         spacing: $spacing;
         padding: 3px 1px;
@@ -352,30 +341,32 @@
     #appMenuIcon {
     }
 }
-.window-list-item-box.top StLabel, .window-list-item-box.bottom StLabel {
-  padding-left: 3px;
-}
 // progress was added with cinnamon 3.6 and allows compatible applications to use the window list as a progress bar
-.window-list-item-box {
-    border: 1px solid $interior_border;
-    border-radius: $roundness;
-    transition-duration: 150;
-    &:hover {
-        border: 1px solid $selected_border;
-    }
-    .progress {
-        background-color: $success_color;
-        border: 1px solid $selected_border;
+.window-list-item {
+    &-box {
+        border: 1px solid $interior_border;
         border-radius: $roundness;
+        transition-duration: 150;
+        &:hover {
+            border: 1px solid $selected_border;
+        }
+        &.top StLabel, &.bottom StLabel {
+            padding-left: 3px;
+        }
+        .progress {
+            background-color: $success_color;
+            border: 1px solid $selected_border;
+            border-radius: $roundness;
+            color: $info_fg_color;
+        }
+        #appMenuIcon {
+		    padding-right: 0.2em;
+        }
+    }
+    &-demands-attention {
+        background-color: $info_bg_color;
         color: $info_fg_color;
     }
-    #appMenuIcon {
-		padding-right: 0.2em;
-    }
-}
-.window-list-item-demands-attention {
-    background-color: $info_bg_color;
-    color: $info_fg_color;
 }
 // cinnamon 3.8 will support an improved window-list-thumbnail preview which now has it's own selector
 .window-list-preview {
@@ -383,87 +374,83 @@
 
     border-radius: $roundness;
     border: 1px solid $exterior_border;
-    padding: 10px 15px;
-    spacing: 1em;
+    padding: 6px 12px;
+    spacing: $spacing;
     color: $cinn_fg_color;
 }
 // Cinnamon 4.0 has a new grouped window list applet with it's own selectors.
 // Initial theme support is defined here.
 
-.grouped-window-list-thumbnail-label {
-    padding-left: 3px;
-}
-.grouped-window-list-number-label {
-    z-index: 99;
-    font-size: 0.8em;
-    color: $dark_fg_color;
-}
-.grouped-window-list-button-label {
-    //transition-duration: 150;
-    padding-left: 3px;
-}
-.grouped-window-list-badge {
-    border-radius: 256px;
-    background-color: $dark_bg_color; 
-}
-.panel-top .grouped-window-list-badge {
-    margin-top: 2px;
-}
-.panel-left .grouped-window-list-badge {
-    margin-left: 2px;
-}
-.grouped-window-list-thumbnail-alert {
-    background: $warning_color;
-}
-.grouped-window-list-item-box {
-    //transition-duration: 150;
-    spacing: 1em;
-    background-color: rgba(0, 0, 0, 0.01);
-}
-.grouped-window-list-item-box StIcon {
-}
-.grouped-window-list-item-box StBin {
-}
-.grouped-window-list-item-demands-attention {
-    background-color: $info_bg_color;
-    color: $info_fg_color;
-}
-.grouped-window-list-item-box .progress {
-    background-color: $success_color;
-    color: $info_fg_color;
-}
-.grouped-window-list-thumbnail-menu {
-    @extend %bg-grad-to-right;
+.grouped-window-list {
+    &-thumbnail-label {
+        padding-left: 3px;
+    }
+    &-number-label {
+        z-index: 99;
+        font-size: 0.8em;
+        color: $dark_fg_color;
+    }
+    &-button-label {
+        padding-left: 3px;
+    }
+    &-badge {
+        border-radius: 256px;
+        background-color: $dark_bg_color; 
+    }
+    &-thumbnail-alert {
+        background: $warning_color;
+    }
+    &-item-box {
+        transition-duration: 150;
+        spacing: 1em;
+        background-color: rgba(0, 0, 0, 0.01);
+        &:hover, &:focus, {
+           color: $selected_bg_color;
+        }
+        &:focus  {
+           font-weight: bold;
+        }
+        .progress {
+           background-color: $success_color;
+           color: $info_fg_color;
+        }
+    }
+    &-demands-attention {
+        background-color: $info_bg_color;
+        color: $info_fg_color;
+    }
+    &-thumbnail-menu {
+        @extend %bg-grad-to-right;
 
-    border-radius: $roundness;
-    padding: 10px 15px;
-    spacing: 1em;
-    color: $cinn_fg_color;
+        border-radius: $roundness;
+        padding: 10px 15px;
+        spacing: $spacing;
+        color: $cinn_fg_color;
+        .item-box {
+            padding: 8px;
+            border-radius: $roundness;
+            border: 1px solid $interior_border;
+            &:outlined {
+                border: 1px solid $selected_border;
+            }
+            &:selected {
+                background: $selected_bg_color;
+                border: 1px solid $selected_border;
+            }
+        }
+        .thumbnail-box {
+            padding: 2px;
+            spacing: $spacing;
+        }
+        .thumbnail {
+            width: 256px;
+        }
+        .separator {
+            width: 1px;
+            background: $selected_bg_color;
+        }
+    }
 }
-.grouped-window-list-thumbnail-menu .item-box {
-    padding: 8px;
-    border-radius: $roundness;
-    border: 1px solid $interior_border;
-}
-.grouped-window-list-thumbnail-menu .item-box:outlined {
-    border: 1px solid $selected_border;
-}
-.grouped-window-list-thumbnail-menu .item-box:selected {
-    background: $selected_bg_color;
-    border: 1px solid $selected_border;
-}
-.grouped-window-list-thumbnail-menu .thumbnail-box {
-    padding: 2px;
-    spacing: 4px;
-}
-.grouped-window-list-thumbnail-menu .thumbnail {
-    width: 256px;
-}
-.grouped-window-list-thumbnail-menu .separator {
-    width: 1px;
-    background: $selected_bg_color;
-}
-
 // the sound player applet
 .sound-player {
     StButton {
@@ -561,17 +548,13 @@
 }
 // most panel launcher themeing is orientation specific
 .panel-launchers {
-    padding: 0 4px;
+    padding: 0 $spacing;
     spacing: $spacing;
     .launcher {
         background-color:rgba(0, 0, 0, 0.01);
     }
     &.vertical {
         padding: 4px 0;
-        spacing: $spacing;
-        .launcher .icon-box {
-            padding-top: 0;
-        }
     }
 }
 .notification-applet-padding {
@@ -581,7 +564,7 @@
     max-height: 100px;
 }
 .systray {
-    spacing: 4px;
+    spacing: $spacing;
 }
 .flashspot {
     background-color: $selected_bg_color;
