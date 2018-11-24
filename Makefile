@@ -37,6 +37,7 @@ endif
 css_cinnamon:
 	mkdir -p $(DIST_DIR_CINNAMON)
 	$(SASS) $(SASSFLAGS) "$(SCSS_DIR_CINNAMON)" "$(SCSS_DIR_CINNAMON)/cinnamon.scss" "$(DIST_DIR_CINNAMON)/cinnamon.css"
+	$(SASS) $(SASSFLAGS) "$(SCSS_DIR_CINNAMON)" "$(SCSS_DIR_CINNAMON)/cinnamon_old.scss" "$(DIST_DIR_CINNAMON)/cinnamon_old.css"
 css: css_gtk3 css_gtk320
 
 gresource_gtk3: css_gtk3
