@@ -42,6 +42,18 @@ To access the tool open a terminal window (Ctrl-Alt-T) and use the following com
 
 If you are not happy with the end result simply run `~/.themes/#THEMENAME/cinnamon/cinnamox_transparency.sh` again to chose another option including the default.
 
+### Cinnamon Theme Panel Styling
+
+The themes from the 25/11/18 release onwards have a new default styling for the window-list, panel and (in Cinnamon 4) grouped window list applet.
+
+If you prefer the old styling a helper script is included to allow end users to switch to the old styling.
+
+To access the tool open a terminal window (Ctrl-Alt-T) and use the following command to make the script executable and launch it. 
+
+`chmod +x ~/.themes/#THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh && ~/.themes/#THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh`
+
+To revert to the new styling simply run `~/.themes/#THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh` again.
+
 ### GTK2 HIDPI support
 
 If you need HIDPI Support in GTK2 the theme includes a HIDPI version of the gtkrc theme file and a helper script to toggle between the regular and HIDPI version.
