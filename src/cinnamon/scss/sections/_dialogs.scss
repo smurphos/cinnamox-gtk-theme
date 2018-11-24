@@ -147,7 +147,7 @@
         background-color: $scrollbar_slider_hover_color;
     }
 }
-.info-osd, .workspace-osd {
+.info-osd, .workspace-osd, .overview-empty-placeholder {
     @extend %osd-shared;
 
     font-size: 1.5em;
