@@ -1,5 +1,8 @@
 #!/bin/bash
 #Description: Helper script to build the Cinnamox themes GTK elements.
+if [ ! -t 1 ]; then
+    exit
+fi
 function aubergine {
 	LIGHTBG="#671559"; DARKBG="#3e0d35";
 	LOWTRANSLIGHTBG="rgba(103, 21, 89, 0.8)"; MODTRANSLIGHTBG="rgba(103, 21, 89, 0.6)"; HIGHTRANSLIGHTBG="rgba(103, 21, 89, 0.4)";
@@ -69,6 +72,7 @@ function build_theme {
 	fi
     ./change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/colors/cinnamox/$THEMENAME";
     cp "$WORKDIR/cinnamox_specific/cinnamox_transparency.sh" "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh";
+    cp "$WORKDIR/cinnamox_specific/cinnamox_toggle_cinnamon.sh" "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh";
     cp "$WORKDIR/cinnamox_specific/info.json" "$BUILDDIR/$THEMENAME/info.json";
     cp "$WORKDIR/cinnamox_specific/LICENSE" "$BUILDDIR/$THEMENAME/LICENSE";
     cp "$WORKDIR/cinnamox_specific/README.md" "$BUILDDIR/$THEMENAME/README.md";
@@ -82,9 +86,13 @@ function build_theme {
 	sed -i "s|#MODTRANSDARKBG|$MODTRANSDARKBG|g" cinnamox_transparency.sh;
 	sed -i "s|#HIGHTRANSDARKBG|$HIGHTRANSDARKBG|g" cinnamox_transparency.sh;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_transparency.sh;
+	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_cinnamon.sh;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon.css;
 	sed -i "s|#VARIANT|Transparency: None|g" cinnamon.css;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon.css;
+	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon_old.css;
+	sed -i "s|#VARIANT|Transparency: None|g" cinnamon_old.css;
+	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon_old.css;	
 	cd "$BUILDDIR/$THEMENAME";
 	sed -i "s|#THEMENAME|$THEMENAME|g" info.json;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" info.json;
@@ -98,6 +106,7 @@ function build_theme {
     cd "$THEMEDIR/$THEMENAME/cinnamon" && rm -r "$PWD/assets";
     rsync -a -u --exclude 'all-assets.*' --exclude 'Makefile' --exclude '*.sh' --exclude 'thumbnail.png' --exclude 'thumbnail.svg' --exclude 'scss' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR/$THEMENAME";
     cp "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh" "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh";
+    cp "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh" "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh";
     cd "$THEMEDIR/$THEMENAME/gtk-3.0";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.0/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/dist";

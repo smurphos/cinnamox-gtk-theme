@@ -1,5 +1,8 @@
 #!/bin/bash
 #Description: A script to move cinnamox_theme files to appropriate git directories to be pushed for release.
+if [ ! -t 1 ]; then
+    exit
+fi
 echo "";
 read -p "Press enter to start the script.";
 SPICEDIR="$HOME/Github/other_projects/cinnamon-spices-themes";
