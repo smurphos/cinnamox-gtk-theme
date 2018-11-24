@@ -83,6 +83,14 @@ $error_color: #%ERROR_COLOR%;
 $info_fg_color: #%SPECIAL_FG_COLOR%;
 $info_bg_color: #%INFO_BG_COLOR%;
 
+//alt-panel colors for new window list theming
+$alt_success_color: fade-out($success_color, 0.8);
+$alt_hover_background: fade-out($hover_bg_color, 0.8);
+$alt_selected_bg_color: fade-out($selected_bg_color, 0.8);
+$alt_hover_selected_color: fade-out($hover_selected_color, 0.8);
+$alt_info_bg_color: fade-out($info_bg_color, 0.8);
+$alt_warning_color: fade-out($warning_color, 0.8);
+
 // used for border-radius throughout theme
 $roundness: %ROUNDNESS%px;
 
