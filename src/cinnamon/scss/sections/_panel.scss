@@ -411,8 +411,7 @@
            font-weight: bold;
         }
         .progress {
-           background-color: $success_color;
-           color: $info_fg_color;
+           background-color: $alt_success_color;
         }
     }
     &-demands-attention {
@@ -554,7 +553,7 @@
         background-color:rgba(0, 0, 0, 0.01);
     }
     &.vertical {
-        padding: 4px 0;
+        padding: $spacing 0;
     }
 }
 .notification-applet-padding {

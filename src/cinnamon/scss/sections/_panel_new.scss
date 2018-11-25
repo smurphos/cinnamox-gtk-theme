@@ -534,13 +534,16 @@
 // most panel launcher themeing is orientation specific
 .panel-launchers {
     padding: 0 $spacing;
-    spacing: $spacing;
     .launcher {
         background-color:rgba(0, 0, 0, 0.01);
         border-radius: $roundness;
+        padding: 0 $spacing;
     }
     &.vertical {
-        padding: 4px 0;
+        padding: $spacing 0;
+        .launcher {
+            padding: $spacing 0;
+        }
     }
 }
 .notification-applet-padding {
