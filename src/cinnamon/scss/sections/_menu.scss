@@ -101,6 +101,16 @@
     border: 1px solid $interior_border;
     border-radius: $roundness;
     transition-duration: 150;
+    spacing: 1em;
+}
+// This is for the stock menu in Cinnamon 4.0.2 and later - adds more vfade to the scrollable favorites box and fakes a seperator from the system buttons with a bottom border.
+.menu-favorites-scrollbox {
+    padding-bottom: 1em;
+    border-bottom: 1px solid;
+    border-color: $interior_border;
+    &.vfade {
+        -st-vfade-offset: 136px;
+    }   
 }
 .menu-favorites-button {
     @extend %menu-buttons-shared;
