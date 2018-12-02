@@ -97,7 +97,7 @@
 .menu-favorites-box {
     @extend %bg-grad-to-right;
 
-    padding: 8px;
+    padding: 0.8em;
     border: 1px solid $interior_border;
     border-radius: $roundness;
     transition-duration: 150;
@@ -122,12 +122,12 @@
     }
 }
 .menu-categories-box {
-    padding: 8px;
+    padding: 0.8em;
 }
 .menu-applications-inner-box {
     @extend %bg-grad-to-right;
 
-    padding: 8px;
+    padding: 0.8em;
     border-radius: $roundness;
     border: 1px solid $interior_border;
     StScrollView {
@@ -137,7 +137,7 @@
 .menu-applications-outer-box {
     @extend %bg-grad-to-right;
 
-    padding: 8px;
+    padding: 0.8em;
     border: 1px solid $interior_border;
     border-radius: $roundness;
 }
@@ -184,8 +184,7 @@
 }
 // in the stock menu app descriptions are shown at the base of the menu
 .menu-selected-app-box {
-    padding: 8px;
-    margin-bottom: 4px;
+    padding: 2px 8px;
     text-align: right;
     &:rtl {
         text-align: left;
@@ -215,7 +214,7 @@
 #menu-search-entry {
     @extend %dialog-entry;
 
-    margin: 0.5em 0;
+    margin-bottom: 0.5em;
     &:focus {
         border: 1px solid $selected_border;
     }
@@ -226,12 +225,13 @@
     icon-size: 1em;
     color: $dark_fg_color;
 }
-// new styleclasses for the Cinnamon 4.0.0 stock menu - note this menu was dropped in Cinnamon 4.0.1 but may come back.
+// new styleclasses for the Cinnamon 4.0.0 stock menu - note this menu was dropped in Cinnamon 4.0.1 but retain styling in case it's revived.
 .menu-top-box {
   spacing: 10px; }
 .menu-systembuttons-box {
   padding-bottom: 12px;
-  padding-top: 12px;  }
+  padding-top: 12px;
+  margin-bottom: 0.5em; }
 // cinnVIIstark menu right click favourites context menu
 .starkmenu-favorites-box .menu-context-menu, .menu-context-menu {
         @extend %menu-context-shared;
