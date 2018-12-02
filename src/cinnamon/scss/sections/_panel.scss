@@ -390,8 +390,9 @@
         font-size: 0.8em;
         color: $dark_fg_color;
     }
+    // May need to revise depending on upstream GWL developments
     &-button-label {
-        padding-left: 3px;
+        padding: 0;
     }
     &-badge {
         border-radius: 256px;
