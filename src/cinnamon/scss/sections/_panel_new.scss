@@ -305,12 +305,12 @@
 // the window list applet. Some third party applets inherit some of this theming.
 .window-list-box {
     spacing: $spacing;
-    padding: 1px 3px;
+    padding: 0 3px;
     font-size: 0.9em;
     border-radius: $roundness;
     &.vertical {
         spacing: $spacing;
-        padding: 3px 1px;
+        padding: 2px 0;
     }
     &:highlight {
         background-color: $alt_selected_bg_color;
@@ -437,6 +437,9 @@
             background: $selected_bg_color;
         }
     }
+}
+.vertical .grouped-window-list-item-box {
+    padding: 2px 0;
 }
 // the sound player applet
 .sound-player {
