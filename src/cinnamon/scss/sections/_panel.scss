@@ -434,8 +434,9 @@
                 border: 1px solid $selected_border;
             }
             &:selected {
-                background: $selected_bg_color;
+                background-color: $selected_bg_color;
                 border: 1px solid $selected_border;
+                color: $selected_fg_color;
             }
         }
         .thumbnail-box {
