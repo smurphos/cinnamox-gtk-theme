@@ -127,7 +127,7 @@
 .menu-applications-inner-box {
     @extend %bg-grad-to-right;
 
-    padding: 0.8em;
+    padding: 8px;
     border-radius: $roundness;
     border: 1px solid $interior_border;
     StScrollView {
@@ -137,7 +137,7 @@
 .menu-applications-outer-box {
     @extend %bg-grad-to-right;
 
-    padding: 0.8em;
+    padding: 8px;
     border: 1px solid $interior_border;
     border-radius: $roundness;
 }
@@ -184,7 +184,8 @@
 }
 // in the stock menu app descriptions are shown at the base of the menu
 .menu-selected-app-box {
-    padding: 2px 8px;
+    padding: 0 8px;
+    margin-bottom: 0.9em;
     text-align: right;
     &:rtl {
         text-align: left;
@@ -192,7 +193,8 @@
 }
 .menu-selected-app-title {
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    margin-top: 6px;
 }
 .menu-selected-app-description {
     max-width: 150px;
