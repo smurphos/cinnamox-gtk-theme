@@ -153,6 +153,7 @@
 
     box-shadow: -1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
+		padding: 2px 0;
         margin-right: 1px;
         @extend %bg-grad-to-left;
 
@@ -168,6 +169,7 @@
         }
     }
     .grouped-window-list-item-box {
+        padding: 2px 0;
         &:active, &:checked {      
           box-shadow: 2px 0 0 0 $cinn_fg_color inset;
           }
@@ -193,6 +195,7 @@
 
      box-shadow: 1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
+        padding: 2px 0;
         margin-left: 1px;
         @extend %bg-grad-to-right;
 
@@ -208,6 +211,7 @@
         }
     }
      .grouped-window-list-item-box {
+        padding: 2px 0;
         &:active, &:checked {      
           box-shadow: -2px 0 0 0 $cinn_fg_color inset;
           }
@@ -383,7 +387,7 @@
 
 .grouped-window-list {
     &-thumbnail-label {
-        padding-left: 3px;
+        padding-left: 4px;
     }
     &-number-label {
         z-index: 99;
@@ -423,7 +427,7 @@
         @extend %bg-grad-to-right;
 
         border-radius: $roundness;
-        padding: 10px 15px;
+        padding: 2px;
         spacing: $spacing;
         color: $cinn_fg_color;
         .item-box {
@@ -445,6 +449,7 @@
         }
         .thumbnail {
             width: 256px;
+            padding-top: 4px;
         }
         .separator {
             width: 1px;

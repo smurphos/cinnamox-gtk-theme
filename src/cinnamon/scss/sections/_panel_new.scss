@@ -144,6 +144,7 @@
 
     box-shadow: -1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
+        padding: 2px 0;
         box-shadow: 1px 0 1px 1px $interior_border inset;
        
         &:hover, &:checked {
@@ -154,6 +155,7 @@
         }
     }
     .grouped-window-list-item-box {
+        padding: 3px 0;
         &:active, &:checked {
             box-shadow: 1px 0 1px 1px $interior_border inset;
         }
@@ -179,6 +181,7 @@
 
      box-shadow: 1px 0 0 0 $exterior_border inset;
     .window-list-item-box {
+        padding: 2px 0;
         box-shadow: -1px 0 1px 1px $interior_border inset;
        
         &:hover, &:checked {
@@ -189,6 +192,7 @@
         }
     }
     .grouped-window-list-item-box {
+        padding: 3px 0;
         &:active, &:checked {
             box-shadow: -1px 0 1px 1px $interior_border inset;
         }
@@ -362,7 +366,7 @@
 
 .grouped-window-list {
     &-thumbnail-label {
-        padding-left: 3px;
+        padding-left: 4px;
     }
     &-number-label {
         z-index: 99;
@@ -409,7 +413,7 @@
         @extend %bg-grad-to-right;
 
         border-radius: $roundness;
-        padding: 10px 15px;
+        padding: 2px;
         spacing: $spacing;
         color: $cinn_fg_color;
         .item-box {
@@ -431,15 +435,13 @@
         }
         .thumbnail {
             width: 256px;
+            padding-top: 4px;
         }
         .separator {
             width: 1px;
             background: $selected_bg_color;
         }
     }
-}
-.vertical .grouped-window-list-item-box {
-    padding: 2px 0;
 }
 // the sound player applet
 .sound-player {
