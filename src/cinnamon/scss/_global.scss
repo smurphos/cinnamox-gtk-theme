@@ -17,6 +17,9 @@ $cinn_fg_color: #%CINN_FG%;
 // an always transparent color used for expo & scale views and the lightbox effect when cinnamon is showing an OSD.
 $bg_color_trans: fade-out(#%CINN_BG%, 1 - (%CINNAMON_OPACITY% / 2));
 
+// an always transparent color used for sound-player applet background.
+$bg_color_trans_sound: fade-out(#%CINN_BG%, 1 - (%CINNAMON_OPACITY% / 1.333333));
+
 // used to calculate gradients for gradient values > 0
 $lighten_amount: 1 + (%GRADIENT% / 2);
 $darken_amount: 1 - (%GRADIENT% / 2);
