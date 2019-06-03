@@ -258,8 +258,12 @@
     transition-duration: 150;
     border-radius: $roundness;
     padding: 0 $spacing;
+    text-align: center;
     &.vertical {
         padding: $spacing 0;
+        .applet-label {
+            padding: 0;
+        }
     }
     &:checked {
         color: $selected_bg_color;
@@ -284,7 +288,7 @@
 .applet-label {
     font-weight: bold;
     color: $cinn_fg_color;
-    padding-left: 3px;
+    padding-left: 2px;
 }
 // icon-size set to 22 to match hard-coded menu icon size - applet-icon style is used for search provider results in menu
 .applet-icon {
@@ -409,6 +413,7 @@
         transition-duration: 150;
         spacing: 1em;
         background-color: rgba(0, 0, 0, 0.01);
+        text-align: left;
         &:hover, &:focus, {
            color: $selected_bg_color;
         }
