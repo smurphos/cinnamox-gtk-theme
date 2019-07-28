@@ -8,7 +8,7 @@
     padding: 16px 20px;
 }
 .modal-dialog-button-box {
-    spacing: 16px;
+    padding-top: 16px;
 }
 .modal-dialog-button {
     @extend %shared-button;
@@ -35,14 +35,13 @@
 // run dialog (ALT-F2)
 .run-dialog-label {
     color: $cinn_fg_color;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
 }
 .run-dialog-error-label {
     color: $selected_bg_color;
 }
 .run-dialog-error-box {
-    padding-top: 15px;
-    spacing: 5px;
+    padding-top: 16px;
 }
 .run-dialog-completion-box {
     padding-left: 15px;
@@ -56,7 +55,7 @@
 }
 .run-dialog {
     border-radius: $roundness;
-    padding: 16px 20px;
+    padding: 16px 20px 8px;
 }
 // removable media dialogs
 .cinnamon-mount-operation-icon {
