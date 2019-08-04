@@ -53,7 +53,7 @@ function willowgrove {
 	build_theme;
 }
 function build_theme {
-	DESCRIPTION="$THEMENAME features $COLORDESC. Cinnamon, Metacity, GTK2, GTK3.18 and GTK3.20+ themes are included along with a script to adjust the transparency of the Cinnamon theme.";
+	DESCRIPTION="$THEMENAME features $COLORDESC. Cinnamon, Metacity, GTK2, GTK3.18 and GTK3.20+ themes are included along with several interactive bash scripts to allow end-users to tweak theme characteristics.";
 	CURRENTDIR="$PWD";
 	cd ..;
     WORKDIR="$PWD";
@@ -73,6 +73,7 @@ function build_theme {
     ./change_color.sh -t "$BUILDDIR" -o "$THEMENAME" -m all -d false "$PWD/colors/cinnamox/$THEMENAME";
     cp "$WORKDIR/cinnamox_specific/cinnamox_transparency.sh" "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh";
     cp "$WORKDIR/cinnamox_specific/cinnamox_toggle_cinnamon.sh" "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh";
+    cp "$WORKDIR/cinnamox_specific/cinnamox_fontsize.sh" "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_fontsize.sh";
     cp "$WORKDIR/cinnamox_specific/info.json" "$BUILDDIR/$THEMENAME/info.json";
     cp "$WORKDIR/cinnamox_specific/LICENSE" "$BUILDDIR/$THEMENAME/LICENSE";
     cp "$WORKDIR/cinnamox_specific/README.md" "$BUILDDIR/$THEMENAME/README.md";
@@ -86,9 +87,11 @@ function build_theme {
 	sed -i "s|#MODTRANSDARKBG|$MODTRANSDARKBG|g" cinnamox_transparency.sh;
 	sed -i "s|#HIGHTRANSDARKBG|$HIGHTRANSDARKBG|g" cinnamox_transparency.sh;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_transparency.sh;
+	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_fontsize.sh;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_cinnamon.sh;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon.css;
 	sed -i "s|#VARIANT|Transparency: None|g" cinnamon.css;
+	sed -i "s|#FONTSIZE|Standard font size (10pt)|g" cinnamon.css;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon.css;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon_old.css;
 	sed -i "s|#VARIANT|Transparency: None|g" cinnamon_old.css;
@@ -106,7 +109,11 @@ function build_theme {
     cd "$THEMEDIR/$THEMENAME/cinnamon" && rm -r "$PWD/assets";
     rsync -a -u --exclude 'all-assets.*' --exclude 'Makefile' --exclude '*.sh' --exclude 'thumbnail.png' --exclude 'thumbnail.svg' --exclude 'scss' --exclude 'openbox-3' --exclude 'unity' --exclude 'xfwm4' "$BUILDDIR/$THEMENAME"/ "$THEMEDIR/$THEMENAME";
     cp "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh" "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh";
+    chmod +x "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_transparency.sh"
     cp "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh" "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh";
+    chmod +x "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_toggle_cinnamon.sh"
+    cp "$BUILDDIR/$THEMENAME/cinnamon/cinnamox_fontsize.sh" "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_fontsize.sh";
+    chmod +x "$THEMEDIR/$THEMENAME/cinnamon/cinnamox_fontsize.sh";
     cd "$THEMEDIR/$THEMENAME/gtk-3.0";
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.0/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/dist";
@@ -115,12 +122,15 @@ function build_theme {
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.20/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.20" && rm -r "$PWD/dist";
     cp "$QTDIR/$THEMENAME.conf" "$QTTHEMEDIR/$THEMENAME.conf";
     cp "$WORKDIR/cinnamox_specific/cinnamox_enable_qt5ct.sh" "$QTTHEMEDIR/cinnamox_enable_qt5ct.sh";
+    chmod +x "$QTTHEMEDIR/cinnamox_enable_qt5ct.sh"
     cd "$QTTHEMEDIR";
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_enable_qt5ct.sh;
     cp "$WORKDIR/cinnamox_specific/cinnamox_toggle_GTK2_HIDPI.sh" "$THEMEDIR/$THEMENAME/gtk-2.0/cinnamox_toggle_GTK2_HIDPI.sh";
+    chmod +x "$THEMEDIR/$THEMENAME/gtk-2.0/cinnamox_toggle_GTK2_HIDPI.sh"
     cd "$THEMEDIR/$THEMENAME/gtk-2.0";
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_GTK2_HIDPI.sh;
     cp "$WORKDIR/cinnamox_specific/cinnamox_firefox_fix.sh" "$THEMEDIR/$THEMENAME/cinnamox_firefox_fix.sh";
+    chmod +x "$THEMEDIR/$THEMENAME/cinnamox_firefox_fix.sh"
     cd "$CURRENTDIR"; 
 }
 

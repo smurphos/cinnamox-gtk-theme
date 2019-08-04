@@ -32,6 +32,16 @@ To allow the GTK2, GTK3 and Metacity1 themes to apply to GUI apps running as roo
 
 ## Tweaking
 
+### Cinnamon Theme Font-Size
+
+The theme includes an interactive bash script that allows end users to adjust the base font-size of the Cinnamon Theme. This can be useful for users running Cinnamon on realtively high resolution displays with relatively small screen dimensions where the hard-coded theme default font-sizes are too small.
+
+To access the tool open a terminal window (Ctrl-Alt-T) and use the following command to make the script executable and launch it. 
+
+`chmod +x ~/.themes/#THEMENAME/cinnamon/cinnamox_fontsize.sh && ~/.themes/#THEMENAME/cinnamon/cinnamox_fontsize.sh`
+
+If you are not happy with the end result simply run `~/.themes/#THEMENAME/cinnamon/cinnamox_fontsize.sh` again to chose another option including the default
+
 ### Cinnamon Theme Transparency
 
 The theme includes an interactive bash script that allows end users to adjust the transparency of the Cinnamon Theme. The default is no transparency.
