@@ -95,6 +95,7 @@ function build_theme {
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon.css;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon_old.css;
 	sed -i "s|#VARIANT|Transparency: None|g" cinnamon_old.css;
+	sed -i "s|#FONTSIZE|Standard font size (10pt)|g" cinnamon_old.css;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon_old.css;	
 	cd "$BUILDDIR/$THEMENAME";
 	sed -i "s|#THEMENAME|$THEMENAME|g" info.json;
