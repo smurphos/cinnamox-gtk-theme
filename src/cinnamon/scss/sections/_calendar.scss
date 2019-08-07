@@ -69,7 +69,9 @@
 .calendar-week-number {
     color: $cinn_fg_color;
     font-weight: bold;
-    padding-top: 0.6em;
+    font-size: 0.8em;
+    height: 1.8em;
+    margin-top: 0.4em;
 }
 .calendar-day {
     &:ltr {
