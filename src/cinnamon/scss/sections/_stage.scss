@@ -1,9 +1,9 @@
 // defines font family and standard font size across the whole theme
 // em is preferred for better support for text scaling
-stage {
-    font-family: roboto, Ubuntu, Noto Sans, sans, sans-serif;
-    font-size: 10pt;
-}
+// Cinnamon 4.6.x and later allows the end user to manage the theme font characteristics via the Font Selection GUI
+// Users on older versions of Cinnamon can use the theme's cinnamox_fontsize.sh script to add content to stage{} if they wish.
+stage {}
+
 .cinnamon-link {
     color: $link_color;
     font-style: italic;

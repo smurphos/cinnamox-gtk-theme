@@ -34,7 +34,9 @@ To allow the GTK2, GTK3 and Metacity1 themes to apply to GUI apps running as roo
 
 ### Cinnamon Theme Font-Size
 
-The theme includes an interactive bash script that allows end users to adjust the base font-size of the Cinnamon Theme. This can be useful for users running Cinnamon on realtively high resolution displays with relatively small screen dimensions where the hard-coded theme default font-sizes are too small.
+For Cinnamon version 4.6.x and later the Cinnamon theme's font characteristics van be set via the Font Selection settings module available from the menu.
+
+For users of older Cinnamon versions the theme includes an interactive bash script that allows end users to adjust the base font-size in the Cinnamon theme. This can be useful for users running Cinnamon on relatively high resolution displays with relatively small screen dimensions where the hard-coded theme default font-sizes are too small.
 
 To access the tool open a terminal window (Ctrl-Alt-T) and use the following command to make the script executable and launch it. 
 

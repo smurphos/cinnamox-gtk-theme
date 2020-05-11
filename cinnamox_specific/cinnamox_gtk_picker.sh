@@ -91,12 +91,14 @@ function build_theme {
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_cinnamon.sh;
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon.css;
 	sed -i "s|#VARIANT|Transparency: None|g" cinnamon.css;
-	sed -i "s|#FONTSIZE|Standard font size (10pt)|g" cinnamon.css;
+	sed -i "s|#FONTSIZE|System controlled|g" cinnamon.css;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon.css;
+	echo "stage {}" >> cinnamon.css
 	sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon_old.css;
 	sed -i "s|#VARIANT|Transparency: None|g" cinnamon_old.css;
-	sed -i "s|#FONTSIZE|Standard font size (10pt)|g" cinnamon_old.css;
+	sed -i "s|#FONTSIZE|System controlled|g" cinnamon_old.css;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon_old.css;	
+	echo "stage {}" >> cinnamon_old.css
 	cd "$BUILDDIR/$THEMENAME";
 	sed -i "s|#THEMENAME|$THEMENAME|g" info.json;
 	sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" info.json;
