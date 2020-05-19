@@ -3,25 +3,25 @@
 if find "$HOME"/.mozilla/firefox/ -maxdepth 1 -type d -name '*.default' | head -1; then 
     TARGETPATH=$(find "$HOME"/.mozilla/firefox/ -maxdepth 1 -type d -name '*.default' | head -1)
     TARGETFILE="$TARGETPATH/user.js"
-	TARGETSTRING="user_pref(\"widget.content.gtk-theme-override\", \"Adwaita\");"
-	if [ ! -f "$TARGETFILE" ]; then
-		touch "$TARGETFILE"
-		echo "creating file $TARGETFILE"
-		echo ""
-	fi
-	if ! grep -q "widget.content.gtk-theme-override" "$TARGETFILE"; then
-		echo "$TARGETSTRING" >> "$TARGETFILE"
-		echo "writing  string '$TARGETSTRING' to $TARGETFILE"
-		echo ""
-		echo "please restart Firefox for fix to take effect"
-	else
-		echo "$TARGETFILE already contains a widget.content.gtk-theme-override"
-	fi
+    TARGETSTRING="user_pref(\"widget.content.gtk-theme-override\", \"Adwaita\");"
+    if [ ! -f "$TARGETFILE" ]; then
+        touch "$TARGETFILE"
+        echo "creating file $TARGETFILE"
+        echo ""
+    fi
+    if ! grep -q "widget.content.gtk-theme-override" "$TARGETFILE"; then
+        echo "$TARGETSTRING" >> "$TARGETFILE"
+        echo "writing  string '$TARGETSTRING' to $TARGETFILE"
+        echo ""
+        echo "please restart Firefox for fix to take effect"
+    else
+        echo "$TARGETFILE already contains a widget.content.gtk-theme-override"
+    fi
 else
     echo "could not locate your .default firefox profile"
 fi
 if [ -t 1 ]; then
     echo "";
-    read -p "Press enter to exit the script.";
+    read -rp "Press enter to exit the script.";
 fi
 exit

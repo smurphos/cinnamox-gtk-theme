@@ -21,35 +21,35 @@ echo "";
 echo "*** CINNAMOX CINNAMON DESKTOP THEME FONT UTILITY ***";
 echo "";
 if ! grep -q "$THEMENAME" cinnamon.css; then
-	echo "There is a problem. Cannot find the cinnamon.css file for $THEMENAME in $DIRECTORY.";
-	echo "The script should only be used with $THEMENAME.";
-	echo "";
-	read -rp "Press enter to exit script.";
-	exit 1;
+    echo "There is a problem. Cannot find the cinnamon.css file for $THEMENAME in $DIRECTORY.";
+    echo "The script should only be used with $THEMENAME.";
+    echo "";
+    read -rp "Press enter to exit script.";
+    exit 1;
 fi
 if grep -Fq "$SYSTEMFONTDESC" cinnamon.css && grep -Fq "$SYSTEMFONT" cinnamon.css; then
-	CURRENTDESC="$SYSTEMFONTDESC"; CURRENTFONT="$SYSTEMFONT";
-	VARIANT=("$SMALLFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
+    CURRENTDESC="$SYSTEMFONTDESC"; CURRENTFONT="$SYSTEMFONT";
+    VARIANT=("$SMALLFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
 elif grep -q "$SMALLFONTDESC" cinnamon.css && grep -q "$SMALLFONT" cinnamon.css; then
-	CURRENTDESC="$SMALLFONTDESC"; CURRENTFONT="$SMALLFONT";
-	VARIANT=("$SYSTEMFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
+    CURRENTDESC="$SMALLFONTDESC"; CURRENTFONT="$SMALLFONT";
+    VARIANT=("$SYSTEMFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
 elif grep -q "$STANDARDFONTDESC" cinnamon.css && grep -q "$STANDARDFONT" cinnamon.css; then
-	CURRENTDESC="$STANDARDFONTDESC"; CURRENTFONT="$STANDARDFONT";
-	VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
+    CURRENTDESC="$STANDARDFONTDESC"; CURRENTFONT="$STANDARDFONT";
+    VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
 elif grep -q "$LARGEFONTDESC" cinnamon.css && grep -q "$LARGEFONT" cinnamon.css; then
-	CURRENTDESC="$LARGEFONTDESC"; CURRENTFONT="$LARGEFONT";
-	VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$STANDARDFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
+    CURRENTDESC="$LARGEFONTDESC"; CURRENTFONT="$LARGEFONT";
+    VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$STANDARDFONTDESC" "$VLARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
 elif grep -q "$VLARGEFONTDESC" cinnamon.css && grep -q "$VLARGEFONT" cinnamon.css; then
-	CURRENTDESC="$VLARGEFONTDESC"; CURRENTFONT="$VLARGEFONT";
-	VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
+    CURRENTDESC="$VLARGEFONTDESC"; CURRENTFONT="$VLARGEFONT";
+    VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$LARGESTFONTDESC" "Quit");
 elif grep -q "$LARGESTFONTDESC" cinnamon.css && grep -q "$LARGESTFONT" cinnamon.css; then
-	CURRENTDESC="$LARGESTFONTDESC"; CURRENTFONT="$LARGESTFONT";
-	VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "Quit");
+    CURRENTDESC="$LARGESTFONTDESC"; CURRENTFONT="$LARGESTFONT";
+    VARIANT=("$SYSTEMFONTDESC" "$SMALLFONTDESC" "$STANDARDFONTDESC" "$LARGEFONTDESC" "$VLARGEFONTDESC" "Quit");
 else
-	echo "Cannot confirm the current base font-size of $THEMENAME. Something is wrong.";
-	echo "";
-	read -rp "Press enter to exit script.";
-	exit 1;
+    echo "Cannot confirm the current base font-size of $THEMENAME. Something is wrong.";
+    echo "";
+    read -rp "Press enter to exit script.";
+    exit 1;
 fi
 echo "Hello $USER, this script allows you to set the base font-size of $THEMENAME. The current base font-size of $THEMENAME is $CURRENTDESC.";
 echo "";
@@ -65,19 +65,19 @@ select CHOICE in "${VARIANT[@]}";
 do
     case $CHOICE in
     "$SYSTEMFONTDESC")
-		NEWDESC="$SYSTEMFONTDESC"; NEWFONT="$SYSTEMFONT";;
+        NEWDESC="$SYSTEMFONTDESC"; NEWFONT="$SYSTEMFONT";;
     "$SMALLFONTDESC")
-		NEWDESC="$SMALLFONTDESC"; NEWFONT="$SMALLFONT";;
+        NEWDESC="$SMALLFONTDESC"; NEWFONT="$SMALLFONT";;
     "$STANDARDFONTDESC")
-		NEWDESC="$STANDARDFONTDESC"; NEWFONT="$STANDARDFONT";;
+        NEWDESC="$STANDARDFONTDESC"; NEWFONT="$STANDARDFONT";;
     "$LARGEFONTDESC")
-		NEWDESC="$LARGEFONTDESC"; NEWFONT="$LARGEFONT";;
+        NEWDESC="$LARGEFONTDESC"; NEWFONT="$LARGEFONT";;
     "$VLARGEFONTDESC")
-		NEWDESC="$VLARGEFONTDESC"; NEWFONT="$VLARGEFONT";;
+        NEWDESC="$VLARGEFONTDESC"; NEWFONT="$VLARGEFONT";;
     "$LARGESTFONTDESC")
-		NEWDESC="$LARGESTFONTDESC"; NEWFONT="$LARGESTFONT";;
-	"Quit")
-		cd || exit; exit;;
+        NEWDESC="$LARGESTFONTDESC"; NEWFONT="$LARGESTFONT";;
+    "Quit")
+        cd || exit; exit;;
     *) echo ""; echo "Invalid option. Try another one."; echo ""; continue;;
     esac
     break
@@ -87,15 +87,10 @@ sed -i "s|$CURRENTFONT|$NEWFONT|g" cinnamon.css;
 echo "";
 echo "Theme updated.";
 echo "";
-if command -v gsettings > /dev/null; then
-	echo "Activating $THEMENAME - $CHOICE.";
-	gsettings reset org.cinnamon.theme name;
-	gsettings set org.cinnamon.theme name "$THEMENAME";
-else
-	echo"If $THEMENAME is already active then press Ctrl-Alt-Esc to reload cinnamon and the theme. If $THEMENAME is not active go to the Themes App and set $THEMENAME as your desktop theme.";
-	echo"But first exit the script.";
-fi
+echo "Activating $THEMENAME - $CHOICE.";
+gsettings reset org.cinnamon.theme name;
+sleep 1;
+gsettings set org.cinnamon.theme name "$THEMENAME";
 echo "";
 read -rp "Press enter to exit the script.";
-cd || exit;
 exit
