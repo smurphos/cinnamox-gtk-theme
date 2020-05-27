@@ -9,6 +9,7 @@
 </info>
 
 <!-- ::: CONSTANTS ::: -->
+<constant name="SIZER" value="5" />
 <constant name="C_titlebar_focused" value="gtk:custom(wm_bg_focused,#444444)" />
 <constant name="C_titlebar_unfocused" value="gtk:custom(wm_bg_unfocused,#353535)" />
 <constant name="C_border_focused" value="gtk:custom(wm_border_focused,#484848)" />
@@ -230,109 +231,109 @@
 <!-- close icon -->
 <draw_ops name="close_focused">
 	<line
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow" 
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" 
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused" />
 	<line 
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused" />
 	<line 
-		x1="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
 	<line
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow" 
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" 
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_prelight" />
 	<line 
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_prelight" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_prelight" />
 	<line 
-		x1="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_prelight" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
 	<line
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow" 
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" 
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_pressed" />
 	<line 
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_pressed" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_pressed" />
 	<line 
-		x1="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_pressed" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="close_unfocused">
 	<line
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow" 
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" 
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_unfocused" />
 	<line 
-		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_unfocused" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_unfocused" />
 	<line 
-		x1="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow"
 		color="C_icons_unfocused" />
 	<line 
-		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		x2="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		x1="width-(width-width%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow" y1="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		x2="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%SIZER)/SIZER-1-D_icons_shrink+D_icons_grow"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -347,45 +348,45 @@
 <!-- maximize icon -->
 <draw_ops name="maximize_focused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_prelight">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_prelight" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_pressed" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_unfocused" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -400,45 +401,45 @@
 <!-- unmaximize icon -->
 <draw_ops name="unmaximize_focused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%3)/3-6-D_icons_shrink+D_icons_grow" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_prelight">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_prelight" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%3)/3-6-D_icons_shrink+D_icons_grow" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_pressed">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_pressed" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%3)/3-6-D_icons_shrink+D_icons_grow" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_unfocused" />
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
-		width="width-2*(width-width%3)/3-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%3)/3-6-D_icons_shrink+D_icons_grow" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -453,29 +454,29 @@
 <!-- minimize icon -->
 <draw_ops name="minimize_focused">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_prelight">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-2-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -490,61 +491,61 @@
 <!-- menu icon -->
 <draw_ops name="menu_focused">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused" />
 	<rectangle 
-		x="(width-width%3)/3+2+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+2+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused" />
 	<rectangle 
-		x="(width-width%3)/3+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
-		width="width-2*(width-width%3)/3-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
+		width="width-2*(width-width%SIZER)/SIZER-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="menu_focused_prelight">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_prelight" />
 	<rectangle 
-		x="(width-width%3)/3+2+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+2+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_prelight" />
 	<rectangle 
-		x="(width-width%3)/3+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
-		width="width-2*(width-width%3)/3-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
+		width="width-2*(width-width%SIZER)/SIZER-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="menu_focused_pressed">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_pressed" />
 	<rectangle 
-		x="(width-width%3)/3+2+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+2+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_focused_pressed" />
 	<rectangle 
-		x="(width-width%3)/3+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
-		width="width-2*(width-width%3)/3-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
+		width="width-2*(width-width%SIZER)/SIZER-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="menu_unfocused">
 	<rectangle 
-		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-1-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_unfocused" />
 	<rectangle 
-		x="(width-width%3)/3+2+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		x="(width-width%SIZER)/SIZER+2+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+1+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%SIZER)/SIZER-3-2*D_icons_shrink+2*D_icons_grow" 
 		color="C_icons_unfocused" />
 	<rectangle 
-		x="(width-width%3)/3+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
-		width="width-2*(width-width%3)/3-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+4+D_icons_shrink-D_icons_grow" y="height/2-1" 
+		width="width-2*(width-width%SIZER)/SIZER-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -559,29 +560,29 @@
 <!-- shade icon -->
 <draw_ops name="shade_focused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="shade_focused_prelight">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="shade_focused_pressed">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="shade_unfocused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="(height-height%SIZER)/SIZER+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -596,29 +597,29 @@
 <!-- unshade icon -->
 <draw_ops name="unshade_focused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-6-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="unshade_focused_prelight">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-6-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="unshade_focused_pressed">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-6-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="unshade_unfocused">
 	<rectangle 
-		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-6-D_icons_shrink+D_icons_grow" 
-		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
+		x="(width-width%SIZER)/SIZER+D_icons_shrink-D_icons_grow" y="height-(height-height%SIZER)/SIZER-6-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%SIZER)/SIZER-2*D_icons_shrink+2*D_icons_grow" height="6" filled="false"
 		color="C_icons_unfocused" />
 </draw_ops>
 
