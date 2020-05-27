@@ -9,6 +9,7 @@
 </info>
 
 <!-- ::: CONSTANTS ::: -->
+<constant name="SIZER" value="5" />
 <constant name="C_titlebar_focused" value="#%MENU_BG%" />
 <constant name="C_titlebar_unfocused" value="#%BG%" />
 <constant name="C_border_focused" value="#%WM_BORDER_FOCUS%" />
@@ -215,109 +216,109 @@
 <!-- close icon -->
 <draw_ops name="close_focused">
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+2" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+2" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+2" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="close_unfocused">
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-2" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+2" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-2" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -332,45 +333,45 @@
 <!-- maximize icon -->
 <draw_ops name="maximize_focused">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_prelight">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_pressed" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -385,45 +386,45 @@
 <!-- unmaximize icon -->
 <draw_ops name="unmaximize_focused">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_prelight">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_pressed">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_pressed" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused">
 	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+1" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -438,29 +439,29 @@
 <!-- minimize icon -->
 <draw_ops name="minimize_focused">
 	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+2" y="height-(height-height%SIZER)/SIZER-5"
+		width="width-2*(width-width%SIZER)/SIZER-2" height="2" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_prelight">
 	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+2" y="height-(height-height%SIZER)/SIZER-5"
+		width="width-2*(width-width%SIZER)/SIZER-2" height="2" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
 	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+2" y="height-(height-height%SIZER)/SIZER-5"
+		width="width-2*(width-width%SIZER)/SIZER-2" height="2" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
 	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+2" y="height-(height-height%SIZER)/SIZER-5"
+		width="width-2*(width-width%SIZER)/SIZER-2" height="2" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -475,61 +476,61 @@
 <!-- menu icon -->
 <draw_ops name="menu_focused">
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 	<rectangle
-		x="(width-width%3)/3+3" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+3" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 	<rectangle
-		x="(width-width%3)/3+5" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+5" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="2" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="menu_focused_prelight">
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 	<rectangle
-		x="(width-width%3)/3+3" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+3" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 	<rectangle
-		x="(width-width%3)/3+5" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+5" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="2" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="menu_focused_pressed">
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_pressed" />
 	<rectangle
-		x="(width-width%3)/3+3" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+3" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<rectangle
-		x="(width-width%3)/3+5" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+5" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="2" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="menu_unfocused">
 	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
+		x="(width-width%SIZER)/SIZER+2" y="(height-height%SIZER)/SIZER+1"
+		width="width-2*(width-width%SIZER)/SIZER-3" height="height-2*(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 	<rectangle
-		x="(width-width%3)/3+3" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
+		x="(width-width%SIZER)/SIZER+3" y="(height-height%SIZER)/SIZER+2"
+		width="width-2*(width-width%SIZER)/SIZER-5" height="height-2*(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 	<rectangle
-		x="(width-width%3)/3+5" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="2" filled="true"
+		x="(width-width%SIZER)/SIZER+5" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="2" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -544,125 +545,125 @@
 <!-- shade icon -->
 <draw_ops name="shade_focused">
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 	<line
-		x1="width-(width-width%3)/3-7" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-6"
+		x1="width-(width-width%SIZER)/SIZER-7" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-4" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-4" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+4" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-6"
+		x1="(width-width%SIZER)/SIZER+4" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="shade_focused_prelight">
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="width-(width-width%3)/3-7" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-6"
+		x1="width-(width-width%SIZER)/SIZER-7" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-4" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-4" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+4" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-6"
+		x1="(width-width%SIZER)/SIZER+4" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused_prelight" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="shade_focused_pressed">
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="width-(width-width%3)/3-7" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-6"
+		x1="width-(width-width%SIZER)/SIZER-7" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-4" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-4" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+4" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-6"
+		x1="(width-width%SIZER)/SIZER+4" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused_pressed" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="shade_unfocused">
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 	<line
-		x1="width-(width-width%3)/3-7" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-6"
+		x1="width-(width-width%SIZER)/SIZER-7" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-4" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-4" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+4" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-6"
+		x1="(width-width%SIZER)/SIZER+4" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_unfocused" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
@@ -677,125 +678,125 @@
 <!-- unshade icon -->
 <draw_ops name="unshade_focused">
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+4"
-		x2="(width-width%3)/3+3" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+4"
+		x2="(width-width%SIZER)/SIZER+3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+5"
-		x2="(width-width%3)/3+4" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+5"
+		x2="(width-width%SIZER)/SIZER+4" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="width-(width-width%3)/3-4" y1="(height-height%3)/3+4"
-		x2="(width-width%3)/3+3" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-4" y1="(height-height%SIZER)/SIZER+4"
+		x2="(width-width%SIZER)/SIZER+3" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3" y1="(height-height%3)/3+4"
-		x2="width-(width-width%3)/3-6" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER" y1="(height-height%SIZER)/SIZER+4"
+		x2="width-(width-width%SIZER)/SIZER-6" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3" y1="(height-height%3)/3+5"
-		x2="width-(width-width%3)/3-7" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER" y1="(height-height%SIZER)/SIZER+5"
+		x2="width-(width-width%SIZER)/SIZER-7" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+4"
-		x2="width-(width-width%3)/3-6" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+4"
+		x2="width-(width-width%SIZER)/SIZER-6" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-4"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-4"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="unshade_focused_prelight">
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+4"
-		x2="(width-width%3)/3+3" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+4"
+		x2="(width-width%SIZER)/SIZER+3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+5"
-		x2="(width-width%3)/3+4" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+5"
+		x2="(width-width%SIZER)/SIZER+4" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="width-(width-width%3)/3-4" y1="(height-height%3)/3+4"
-		x2="(width-width%3)/3+3" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-4" y1="(height-height%SIZER)/SIZER+4"
+		x2="(width-width%SIZER)/SIZER+3" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3" y1="(height-height%3)/3+4"
-		x2="width-(width-width%3)/3-6" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER" y1="(height-height%SIZER)/SIZER+4"
+		x2="width-(width-width%SIZER)/SIZER-6" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3" y1="(height-height%3)/3+5"
-		x2="width-(width-width%3)/3-7" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER" y1="(height-height%SIZER)/SIZER+5"
+		x2="width-(width-width%SIZER)/SIZER-7" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_focused_prelight" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+4"
-		x2="width-(width-width%3)/3-6" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+4"
+		x2="width-(width-width%SIZER)/SIZER-6" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_focused_prelight" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-4"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-4"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="unshade_focused_pressed">
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="width-(width-width%3)/3-6" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-5"
+		x1="width-(width-width%SIZER)/SIZER-6" y1="(height-height%SIZER)/SIZER+2"
+		x2="(width-width%SIZER)/SIZER+1" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="width-(width-width%3)/3-7" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3" y2="height-(height-height%3)/3-6"
+		x1="width-(width-width%SIZER)/SIZER-7" y1="(height-height%SIZER)/SIZER+1"
+		x2="(width-width%SIZER)/SIZER" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+3" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-4" y2="height-(height-height%3)/3-5"
+		x1="(width-width%SIZER)/SIZER+3" y1="(height-height%SIZER)/SIZER+2"
+		x2="width-(width-width%SIZER)/SIZER-4" y2="height-(height-height%SIZER)/SIZER-5"
 		color="C_icons_focused_pressed" />
 	<line
-		x1="(width-width%3)/3+4" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-6"
+		x1="(width-width%SIZER)/SIZER+4" y1="(height-height%SIZER)/SIZER+1"
+		x2="width-(width-width%SIZER)/SIZER-3" y2="height-(height-height%SIZER)/SIZER-6"
 		color="C_icons_focused_pressed" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-2"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-2"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="unshade_unfocused">
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+4"
-		x2="(width-width%3)/3+3" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+4"
+		x2="(width-width%SIZER)/SIZER+3" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+5"
-		x2="(width-width%3)/3+4" y2="height-(height-height%3)/3-2"
+		x1="width-(width-width%SIZER)/SIZER-3" y1="(height-height%SIZER)/SIZER+5"
+		x2="(width-width%SIZER)/SIZER+4" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="width-(width-width%3)/3-4" y1="(height-height%3)/3+4"
-		x2="(width-width%3)/3+3" y2="height-(height-height%3)/3-3"
+		x1="width-(width-width%SIZER)/SIZER-4" y1="(height-height%SIZER)/SIZER+4"
+		x2="(width-width%SIZER)/SIZER+3" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3" y1="(height-height%3)/3+4"
-		x2="width-(width-width%3)/3-6" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER" y1="(height-height%SIZER)/SIZER+4"
+		x2="width-(width-width%SIZER)/SIZER-6" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3" y1="(height-height%3)/3+5"
-		x2="width-(width-width%3)/3-7" y2="height-(height-height%3)/3-2"
+		x1="(width-width%SIZER)/SIZER" y1="(height-height%SIZER)/SIZER+5"
+		x2="width-(width-width%SIZER)/SIZER-7" y2="height-(height-height%SIZER)/SIZER-2"
 		color="C_icons_unfocused" />
 	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+4"
-		x2="width-(width-width%3)/3-6" y2="height-(height-height%3)/3-3"
+		x1="(width-width%SIZER)/SIZER+1" y1="(height-height%SIZER)/SIZER+4"
+		x2="width-(width-width%SIZER)/SIZER-6" y2="height-(height-height%SIZER)/SIZER-3"
 		color="C_icons_unfocused" />
 	<rectangle
-		x="(width-width%3)/3+3" y="height/2-4"
-		width="width-2*(width-width%3)/3-8" height="6" filled="true"
+		x="(width-width%SIZER)/SIZER+3" y="height/2-4"
+		width="width-2*(width-width%SIZER)/SIZER-8" height="6" filled="true"
 		color="C_icons_unfocused" />
 </draw_ops>
 
