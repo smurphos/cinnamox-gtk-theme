@@ -184,8 +184,9 @@
 }
 // in the stock menu app descriptions are shown at the base of the menu
 .menu-selected-app-box {
-    padding: 0 8px;
-    margin-bottom: 0.9em;
+    padding: 0 4px;
+    margin-top: 6px;
+    height: 1.8em;
     text-align: right;
     &:rtl {
         text-align: left;
@@ -194,7 +195,6 @@
 .menu-selected-app-title {
     font-weight: bold;
     font-size: 0.9em;
-    margin-top: 6px;
 }
 .menu-selected-app-description {
     max-width: 150px;
