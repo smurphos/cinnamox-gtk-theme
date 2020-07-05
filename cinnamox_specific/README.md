@@ -40,6 +40,18 @@ To access the tool open a terminal window (Ctrl-Alt-T) and use the following com
 
 If you are not happy with the end result simply run `~/.themes/#THEMENAME/scripts/cinnamox_fontsize.sh` again to chose another option including the default
 
+### Cinnamon Stock Menu applet in Cinnamon 4.4.x and older
+
+The app description area at the bottom of the stock cinnamon menu applet may not expand appropriately to fit the content in Cinnamon 4.4.x and older when text scaling factor is set > 1. 
+
+The theme includes an interactive bash script that allows end users toggle an adjustment of the cinnamon.css to mitigate this behaviour.
+
+To access the tool open a terminal window (Ctrl-Alt-T) and use the following command to make the script executable and launch it. 
+
+`chmod +x ~/.themes/#THEMENAME/scripts/cinnamox_toggle_menufix.sh && ~/.themes/#THEMENAME/scripts/cinnamox_toggle_menufix.sh`
+
+If you are not happy with the end result simply run `~/.themes/#THEMENAME/scripts/cinnamox_toggle_menufix.sh` again to revert.
+
 ### Titlebar Button-Size
 
 The theme includes an interactive bash script that allows end users to adjust the size of the Titlebar buttons. Please note this only affects Windows with a traditional titlebar. It has no affect on on Widows using Client Side Decorations.

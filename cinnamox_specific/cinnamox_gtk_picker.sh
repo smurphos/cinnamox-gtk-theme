@@ -72,6 +72,7 @@ function build_theme {
     cp "$WORKDIR/cinnamox_specific/cinnamox_titlebar_button_size.sh" "$BUILDDIR/$THEMENAME/scripts/cinnamox_titlebar_button_size.sh";
     cp "$WORKDIR/cinnamox_specific/cinnamox_toggle_GTK2_HIDPI.sh" "$BUILDDIR/$THEMENAME/scripts/cinnamox_toggle_GTK2_HIDPI.sh";
     cp "$WORKDIR/cinnamox_specific/cinnamox_enable_qt5ct.sh" "$BUILDDIR/$THEMENAME/scripts/cinnamox_enable_qt5ct.sh";
+    cp "$WORKDIR/cinnamox_specific/cinnamox_toggle_menufix.sh" "$BUILDDIR/$THEMENAME/scripts/cinnamox_toggle_menufix.sh";
     cp "$WORKDIR/cinnamox_specific/info.json" "$BUILDDIR/$THEMENAME/info.json";
     cp "$WORKDIR/cinnamox_specific/LICENSE" "$BUILDDIR/$THEMENAME/LICENSE";
     cp "$WORKDIR/cinnamox_specific/README.md" "$BUILDDIR/$THEMENAME/README.md";
@@ -90,17 +91,20 @@ function build_theme {
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_cinnamon.sh;
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_GTK2_HIDPI.sh;
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_enable_qt5ct.sh;
+    sed -i "s|#THEMENAME|$THEMENAME|g" cinnamox_toggle_menufix.sh;
     cd "$BUILDDIR/$THEMENAME/cinnamon" || exit;
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon.css;
     sed -i "s|#VARIANT|Transparency: None|g" cinnamon.css;
     sed -i "s|#FONTSIZE|System controlled|g" cinnamon.css;
     sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon.css;
     echo "stage {}" >> cinnamon.css
+    echo ".menu-selected-app-box {}" >> cinnamon.css
     sed -i "s|#THEMENAME|$THEMENAME|g" cinnamon_old.css;
     sed -i "s|#VARIANT|Transparency: None|g" cinnamon_old.css;
     sed -i "s|#FONTSIZE|System controlled|g" cinnamon_old.css;
     sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" cinnamon_old.css;   
     echo "stage {}" >> cinnamon_old.css
+    echo ".menu-selected-app-box {}" >> cinnamon_old.css
     cd "$BUILDDIR/$THEMENAME" || exit;
     sed -i "s|#THEMENAME|$THEMENAME|g" info.json;
     sed -i "s|#THEMEDESCRIPTION|$DESCRIPTION|g" info.json;
@@ -128,6 +132,8 @@ function build_theme {
     chmod +x "$THEMEDIR/$THEMENAME/scripts/cinnamox_toggle_GTK2_HIDPI.sh"
     cp "$BUILDDIR/$THEMENAME/scripts/cinnamox_enable_qt5ct.sh" "$THEMEDIR/$THEMENAME/scripts/cinnamox_enable_qt5ct.sh";
     chmod +x "$THEMEDIR/$THEMENAME/scripts/cinnamox_enable_qt5ct.sh"
+    cp "$BUILDDIR/$THEMENAME/scripts/cinnamox_toggle_menufix.sh" "$THEMEDIR/$THEMENAME/scripts/cinnamox_toggle_menufix.sh";
+    chmod +x "$THEMEDIR/$THEMENAME/scripts/cinnamox_toggle_menufix.sh"
     cd "$THEMEDIR/$THEMENAME/gtk-3.0" || exit;
     rm "$PWD/gtk-dark.css"; rm "$PWD/gtk.gresource"; rm "$PWD/gtk.gresource.xml"; rm "$PWD/dist/gtk-dark.css";
     rsync -a "$THEMEDIR/$THEMENAME/gtk-3.0/dist"/ "$THEMEDIR/$THEMENAME/gtk-3.0" && rm -r "$PWD/dist";
