@@ -54,6 +54,8 @@
     }
 
     &.csd { background-color: $bg_color; }
+    
+    &.csd.popup { background-color: transparent }
 }
 
 .gtkstyle-fallback {

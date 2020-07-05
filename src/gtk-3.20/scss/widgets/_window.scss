@@ -54,7 +54,12 @@
         }
 
         .csd.popup & {
-            border-radius: 0;
+            border-radius: 0 0 $roundness $roundness;
+            box-shadow: 0 1px 2px transparentize($black, .8), 0 0 0 1px transparentize($_wm_border, .1);
+        }
+        
+        .background.csd.popup & {
+            border-radius: $roundness;
             box-shadow: 0 1px 2px transparentize($black, .8), 0 0 0 1px transparentize($_wm_border, .1);
         }
 

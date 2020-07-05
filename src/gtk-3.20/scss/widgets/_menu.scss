@@ -63,6 +63,11 @@ $menu_borders_color: mix(
             }
 
             *:hover { color: shade($menubar_fg_color, 1.08); }
+            
+            > window.background.csd.popup > decoration,
+            > window.background.csd.popup > menu {
+            border-radius: 0 0 $roundness $roundness;
+            }
         }
     }
 }
@@ -77,7 +82,7 @@ $menu_borders_color: mix(
     menu,
     .menu,
     .context-menu {
-        border-radius: 0;
+        border-radius: $roundness;
         padding: $spacing;
         background-color: $menu_bg_color;
         color: $menu_fg_color;
@@ -174,18 +179,19 @@ $menu_borders_color: mix(
             min-width: 16px;
             padding: $spacing;
             background-color: $menu_bg_color;
-            border-radius: 0;
 
             &.top {
-                margin-top: -6px;
+                //margin-top: -6px;
                 border-bottom: 1px solid $menu_borders_color;
                 -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+                border-radius: $roundness $roundness 0 0;
             }
 
             &.bottom {
                 margin-bottom: -6px;
                 border-top: 1px solid $menu_borders_color;
                 -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+                border-radius: 0 0 $roundness $roundness;
             }
 
             &:hover {
@@ -315,6 +321,7 @@ $menu_borders_color: mix(
         padding: ($spacing + 2px);
         outline-color: transparent;
         transition: none;
+        border-radius: $roundness;
 
         &:hover {
             background-color: $selected_bg_color;
