@@ -268,7 +268,7 @@
 
         &.default { @include button($selected_bg_color, $selected_fg_color); }
 
-        &.linked, .linked & { @include linked_button($button_bg_color); }
+        //&.linked, .linked & { @include linked_button($button_bg_color); }
 
         .spinbutton & {
             color: mix($text_color, $base_color, .4);
