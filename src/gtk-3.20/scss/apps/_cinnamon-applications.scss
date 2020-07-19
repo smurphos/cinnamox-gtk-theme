@@ -17,3 +17,21 @@
         }
     }
 }
+
+/*********************
+ ! XApp Status Applet *
+**********************/
+
+.xapp-status-icon-menu-window.popup {
+    background-color: transparent;
+    
+    & decoration {
+      border-radius: $roundness;
+      box-shadow: none;
+    }
+      
+    & > decoration,
+    & > menu {
+      border-radius: $roundness;
+    }
+}
