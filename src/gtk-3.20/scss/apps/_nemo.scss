@@ -27,12 +27,6 @@
             border-style: solid;
             border-color: border_normal($toolbar_bg_color);
 
-            button {
-                @include button($bg_color, $fg_color);
-            }
-
-            .linked > button { @include linked_button($bg_color, $fg_color); }
-
             separator, separator:disabled {
                 color: shade($bg_color, ($contrast + .1));
                 border-color: currentColor;
