@@ -1,0 +1,10 @@
+/******************
+ ! Chromium Tweaks*
+*******************/
+
+// chromium context menu will always show annoying background color with rounded menus.
+menu,
+.menu,
+.context-menu {
+    &.chromium { border-radius: 0; }
+}
