@@ -12,9 +12,9 @@ THEMES=("Cinnamox-Aubergine" "Cinnamox-Gold-Spice" "Cinnamox-Heather" "Cinnamox-
 for THEMENAME in "${THEMES[@]}"
 do
     echo "Copying $SOURCEDIR/$THEMENAME to $MYDIR/$THEMENAME";
-    rsync -a --exclude 'metadata.json' "$SOURCEDIR/$THEMENAME"/ "$MYDIR/$THEMENAME";
+    rsync -a --exclude 'metadata.json' --exclude 'gtk-3.0/gtk.css' "$SOURCEDIR/$THEMENAME"/ "$MYDIR/$THEMENAME";
     echo "Copying $SOURCEDIR/$THEMENAME to $SPICEDIR/$THEMENAME/files/$THEMENAME";
-    rsync -a --exclude 'metadata.json' "$SOURCEDIR/$THEMENAME"/ "$SPICEDIR/$THEMENAME/files/$THEMENAME";
+    rsync -a --exclude 'metadata.json' --exclude 'gtk-3.0/gtk.css' "$SOURCEDIR/$THEMENAME"/ "$SPICEDIR/$THEMENAME/files/$THEMENAME";
     echo "Copying info.json, LICENSE and README.md from $SOURCEDIR/$THEMENAME to $SPICEDIR/$THEMENAME";
     rsync -a  --include 'info.json' --include 'README.md' --include 'LICENSE' --exclude '*' "$SOURCEDIR/$THEMENAME"/ "$SPICEDIR/$THEMENAME";
     echo "Copying Cinnamon thumbnail.png to $SPICEDIR/$THEMENAME";
