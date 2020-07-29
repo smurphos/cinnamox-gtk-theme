@@ -122,7 +122,7 @@
         @include toolbar($titlebar_bg_focused, $titlebar_fg_focused);
         @include linear-gradient($titlebar_bg_focused);
 
-        border-radius: $roundness $roundness 0 0;
+        border-radius: 0;
         color: $titlebar_fg_focused;
         padding: 0 $spacing * 2;
         min-height: 42px;
