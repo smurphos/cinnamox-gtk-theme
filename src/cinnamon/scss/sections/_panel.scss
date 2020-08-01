@@ -532,6 +532,8 @@
 }
 // workspace switcher applet simple button view
 .workspace-button {
+    @extend %bg-grad-to-bottom;
+    
     width: 2em;
     height: 1em;
     color: $cinn_fg_color;
@@ -541,33 +543,39 @@
     &.vertical {
     height: 1.5em;
     }
-    &:outlined {
-        background-color: $selected_bg_color;
+    &:outlined, &:outlined:shaded {
+        @extend %selected-bg-grad-to-bottom;
+        
         color: $selected_fg_color;
         border-color: $selected_border;
     }
+    &:shaded {
+        @extend %dark-bg-grad-to-bottom;
+    }
+    
 }
 // workspace switcher applet graph view
 .workspace-graph {
     .workspace {
-        @extend %bg-grad-to-bottom;
+        @extend %dark-bg-grad-to-bottom;
 
+        margin: 2px;
         border: 1px solid $interior_border;
         &:active {
             @extend %selected-bg-grad-to-bottom;
 
-            border: 1px solid $interior_border;
+            border: 1px solid $selected_border;
             .windows {
-                -active-window-background: rgba(255, 255, 255, 0.8);
+                -active-window-background: rgba(255, 255, 255, 0.6);
                 -active-window-border: rgba(0, 0, 0, 0.9);
-                -inactive-window-background: rgba(140, 140, 140, 0.8);
+                -inactive-window-background: rgba(140, 140, 140, 0.4);
                 -inactive-window-border: rgba(0, 0, 0, 0.7);
             }
         }
         .windows {
-            -active-window-background: rgba(140, 140, 140, 0.8);
+            -active-window-background: rgba(140, 140, 140, 0.6);
             -active-window-border: rgba(0, 0, 0, 0.7);
-            -inactive-window-background: rgba(140, 140, 140, 0.8);
+            -inactive-window-background: rgba(140, 140, 140, 0.4);
             -inactive-window-border: rgba(0, 0, 0, 0.7);
         }
     }
