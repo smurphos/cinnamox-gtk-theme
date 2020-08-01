@@ -234,6 +234,20 @@
 .applet-spacer:highlight {
     background-color: $alt_selected_bg_color;
 }
+// New spacer styling was added in Cinnamon 4.2
+.spacer-box {
+    border-radius: $roundness;
+    border: 1px solid transparent;
+    
+    &:highlight {
+      background-color: $alt_selected_bg_color;
+      border: 1px symbolic;
+   }
+    &.edit-mode {
+      border-radius: $roundness;
+      border: 1px symbolic;
+   }
+}
 .applet-box {
     color: $cinn_fg_color;
     transition-duration: 150;
