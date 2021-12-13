@@ -94,6 +94,9 @@ $alt_hover_selected_color: fade-out($hover_selected_color, 0.8);
 $alt_info_bg_color: fade-out($info_bg_color, 0.8);
 $alt_warning_color: fade-out($warning_color, 0.8);
 
+//color for calendar applet events
+$faded_cinn_fg_color: fade-out($cinn_fg_color, 0.3);
+
 // used for border-radius throughout theme
 $roundness: %ROUNDNESS%px;
 

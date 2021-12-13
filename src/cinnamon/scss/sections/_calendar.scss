@@ -60,6 +60,7 @@
         background-color: $selected_bg_color;
     }
     &:hover {
+        background-color: $selected_bg_color;
     }
 }
 .calendar-day-heading {
@@ -100,14 +101,25 @@
 .calendar-nonwork-day {
     font-weight: bold;
 }
-// this is always is an active state
 .calendar-today {
     @extend %selected-bg-grad-to-bottom;
 
     font-weight: bold;
-    &:active {
+    &:selected {
         color: $selected_fg_color;
     }
+}
+.calendar-not-today {
+
+    &:selected {
+        @extend %selected-bg-grad-to-bottom;
+
+        font-weight: bold;
+        color: $selected_fg_color;
+    &:hover {
+        @extend %selected-bg-grad-to-bottom;
+    }
+  }
 }
 .calendar-other-month-day {
     font-style: italic;
@@ -120,3 +132,139 @@
         color: $selected_fg_color;
     }
 }
+// support for calendar events cinnamon 5.2 and later.
+.calendar-main-box {
+}
+
+.calendar-events-main-box {
+    @extend %bg-grad-to-bottom;
+    
+    min-width: 350px;
+    height: 300px;
+    border: 1px solid $interior_border;
+    border-radius: $roundness;
+    padding: 1em 1.75em;
+}
+
+.calendar-events-no-events-button {
+    @extend %shared-button;
+  
+    padding: $spacing_plus2;
+}
+
+.calendar-events-no-events-button:hover {
+    @extend %shared-button-hover;
+}
+
+.calendar-events-no-events-icon,
+.calendar-events-no-events-label {
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar-events-date-label {
+    padding: .1em .1em 1em;
+    color: $cinn_fg_color;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.calendar-events-event-container {}
+
+.calendar-event-button {
+    @extend %shared-button;
+  
+    padding: $spacing_plus2;
+    color: $cinn_fg_color;
+    text-align: left;
+    font-style: normal;
+}
+.calendar-event-button .calendar-event-time-past {
+    color: $faded_cinn_fg_color;
+    font-size: 1.2em;
+}
+.calendar-event-button .calendar-event-time-present {
+    color: $cinn_fg_color;
+    font-size: 1.2em;
+}
+.calendar-event-button .calendar-event-time-present:all-day {
+    color: $cinn_fg_color;
+    font-size: 1.2em;
+}
+.calendar-event-button .calendar-event-time-future {
+    color: $cinn_fg_color;
+    font-size: 1.2em;
+}
+.calendar-event-button .calendar-event-summary {
+    text-align: left;
+    width: 200px;
+}
+.calendar-event-button .calendar-event-countdown {
+    text-align: right;
+    margin-bottom: .6em;
+    color: $warning_color;
+}
+.calendar-event-button .calendar-event-countdown:soon {}
+.calendar-event-button .calendar-event-countdown:imminent {}
+.calendar-event-button .calendar-event-countdown:current {}
+.calendar-event-button:hover  {
+    @extend %shared-button-hover;
+    
+    font-weight: bold;
+}
+.calendar-event-button:hover .calendar-event-countdown {
+    font-weight: bold;
+}
+.calendar-event-button:hover .calendar-event-countdown:soon {}
+.calendar-event-button:hover .calendar-event-countdown:imminent {}
+.calendar-event-button:hover .calendar-event-countdown:current {}
+
+.calendar-event-color-strip {
+    width: 1px;
+}
+
+.calendar-today-home-button {
+    padding: $spacing_plus2;
+    border: 1px solid transparent;
+}
+
+.calendar-today-day-label {
+    font-size: 1.4em;
+    color: $cinn_fg_color;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: .1em;
+}
+
+.calendar-today-date-label {
+    font-size: 1.2em;
+    color: $cinn_fg_color;
+    font-weight: bold;
+    text-align: center;
+}
+.calendar-today-home-button-enabled {
+    @extend %shared-button;
+    
+    padding: $spacing_plus2;
+}
+.calendar-today-home-button-enabled:hover {
+    @extend %shared-button-hover;
+}
+
+.calendar-today-home-button-enabled:hover .calendar-today-day-label {}
+.calendar-today-home-button-enabled:hover .calendar-today-date-label {}
+
+.calendar-day-event-dot-box {
+    margin-top: 1.7em;
+    max-rows: 1;
+}
+
+.calendar-day-event-dot {
+    margin: 1px;
+    border-radius: 99px;
+    width: 4px;
+    height: 4px;
+}
+
+
