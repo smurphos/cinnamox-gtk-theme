@@ -57,6 +57,16 @@
     border-radius: $roundness;
     padding: 16px 20px 8px;
 }
+    
+//selectors for 5.2 and later
+.run-dialog-description {
+    color: $cinn_fg_color;
+    padding-top: 16px;
+}
+
+.run-dialog-description.error {
+    color: $selected_bg_color;
+}
 // removable media dialogs
 .cinnamon-mount-operation-icon {
     icon-size: 4.8em;
