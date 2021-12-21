@@ -69,5 +69,6 @@
         background-color: $base_color;
         color: $text_color;
     }
+    calendar-view event.color-light label { color: black; }
+    calendar-view event.color-dark label { color: white; }
 }
-
