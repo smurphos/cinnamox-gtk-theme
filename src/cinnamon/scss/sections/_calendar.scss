@@ -108,6 +108,9 @@
     &:selected {
         color: $selected_fg_color;
     }
+    &:hover {
+        @extend %selected-bg-grad-to-bottom;
+    }
 }
 .calendar-not-today {
 
@@ -210,12 +213,8 @@
 .calendar-event-button .calendar-event-countdown:current {}
 .calendar-event-button:hover  {
     @extend %shared-button-hover;
-    
-    font-weight: bold;
 }
-.calendar-event-button:hover .calendar-event-countdown {
-    font-weight: bold;
-}
+.calendar-event-button:hover .calendar-event-countdown {}
 .calendar-event-button:hover .calendar-event-countdown:soon {}
 .calendar-event-button:hover .calendar-event-countdown:imminent {}
 .calendar-event-button:hover .calendar-event-countdown:current {}
@@ -256,15 +255,15 @@
 .calendar-today-home-button-enabled:hover .calendar-today-date-label {}
 
 .calendar-day-event-dot-box {
-    margin-top: 1.7em;
+    margin: 1.7em 0 0.5em;
     max-rows: 1;
 }
 
 .calendar-day-event-dot {
     margin: 1px;
-    border-radius: 99px;
-    width: 4px;
-    height: 4px;
+    border-radius: 256px;
+    width: 2px;
+    height: 2px;
 }
 
 
