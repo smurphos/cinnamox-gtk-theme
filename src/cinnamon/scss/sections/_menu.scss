@@ -176,8 +176,13 @@
     background-color: $selected_bg_color;
     border-radius: $roundness;
     color: $selected_fg_color;
-    &:hover {
-    }
+}
+.menu-category-button-hover {
+    @extend %menu-buttons-shared;
+
+    background-color: $alt_selected_bg_color; 
+    border-radius: $roundness;
+    color: $cinn_fg_color;
 }
 .menu-category-button-label {
     @extend %menu-button-label-shared;
