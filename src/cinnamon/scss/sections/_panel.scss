@@ -386,7 +386,7 @@
         }
     }
     &-demands-attention {
-        background-color: $info_bg_color;
+        background-color: $warning_bg_color;
         color: $info_fg_color;
     }
 }
@@ -439,7 +439,7 @@
         }
     }
     &-demands-attention {
-        background-color: $info_bg_color;
+        background-color: $warning_bg_color;
         color: $info_fg_color;
     }
     &-thumbnail-menu {

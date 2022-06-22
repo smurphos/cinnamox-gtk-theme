@@ -365,7 +365,7 @@
         }
     }
     &-demands-attention {
-        background-color: $alt_info_bg_color;
+        background-color: $alt_warning_color;
         border-radius: $roundness;
     }
 }
@@ -425,7 +425,7 @@
         }
     }
     &-item-demands-attention {
-        background-color: $alt_info_bg_color;
+        background-color: $alt_warning_color;
         border-radius: $roundness;
     }
     &-thumbnail-menu {
